@@ -1,0 +1,13 @@
+{
+    "name": "Ether",
+    "description": "Oh not, don't kill me.",
+    "external_url": "https://space-resolution.vercel.app/",
+    "image": "https://bafybeidyrkv35hlnpkmlffkybhhx6qbrxhldggvndeat7vcnisg6p2ziky.ipfs.w3s.link/111002.mp4",
+    "attributes": [
+        {
+            "display_type": "boost_number",
+            "trait_type": "HP",
+            "value": 1
+        }
+    ]
+}

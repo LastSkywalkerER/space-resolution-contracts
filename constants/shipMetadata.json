@@ -1,0 +1,38 @@
+{
+    "name": "Ship",
+    "description": "Somethng, that can destroy ethereum.",
+    "external_url": "https://space-resolution.vercel.app/",
+    "image": "https://bafybeifp45dajwnb63syuius4636belfg2l3isbjznqpdny43grxkmxh5a.ipfs.w3s.link/111003.mp4",
+    "attributes": [
+        {
+            "display_type": "boost_number",
+            "trait_type": "MOVE_SPEED",
+            "value": 10
+        },
+        {
+            "display_type": "boost_number",
+            "trait_type": "MOVE_ANGLE_SPEED",
+            "value": 50
+        },
+        {
+            "display_type": "boost_number",
+            "trait_type": "SHIP_MASS",
+            "value": 10
+        },
+        {
+            "display_type": "boost_number",
+            "trait_type": "LINEAR_DAMPING",
+            "value": 0.5
+        },
+        {
+            "display_type": "boost_number",
+            "trait_type": "ANGULAR_DAMPING",
+            "value": 1.5
+        },
+        {
+            "display_type": "boost_number",
+            "trait_type": "FIRE_RATE",
+            "value": 380
+        }
+    ]
+}
