@@ -7,6 +7,13 @@ struct Position {
     int256 z;
 }
 
+struct Bullet {
+    Position startPosition;
+    Position endPosition;
+    uint256 id;
+    // uint256 angle;
+}
+
 struct PlayerStats {
     uint256 bullets;
     Position currentPosition;

@@ -12,7 +12,7 @@ interface IGameRegistry {
 
     function removeEther(address player_, uint256[] calldata ids_) external;
 
-    function buyBullets(address player_, uint256 amount_) external payable;
+    function addBullets(address player_, uint256 amount_) external;
 
     function getGameData(address player_) external view returns (PlayerStatsResponse memory response);
 }
