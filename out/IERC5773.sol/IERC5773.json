@@ -1,0 +1,3156 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAllForAssets",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ApprovalForAssets",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "replacesId",
+          "type": "uint64"
+        }
+      ],
+      "name": "AssetAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "replacesId",
+          "type": "uint64"
+        }
+      ],
+      "name": "AssetAddedToTokens",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "AssetPrioritySet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "AssetRejected",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "AssetSet",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "acceptAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approveForAssets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getActiveAssetPriorities",
+      "outputs": [
+        {
+          "internalType": "uint64[]",
+          "name": "",
+          "type": "uint64[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getActiveAssets",
+      "outputs": [
+        {
+          "internalType": "uint64[]",
+          "name": "",
+          "type": "uint64[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApprovedForAssets",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "getAssetMetadata",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "newAssetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "getAssetReplacements",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPendingAssets",
+      "outputs": [
+        {
+          "internalType": "uint64[]",
+          "name": "",
+          "type": "uint64[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAllForAssets",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxRejections",
+          "type": "uint256"
+        }
+      ],
+      "name": "rejectAllAssets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "rejectAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAllForAssets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64[]",
+          "name": "priorities",
+          "type": "uint64[]"
+        }
+      ],
+      "name": "setPriority",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "acceptAsset(uint256,uint256,uint64)": "fc3517c8",
+    "approveForAssets(address,uint256)": "5ea72f36",
+    "getActiveAssetPriorities(uint256)": "5e94354a",
+    "getActiveAssets(uint256)": "7280281e",
+    "getApprovedForAssets(uint256)": "e467a48f",
+    "getAssetMetadata(uint256,uint64)": "5e2e3292",
+    "getAssetReplacements(uint256,uint64)": "df6f556b",
+    "getPendingAssets(uint256)": "51532e5a",
+    "isApprovedForAllForAssets(address,address)": "22e6d160",
+    "rejectAllAssets(uint256,uint256)": "e7de4de4",
+    "rejectAsset(uint256,uint256,uint64)": "22f6da9c",
+    "setApprovalForAllForAssets(address,bool)": "8507dc28",
+    "setPriority(uint256,uint64[])": "de8e602c",
+    "supportsInterface(bytes4)": "01ffc9a7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAllForAssets\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ApprovalForAssets\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"replacesId\",\"type\":\"uint64\"}],\"name\":\"AssetAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"replacesId\",\"type\":\"uint64\"}],\"name\":\"AssetAddedToTokens\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"AssetPrioritySet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"AssetRejected\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"AssetSet\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"acceptAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approveForAssets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getActiveAssetPriorities\",\"outputs\":[{\"internalType\":\"uint64[]\",\"name\":\"\",\"type\":\"uint64[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getActiveAssets\",\"outputs\":[{\"internalType\":\"uint64[]\",\"name\":\"\",\"type\":\"uint64[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApprovedForAssets\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"getAssetMetadata\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"newAssetId\",\"type\":\"uint64\"}],\"name\":\"getAssetReplacements\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getPendingAssets\",\"outputs\":[{\"internalType\":\"uint64[]\",\"name\":\"\",\"type\":\"uint64[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAllForAssets\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxRejections\",\"type\":\"uint256\"}],\"name\":\"rejectAllAssets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"rejectAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAllForAssets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64[]\",\"name\":\"priorities\",\"type\":\"uint64[]\"}],\"name\":\"setPriority\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"RMRK team\",\"events\":{\"ApprovalForAllForAssets(address,address,bool)\":{\"params\":{\"approved\":\"Boolean value signifying whether the permission has been granted (`true`) or revoked (`false`)\",\"operator\":\"Address of the account that has been granted the approval to manage the token's assets on all of  the tokens\",\"owner\":\"Address of the account that has granted the approval for all assets on all of their tokens\"}},\"ApprovalForAssets(address,address,uint256)\":{\"details\":\"Approvals must be cleared on transfer\",\"params\":{\"approved\":\"Address of the account that has been granted approval to manage the token's assets\",\"owner\":\"Address of the account that has granted the approval for all token's assets\",\"tokenId\":\"ID of the token on which the approval was granted\"}},\"AssetAccepted(uint256,uint64,uint64)\":{\"params\":{\"assetId\":\"ID of the asset that was accepted\",\"replacesId\":\"ID of the asset that was replaced\",\"tokenId\":\"ID of the token that had a new asset accepted\"}},\"AssetAddedToTokens(uint256[],uint64,uint64)\":{\"params\":{\"assetId\":\"ID of the asset that has been added to the token's pending assets array\",\"replacesId\":\"ID of the asset that would be replaced\",\"tokenIds\":\"An array of token IDs that received a new pending asset\"}},\"AssetPrioritySet(uint256)\":{\"params\":{\"tokenId\":\"ID of the token that had the asset priority array updated\"}},\"AssetRejected(uint256,uint64)\":{\"params\":{\"assetId\":\"ID of the asset that was rejected\",\"tokenId\":\"ID of the token that had an asset rejected\"}},\"AssetSet(uint64)\":{\"params\":{\"assetId\":\"ID of the asset that was initialized\"}}},\"kind\":\"dev\",\"methods\":{\"acceptAsset(uint256,uint256,uint64)\":{\"details\":\"Migrates the asset from the token's pending asset array to the token's active asset array.Active assets cannot be removed by anyone, but can be replaced by a new asset.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - `index` must be in range of the length of the pending asset array.Emits an {AssetAccepted} event.\",\"params\":{\"assetId\":\"ID of the asset expected to be in the index\",\"index\":\"Index of the asset in the pending array to accept\",\"tokenId\":\"ID of the token for which to accept the pending asset\"}},\"approveForAssets(address,uint256)\":{\"details\":\"This differs from transfer approvals, as approvals are not cleared when the approved party accepts or  rejects an asset, or sets asset priorities. This approval is cleared on token transfer.Only a single account can be approved at a time, so approving the `0x0` address clears previous approvals.Requirements:  - The caller must own the token or be an approved operator.  - `tokenId` must exist.Emits an {ApprovalForAssets} event.\",\"params\":{\"to\":\"Address of the account to grant the approval to\",\"tokenId\":\"ID of the token for which the approval to manage the assets is granted\"}},\"getActiveAssetPriorities(uint256)\":{\"details\":\"Asset priorities are a non-sequential array of uint64 values with an array size equal to active asset  priorites.\",\"params\":{\"tokenId\":\"ID of the token for which to retrieve the priorities of the active assets\"},\"returns\":{\"_0\":\"An array of priorities of the active assets of the given token\"}},\"getActiveAssets(uint256)\":{\"details\":\"Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.You can safely get 10k\",\"params\":{\"tokenId\":\"ID of the token to retrieve the IDs of the active assets\"},\"returns\":{\"_0\":\"An array of active asset IDs of the given token\"}},\"getApprovedForAssets(uint256)\":{\"details\":\"Requirements:  - `tokenId` must exist.\",\"params\":{\"tokenId\":\"ID of the token for which to retrieve the approved address\"},\"returns\":{\"_0\":\"Address of the account that is approved to manage the specified token's assets\"}},\"getAssetMetadata(uint256,uint64)\":{\"details\":\"Assets are stored by reference mapping `_assets[assetId]`.Can be overriden to implement enumerate, fallback or other custom logic.\",\"params\":{\"assetId\":\"Asset Id, must be in the active assets array\",\"tokenId\":\"ID of the token from which to retrieve the asset metadata\"},\"returns\":{\"_0\":\"The metadata of the asset belonging to the specified index in the token's active assets  array\"}},\"getAssetReplacements(uint256,uint64)\":{\"details\":\"Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.\",\"params\":{\"newAssetId\":\"ID of the pending asset which will be accepted\",\"tokenId\":\"ID of the token to check\"},\"returns\":{\"_0\":\"ID of the asset which will be replaced\"}},\"getPendingAssets(uint256)\":{\"details\":\"Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.\",\"params\":{\"tokenId\":\"ID of the token to retrieve the IDs of the pending assets\"},\"returns\":{\"_0\":\"An array of pending asset IDs of the given token\"}},\"isApprovedForAllForAssets(address,address)\":{\"details\":\"See {setApprovalForAllForAssets}.\",\"params\":{\"operator\":\"Address of the account that we are checking whether it has the operator role or not\",\"owner\":\"Address of the account that we are checking for whether it has granted the operator role\"},\"returns\":{\"_0\":\"A boolean value indicating wehter the account we are checking has been granted the operator role\"}},\"rejectAllAssets(uint256,uint256)\":{\"details\":\"Effecitvely deletes the pending array.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.Emits a {AssetRejected} event with assetId = 0.\",\"params\":{\"maxRejections\":\"Maximum number of expected assets to reject, used to prevent from rejecting assets which  arrive just before this operation.\",\"tokenId\":\"ID of the token of which to clear the pending array.\"}},\"rejectAsset(uint256,uint256,uint64)\":{\"details\":\"Removes the asset from the token's pending asset array.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - `index` must be in range of the length of the pending asset array.Emits a {AssetRejected} event.\",\"params\":{\"assetId\":\"ID of the asset expected to be in the index\",\"index\":\"Index of the asset in the pending array to be rejected\",\"tokenId\":\"ID of the token that the asset is being rejected from\"}},\"setApprovalForAllForAssets(address,bool)\":{\"details\":\"Operators can call {acceptAsset}, {rejectAsset}, {rejectAllAssets} or {setPriority} for any token  owned by the caller.Requirements:  - The `operator` cannot be the caller.Emits an {ApprovalForAllForAssets} event.\",\"params\":{\"approved\":\"The boolean value indicating whether the operator role is being granted (`true`) or revoked  (`false`)\",\"operator\":\"Address of the account to which the operator role is granted or revoked from\"}},\"setPriority(uint256,uint64[])\":{\"details\":\"The priority array is a non-sequential list of `uint64`s, where the lowest value is considered highest  priority.Value `0` of a priority is a special case equivalent to unitialized.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - The length of `priorities` must be equal the length of the active assets array.Emits a {AssetPrioritySet} event.\",\"params\":{\"priorities\":\"An array of priorities of active assets. The succesion of items in the priorities array  matches that of the succesion of items in the active array\",\"tokenId\":\"ID of the token to set the priorities for\"}},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"}},\"title\":\"IERC5773\",\"version\":1},\"userdoc\":{\"events\":{\"ApprovalForAllForAssets(address,address,bool)\":{\"notice\":\"Used to notify listeners that owner has granted approval to the user to manage assets of all of their  tokens.\"},\"ApprovalForAssets(address,address,uint256)\":{\"notice\":\"Used to notify listeners that owner has granted an approval to the user to manage the assets of a  given token.\"},\"AssetAccepted(uint256,uint64,uint64)\":{\"notice\":\"Used to notify listeners that an asset object at `assetId` is accepted by the token and migrated  from token's pending assets array to active assets array of the token.\"},\"AssetAddedToTokens(uint256[],uint64,uint64)\":{\"notice\":\"Used to notify listeners that an asset object at `assetId` is added to token's pending asset  array.\"},\"AssetPrioritySet(uint256)\":{\"notice\":\"Used to notify listeners that token's prioritiy array is reordered.\"},\"AssetRejected(uint256,uint64)\":{\"notice\":\"Used to notify listeners that an asset object at `assetId` is rejected from token and is dropped  from the pending assets array of the token.\"},\"AssetSet(uint64)\":{\"notice\":\"Used to notify listeners that an asset object is initialized at `assetId`.\"}},\"kind\":\"user\",\"methods\":{\"acceptAsset(uint256,uint256,uint64)\":{\"notice\":\"Accepts an asset at from the pending array of given token.\"},\"approveForAssets(address,uint256)\":{\"notice\":\"Used to grant permission to the user to manage token's assets.\"},\"getActiveAssetPriorities(uint256)\":{\"notice\":\"Used to retrieve the priorities of the active resoources of a given token.\"},\"getActiveAssets(uint256)\":{\"notice\":\"Used to retrieve IDs of the active assets of given token.\"},\"getApprovedForAssets(uint256)\":{\"notice\":\"Used to retrieve the address of the account approved to manage assets of a given token.\"},\"getAssetMetadata(uint256,uint64)\":{\"notice\":\"Used to fetch the asset metadata of the specified token's active asset with the given index.\"},\"getAssetReplacements(uint256,uint64)\":{\"notice\":\"Used to retrieve the asset that will be replaced if a given asset from the token's pending array  is accepted.\"},\"getPendingAssets(uint256)\":{\"notice\":\"Used to retrieve IDs of the pending assets of given token.\"},\"isApprovedForAllForAssets(address,address)\":{\"notice\":\"Used to check whether the address has been granted the operator role by a given address or not.\"},\"rejectAllAssets(uint256,uint256)\":{\"notice\":\"Rejects all assets from the pending array of a given token.\"},\"rejectAsset(uint256,uint256,uint64)\":{\"notice\":\"Rejects an asset from the pending array of given token.\"},\"setApprovalForAllForAssets(address,bool)\":{\"notice\":\"Used to add or remove an operator of assets for the caller.\"},\"setPriority(uint256,uint64[])\":{\"notice\":\"Sets a new priority array for a given token.\"}},\"notice\":\"Interface smart contract of the RMRK multi asset module.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/multiasset/IERC5773.sol\":\"IERC5773\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@rmrk-team/=node_modules/@rmrk-team/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/multiasset/IERC5773.sol\":{\"keccak256\":\"0x4e5b78824f54620c5b610a5e2c944cd159b8b054065fabf3af2aaea2f3360d89\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://713b179262117f3ff772aed51aa26e48bf7e3ff5c7ec6588060a887e634fe0f1\",\"dweb:/ipfs/Qme2B9DrgB93HPQy96Pia23jzrkdmUrVQPHdAqCxA8dzYY\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ApprovalForAllForAssets",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "approved",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "ApprovalForAssets",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "replacesId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetAccepted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256[]",
+              "name": "tokenIds",
+              "type": "uint256[]",
+              "indexed": false
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "replacesId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetAddedToTokens",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetPrioritySet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetRejected",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "acceptAsset"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "approveForAssets"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getActiveAssetPriorities",
+          "outputs": [
+            {
+              "internalType": "uint64[]",
+              "name": "",
+              "type": "uint64[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getActiveAssets",
+          "outputs": [
+            {
+              "internalType": "uint64[]",
+              "name": "",
+              "type": "uint64[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getApprovedForAssets",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAssetMetadata",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "newAssetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAssetReplacements",
+          "outputs": [
+            {
+              "internalType": "uint64",
+              "name": "",
+              "type": "uint64"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPendingAssets",
+          "outputs": [
+            {
+              "internalType": "uint64[]",
+              "name": "",
+              "type": "uint64[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isApprovedForAllForAssets",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxRejections",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "rejectAllAssets"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "rejectAsset"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setApprovalForAllForAssets"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64[]",
+              "name": "priorities",
+              "type": "uint64[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setPriority"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "acceptAsset(uint256,uint256,uint64)": {
+            "details": "Migrates the asset from the token's pending asset array to the token's active asset array.Active assets cannot be removed by anyone, but can be replaced by a new asset.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - `index` must be in range of the length of the pending asset array.Emits an {AssetAccepted} event.",
+            "params": {
+              "assetId": "ID of the asset expected to be in the index",
+              "index": "Index of the asset in the pending array to accept",
+              "tokenId": "ID of the token for which to accept the pending asset"
+            }
+          },
+          "approveForAssets(address,uint256)": {
+            "details": "This differs from transfer approvals, as approvals are not cleared when the approved party accepts or  rejects an asset, or sets asset priorities. This approval is cleared on token transfer.Only a single account can be approved at a time, so approving the `0x0` address clears previous approvals.Requirements:  - The caller must own the token or be an approved operator.  - `tokenId` must exist.Emits an {ApprovalForAssets} event.",
+            "params": {
+              "to": "Address of the account to grant the approval to",
+              "tokenId": "ID of the token for which the approval to manage the assets is granted"
+            }
+          },
+          "getActiveAssetPriorities(uint256)": {
+            "details": "Asset priorities are a non-sequential array of uint64 values with an array size equal to active asset  priorites.",
+            "params": {
+              "tokenId": "ID of the token for which to retrieve the priorities of the active assets"
+            },
+            "returns": {
+              "_0": "An array of priorities of the active assets of the given token"
+            }
+          },
+          "getActiveAssets(uint256)": {
+            "details": "Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.You can safely get 10k",
+            "params": {
+              "tokenId": "ID of the token to retrieve the IDs of the active assets"
+            },
+            "returns": {
+              "_0": "An array of active asset IDs of the given token"
+            }
+          },
+          "getApprovedForAssets(uint256)": {
+            "details": "Requirements:  - `tokenId` must exist.",
+            "params": {
+              "tokenId": "ID of the token for which to retrieve the approved address"
+            },
+            "returns": {
+              "_0": "Address of the account that is approved to manage the specified token's assets"
+            }
+          },
+          "getAssetMetadata(uint256,uint64)": {
+            "details": "Assets are stored by reference mapping `_assets[assetId]`.Can be overriden to implement enumerate, fallback or other custom logic.",
+            "params": {
+              "assetId": "Asset Id, must be in the active assets array",
+              "tokenId": "ID of the token from which to retrieve the asset metadata"
+            },
+            "returns": {
+              "_0": "The metadata of the asset belonging to the specified index in the token's active assets  array"
+            }
+          },
+          "getAssetReplacements(uint256,uint64)": {
+            "details": "Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.",
+            "params": {
+              "newAssetId": "ID of the pending asset which will be accepted",
+              "tokenId": "ID of the token to check"
+            },
+            "returns": {
+              "_0": "ID of the asset which will be replaced"
+            }
+          },
+          "getPendingAssets(uint256)": {
+            "details": "Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.",
+            "params": {
+              "tokenId": "ID of the token to retrieve the IDs of the pending assets"
+            },
+            "returns": {
+              "_0": "An array of pending asset IDs of the given token"
+            }
+          },
+          "isApprovedForAllForAssets(address,address)": {
+            "details": "See {setApprovalForAllForAssets}.",
+            "params": {
+              "operator": "Address of the account that we are checking whether it has the operator role or not",
+              "owner": "Address of the account that we are checking for whether it has granted the operator role"
+            },
+            "returns": {
+              "_0": "A boolean value indicating wehter the account we are checking has been granted the operator role"
+            }
+          },
+          "rejectAllAssets(uint256,uint256)": {
+            "details": "Effecitvely deletes the pending array.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.Emits a {AssetRejected} event with assetId = 0.",
+            "params": {
+              "maxRejections": "Maximum number of expected assets to reject, used to prevent from rejecting assets which  arrive just before this operation.",
+              "tokenId": "ID of the token of which to clear the pending array."
+            }
+          },
+          "rejectAsset(uint256,uint256,uint64)": {
+            "details": "Removes the asset from the token's pending asset array.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - `index` must be in range of the length of the pending asset array.Emits a {AssetRejected} event.",
+            "params": {
+              "assetId": "ID of the asset expected to be in the index",
+              "index": "Index of the asset in the pending array to be rejected",
+              "tokenId": "ID of the token that the asset is being rejected from"
+            }
+          },
+          "setApprovalForAllForAssets(address,bool)": {
+            "details": "Operators can call {acceptAsset}, {rejectAsset}, {rejectAllAssets} or {setPriority} for any token  owned by the caller.Requirements:  - The `operator` cannot be the caller.Emits an {ApprovalForAllForAssets} event.",
+            "params": {
+              "approved": "The boolean value indicating whether the operator role is being granted (`true`) or revoked  (`false`)",
+              "operator": "Address of the account to which the operator role is granted or revoked from"
+            }
+          },
+          "setPriority(uint256,uint64[])": {
+            "details": "The priority array is a non-sequential list of `uint64`s, where the lowest value is considered highest  priority.Value `0` of a priority is a special case equivalent to unitialized.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - The length of `priorities` must be equal the length of the active assets array.Emits a {AssetPrioritySet} event.",
+            "params": {
+              "priorities": "An array of priorities of active assets. The succesion of items in the priorities array  matches that of the succesion of items in the active array",
+              "tokenId": "ID of the token to set the priorities for"
+            }
+          },
+          "supportsInterface(bytes4)": {
+            "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "acceptAsset(uint256,uint256,uint64)": {
+            "notice": "Accepts an asset at from the pending array of given token."
+          },
+          "approveForAssets(address,uint256)": {
+            "notice": "Used to grant permission to the user to manage token's assets."
+          },
+          "getActiveAssetPriorities(uint256)": {
+            "notice": "Used to retrieve the priorities of the active resoources of a given token."
+          },
+          "getActiveAssets(uint256)": {
+            "notice": "Used to retrieve IDs of the active assets of given token."
+          },
+          "getApprovedForAssets(uint256)": {
+            "notice": "Used to retrieve the address of the account approved to manage assets of a given token."
+          },
+          "getAssetMetadata(uint256,uint64)": {
+            "notice": "Used to fetch the asset metadata of the specified token's active asset with the given index."
+          },
+          "getAssetReplacements(uint256,uint64)": {
+            "notice": "Used to retrieve the asset that will be replaced if a given asset from the token's pending array  is accepted."
+          },
+          "getPendingAssets(uint256)": {
+            "notice": "Used to retrieve IDs of the pending assets of given token."
+          },
+          "isApprovedForAllForAssets(address,address)": {
+            "notice": "Used to check whether the address has been granted the operator role by a given address or not."
+          },
+          "rejectAllAssets(uint256,uint256)": {
+            "notice": "Rejects all assets from the pending array of a given token."
+          },
+          "rejectAsset(uint256,uint256,uint64)": {
+            "notice": "Rejects an asset from the pending array of given token."
+          },
+          "setApprovalForAllForAssets(address,bool)": {
+            "notice": "Used to add or remove an operator of assets for the caller."
+          },
+          "setPriority(uint256,uint64[])": {
+            "notice": "Sets a new priority array for a given token."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@rmrk-team/=node_modules/@rmrk-team/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/multiasset/IERC5773.sol": "IERC5773"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/multiasset/IERC5773.sol": {
+        "keccak256": "0x4e5b78824f54620c5b610a5e2c944cd159b8b054065fabf3af2aaea2f3360d89",
+        "urls": [
+          "bzz-raw://713b179262117f3ff772aed51aa26e48bf7e3ff5c7ec6588060a887e634fe0f1",
+          "dweb:/ipfs/Qme2B9DrgB93HPQy96Pia23jzrkdmUrVQPHdAqCxA8dzYY"
+        ],
+        "license": "Apache-2.0"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/multiasset/IERC5773.sol",
+    "id": 34869,
+    "exportedSymbols": {
+      "IERC165": [
+        28205
+      ],
+      "IERC5773": [
+        34868
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:12006:86",
+    "nodes": [
+      {
+        "id": 34691,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:86",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 34692,
+        "nodeType": "ImportDirective",
+        "src": "66:65:86",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 34869,
+        "sourceUnit": 28206,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 34868,
+        "nodeType": "ContractDefinition",
+        "src": "249:11796:86",
+        "nodes": [
+          {
+            "id": 34700,
+            "nodeType": "EventDefinition",
+            "src": "450:39:86",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 34696,
+              "nodeType": "StructuredDocumentation",
+              "src": "285:160:86",
+              "text": " @notice Used to notify listeners that an asset object is initialized at `assetId`.\n @param assetId ID of the asset that was initialized"
+            },
+            "eventSelector": "3cd061096eaf881067d936308fbd8b81d060c45ab2ec910c02b953162befc109",
+            "name": "AssetSet",
+            "nameLocation": "456:8:86",
+            "parameters": {
+              "id": 34699,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34698,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "480:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34700,
+                  "src": "465:22:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34697,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "465:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "464:24:86"
+            }
+          },
+          {
+            "id": 34710,
+            "nodeType": "EventDefinition",
+            "src": "871:126:86",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 34701,
+              "nodeType": "StructuredDocumentation",
+              "src": "495:371:86",
+              "text": " @notice Used to notify listeners that an asset object at `assetId` is added to token's pending asset\n  array.\n @param tokenIds An array of token IDs that received a new pending asset\n @param assetId ID of the asset that has been added to the token's pending assets array\n @param replacesId ID of the asset that would be replaced"
+            },
+            "eventSelector": "4a85a0221f784dbe75db7c29c422f474c15bde9211a98e50a30018fa8dfa937b",
+            "name": "AssetAddedToTokens",
+            "nameLocation": "877:18:86",
+            "parameters": {
+              "id": 34709,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34704,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenIds",
+                  "nameLocation": "915:8:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34710,
+                  "src": "905:18:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34702,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "905:7:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 34703,
+                    "nodeType": "ArrayTypeName",
+                    "src": "905:9:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34706,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "948:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34710,
+                  "src": "933:22:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34705,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "933:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34708,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "replacesId",
+                  "nameLocation": "980:10:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34710,
+                  "src": "965:25:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34707,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "965:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "895:101:86"
+            }
+          },
+          {
+            "id": 34719,
+            "nodeType": "EventDefinition",
+            "src": "1393:126:86",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 34711,
+              "nodeType": "StructuredDocumentation",
+              "src": "1003:385:86",
+              "text": " @notice Used to notify listeners that an asset object at `assetId` is accepted by the token and migrated\n  from token's pending assets array to active assets array of the token.\n @param tokenId ID of the token that had a new asset accepted\n @param assetId ID of the asset that was accepted\n @param replacesId ID of the asset that was replaced"
+            },
+            "eventSelector": "3f2709a99f6c06b4e57bbb38eb0134332f96f51a3da314f41a515adbb28b17cc",
+            "name": "AssetAccepted",
+            "nameLocation": "1399:13:86",
+            "parameters": {
+              "id": 34718,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34713,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1438:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34719,
+                  "src": "1422:23:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34712,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1422:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34715,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "1470:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34719,
+                  "src": "1455:22:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34714,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1455:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34717,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "replacesId",
+                  "nameLocation": "1502:10:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34719,
+                  "src": "1487:25:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34716,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1487:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1412:106:86"
+            }
+          },
+          {
+            "id": 34726,
+            "nodeType": "EventDefinition",
+            "src": "1826:69:86",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 34720,
+              "nodeType": "StructuredDocumentation",
+              "src": "1525:296:86",
+              "text": " @notice Used to notify listeners that an asset object at `assetId` is rejected from token and is dropped\n  from the pending assets array of the token.\n @param tokenId ID of the token that had an asset rejected\n @param assetId ID of the asset that was rejected"
+            },
+            "eventSelector": "1010837a46db9510cad56c9b63e97183557a136e9d4ddbec309ce52c99afb124",
+            "name": "AssetRejected",
+            "nameLocation": "1832:13:86",
+            "parameters": {
+              "id": 34725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34722,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1862:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34726,
+                  "src": "1846:23:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34721,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1846:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34724,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "1886:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34726,
+                  "src": "1871:22:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34723,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1871:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1845:49:86"
+            }
+          },
+          {
+            "id": 34731,
+            "nodeType": "EventDefinition",
+            "src": "2080:48:86",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 34727,
+              "nodeType": "StructuredDocumentation",
+              "src": "1901:174:86",
+              "text": " @notice Used to notify listeners that token's prioritiy array is reordered.\n @param tokenId ID of the token that had the asset priority array updated"
+            },
+            "eventSelector": "f0bfd70b0068f973d58178846ca67112671ec45e060838f7de5662036bcf8017",
+            "name": "AssetPrioritySet",
+            "nameLocation": "2086:16:86",
+            "parameters": {
+              "id": 34730,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34729,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "2119:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34731,
+                  "src": "2103:23:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34728,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2103:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2102:25:86"
+            }
+          },
+          {
+            "id": 34740,
+            "nodeType": "EventDefinition",
+            "src": "2608:128:86",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 34732,
+              "nodeType": "StructuredDocumentation",
+              "src": "2134:469:86",
+              "text": " @notice Used to notify listeners that owner has granted an approval to the user to manage the assets of a\n  given token.\n @dev Approvals must be cleared on transfer\n @param owner Address of the account that has granted the approval for all token's assets\n @param approved Address of the account that has been granted approval to manage the token's assets\n @param tokenId ID of the token on which the approval was granted"
+            },
+            "eventSelector": "b90cc0d925ac3511ab6af2d7ca73ffcf7ec4bd871fff36b958ecf440079c463e",
+            "name": "ApprovalForAssets",
+            "nameLocation": "2614:17:86",
+            "parameters": {
+              "id": 34739,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34734,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "2657:5:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34740,
+                  "src": "2641:21:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34733,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2641:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34736,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "approved",
+                  "nameLocation": "2688:8:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34740,
+                  "src": "2672:24:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34735,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2672:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34738,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "2722:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34740,
+                  "src": "2706:23:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34737,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2706:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2631:104:86"
+            }
+          },
+          {
+            "id": 34749,
+            "nodeType": "EventDefinition",
+            "src": "3259:124:86",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 34741,
+              "nodeType": "StructuredDocumentation",
+              "src": "2742:512:86",
+              "text": " @notice Used to notify listeners that owner has granted approval to the user to manage assets of all of their\n  tokens.\n @param owner Address of the account that has granted the approval for all assets on all of their tokens\n @param operator Address of the account that has been granted the approval to manage the token's assets on all of\n  the tokens\n @param approved Boolean value signifying whether the permission has been granted (`true`) or revoked (`false`)"
+            },
+            "eventSelector": "0cff4fcf777050010027190b8061fd8bfd1de16d81b1f94e9752df1427a26235",
+            "name": "ApprovalForAllForAssets",
+            "nameLocation": "3265:23:86",
+            "parameters": {
+              "id": 34748,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34743,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "3314:5:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34749,
+                  "src": "3298:21:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3298:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34745,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nameLocation": "3345:8:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34749,
+                  "src": "3329:24:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34744,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3329:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34747,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "approved",
+                  "nameLocation": "3368:8:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34749,
+                  "src": "3363:13:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34746,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3363:4:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3288:94:86"
+            }
+          },
+          {
+            "id": 34759,
+            "nodeType": "FunctionDefinition",
+            "src": "4155:108:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34750,
+              "nodeType": "StructuredDocumentation",
+              "src": "3389:761:86",
+              "text": " @notice Accepts an asset at from the pending array of given token.\n @dev Migrates the asset from the token's pending asset array to the token's active asset array.\n @dev Active assets cannot be removed by anyone, but can be replaced by a new asset.\n @dev Requirements:\n  - The caller must own the token or be approved to manage the token's assets\n  - `tokenId` must exist.\n  - `index` must be in range of the length of the pending asset array.\n @dev Emits an {AssetAccepted} event.\n @param tokenId ID of the token for which to accept the pending asset\n @param index Index of the asset in the pending array to accept\n @param assetId ID of the asset expected to be in the index"
+            },
+            "functionSelector": "fc3517c8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptAsset",
+            "nameLocation": "4164:11:86",
+            "parameters": {
+              "id": 34757,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34752,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "4193:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34759,
+                  "src": "4185:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34751,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4185:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34754,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "4218:5:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34759,
+                  "src": "4210:13:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34753,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4210:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34756,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "4240:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34759,
+                  "src": "4233:14:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34755,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4233:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4175:78:86"
+            },
+            "returnParameters": {
+              "id": 34758,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4262:0:86"
+            },
+            "scope": 34868,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34769,
+            "nodeType": "FunctionDefinition",
+            "src": "4910:108:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34760,
+              "nodeType": "StructuredDocumentation",
+              "src": "4269:636:86",
+              "text": " @notice Rejects an asset from the pending array of given token.\n @dev Removes the asset from the token's pending asset array.\n @dev Requirements:\n  - The caller must own the token or be approved to manage the token's assets\n  - `tokenId` must exist.\n  - `index` must be in range of the length of the pending asset array.\n @dev Emits a {AssetRejected} event.\n @param tokenId ID of the token that the asset is being rejected from\n @param index Index of the asset in the pending array to be rejected\n @param assetId ID of the asset expected to be in the index"
+            },
+            "functionSelector": "22f6da9c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rejectAsset",
+            "nameLocation": "4919:11:86",
+            "parameters": {
+              "id": 34767,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34762,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "4948:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34769,
+                  "src": "4940:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34761,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4940:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34764,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "4973:5:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34769,
+                  "src": "4965:13:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34763,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4965:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34766,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "4995:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34769,
+                  "src": "4988:14:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34765,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4988:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4930:78:86"
+            },
+            "returnParameters": {
+              "id": 34768,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5017:0:86"
+            },
+            "scope": 34868,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34777,
+            "nodeType": "FunctionDefinition",
+            "src": "5610:74:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34770,
+              "nodeType": "StructuredDocumentation",
+              "src": "5024:581:86",
+              "text": " @notice Rejects all assets from the pending array of a given token.\n @dev Effecitvely deletes the pending array.\n @dev Requirements:\n  - The caller must own the token or be approved to manage the token's assets\n  - `tokenId` must exist.\n @dev Emits a {AssetRejected} event with assetId = 0.\n @param tokenId ID of the token of which to clear the pending array.\n @param maxRejections Maximum number of expected assets to reject, used to prevent from rejecting assets which\n  arrive just before this operation."
+            },
+            "functionSelector": "e7de4de4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rejectAllAssets",
+            "nameLocation": "5619:15:86",
+            "parameters": {
+              "id": 34775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34772,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "5643:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34777,
+                  "src": "5635:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34771,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5635:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34774,
+                  "mutability": "mutable",
+                  "name": "maxRejections",
+                  "nameLocation": "5660:13:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34777,
+                  "src": "5652:21:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34773,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5652:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5634:40:86"
+            },
+            "returnParameters": {
+              "id": 34776,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5683:0:86"
+            },
+            "scope": 34868,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34786,
+            "nodeType": "FunctionDefinition",
+            "src": "6509:99:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34778,
+              "nodeType": "StructuredDocumentation",
+              "src": "5690:814:86",
+              "text": " @notice Sets a new priority array for a given token.\n @dev The priority array is a non-sequential list of `uint64`s, where the lowest value is considered highest\n  priority.\n @dev Value `0` of a priority is a special case equivalent to unitialized.\n @dev Requirements:\n  - The caller must own the token or be approved to manage the token's assets\n  - `tokenId` must exist.\n  - The length of `priorities` must be equal the length of the active assets array.\n @dev Emits a {AssetPrioritySet} event.\n @param tokenId ID of the token to set the priorities for\n @param priorities An array of priorities of active assets. The succesion of items in the priorities array\n  matches that of the succesion of items in the active array"
+            },
+            "functionSelector": "de8e602c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPriority",
+            "nameLocation": "6518:11:86",
+            "parameters": {
+              "id": 34784,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34780,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "6547:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34786,
+                  "src": "6539:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34779,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6539:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34783,
+                  "mutability": "mutable",
+                  "name": "priorities",
+                  "nameLocation": "6582:10:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34786,
+                  "src": "6564:28:86",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint64_$dyn_calldata_ptr",
+                    "typeString": "uint64[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34781,
+                      "name": "uint64",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6564:6:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "id": 34782,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6564:8:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint64_$dyn_storage_ptr",
+                      "typeString": "uint64[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6529:69:86"
+            },
+            "returnParameters": {
+              "id": 34785,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6607:0:86"
+            },
+            "scope": 34868,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34795,
+            "nodeType": "FunctionDefinition",
+            "src": "7031:96:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34787,
+              "nodeType": "StructuredDocumentation",
+              "src": "6614:412:86",
+              "text": " @notice Used to retrieve IDs of the active assets of given token.\n @dev Asset data is stored by reference, in order to access the data corresponding to the ID, call\n  `getAssetMetadata(tokenId, assetId)`.\n @dev You can safely get 10k\n @param tokenId ID of the token to retrieve the IDs of the active assets\n @return An array of active asset IDs of the given token"
+            },
+            "functionSelector": "7280281e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getActiveAssets",
+            "nameLocation": "7040:15:86",
+            "parameters": {
+              "id": 34790,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34789,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "7073:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34795,
+                  "src": "7065:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34788,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7065:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7055:31:86"
+            },
+            "returnParameters": {
+              "id": 34794,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34793,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34795,
+                  "src": "7110:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint64_$dyn_memory_ptr",
+                    "typeString": "uint64[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34791,
+                      "name": "uint64",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "7110:6:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "id": 34792,
+                    "nodeType": "ArrayTypeName",
+                    "src": "7110:8:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint64_$dyn_storage_ptr",
+                      "typeString": "uint64[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7109:17:86"
+            },
+            "scope": 34868,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34804,
+            "nodeType": "FunctionDefinition",
+            "src": "7518:97:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34796,
+              "nodeType": "StructuredDocumentation",
+              "src": "7133:380:86",
+              "text": " @notice Used to retrieve IDs of the pending assets of given token.\n @dev Asset data is stored by reference, in order to access the data corresponding to the ID, call\n  `getAssetMetadata(tokenId, assetId)`.\n @param tokenId ID of the token to retrieve the IDs of the pending assets\n @return An array of pending asset IDs of the given token"
+            },
+            "functionSelector": "51532e5a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPendingAssets",
+            "nameLocation": "7527:16:86",
+            "parameters": {
+              "id": 34799,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34798,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "7561:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34804,
+                  "src": "7553:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34797,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7553:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7543:31:86"
+            },
+            "returnParameters": {
+              "id": 34803,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34802,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34804,
+                  "src": "7598:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint64_$dyn_memory_ptr",
+                    "typeString": "uint64[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34800,
+                      "name": "uint64",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "7598:6:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "id": 34801,
+                    "nodeType": "ArrayTypeName",
+                    "src": "7598:8:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint64_$dyn_storage_ptr",
+                      "typeString": "uint64[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7597:17:86"
+            },
+            "scope": 34868,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34813,
+            "nodeType": "FunctionDefinition",
+            "src": "8034:105:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34805,
+              "nodeType": "StructuredDocumentation",
+              "src": "7621:408:86",
+              "text": " @notice Used to retrieve the priorities of the active resoources of a given token.\n @dev Asset priorities are a non-sequential array of uint64 values with an array size equal to active asset\n  priorites.\n @param tokenId ID of the token for which to retrieve the priorities of the active assets\n @return An array of priorities of the active assets of the given token"
+            },
+            "functionSelector": "5e94354a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getActiveAssetPriorities",
+            "nameLocation": "8043:24:86",
+            "parameters": {
+              "id": 34808,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34807,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "8085:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34813,
+                  "src": "8077:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34806,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8077:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8067:31:86"
+            },
+            "returnParameters": {
+              "id": 34812,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34811,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34813,
+                  "src": "8122:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint64_$dyn_memory_ptr",
+                    "typeString": "uint64[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 34809,
+                      "name": "uint64",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "8122:6:86",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "id": 34810,
+                    "nodeType": "ArrayTypeName",
+                    "src": "8122:8:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint64_$dyn_storage_ptr",
+                      "typeString": "uint64[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8121:17:86"
+            },
+            "scope": 34868,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34823,
+            "nodeType": "FunctionDefinition",
+            "src": "8618:119:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34814,
+              "nodeType": "StructuredDocumentation",
+              "src": "8145:468:86",
+              "text": " @notice Used to retrieve the asset that will be replaced if a given asset from the token's pending array\n  is accepted.\n @dev Asset data is stored by reference, in order to access the data corresponding to the ID, call\n  `getAssetMetadata(tokenId, assetId)`.\n @param tokenId ID of the token to check\n @param newAssetId ID of the pending asset which will be accepted\n @return ID of the asset which will be replaced"
+            },
+            "functionSelector": "df6f556b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAssetReplacements",
+            "nameLocation": "8627:20:86",
+            "parameters": {
+              "id": 34819,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34816,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "8665:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34823,
+                  "src": "8657:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34815,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8657:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34818,
+                  "mutability": "mutable",
+                  "name": "newAssetId",
+                  "nameLocation": "8689:10:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34823,
+                  "src": "8682:17:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34817,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8682:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8647:58:86"
+            },
+            "returnParameters": {
+              "id": 34822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34821,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34823,
+                  "src": "8729:6:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34820,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8729:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8728:8:86"
+            },
+            "scope": 34868,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34833,
+            "nodeType": "FunctionDefinition",
+            "src": "9287:119:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34824,
+              "nodeType": "StructuredDocumentation",
+              "src": "8743:539:86",
+              "text": " @notice Used to fetch the asset metadata of the specified token's active asset with the given index.\n @dev Assets are stored by reference mapping `_assets[assetId]`.\n @dev Can be overriden to implement enumerate, fallback or other custom logic.\n @param tokenId ID of the token from which to retrieve the asset metadata\n @param assetId Asset Id, must be in the active assets array\n @return The metadata of the asset belonging to the specified index in the token's active assets\n  array"
+            },
+            "functionSelector": "5e2e3292",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAssetMetadata",
+            "nameLocation": "9296:16:86",
+            "parameters": {
+              "id": 34829,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34826,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "9330:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34833,
+                  "src": "9322:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34825,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9322:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34828,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "9354:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34833,
+                  "src": "9347:14:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 34827,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9347:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9312:55:86"
+            },
+            "returnParameters": {
+              "id": 34832,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34831,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34833,
+                  "src": "9391:13:86",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 34830,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9391:6:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9390:15:86"
+            },
+            "scope": 34868,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34841,
+            "nodeType": "FunctionDefinition",
+            "src": "10192:64:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34834,
+              "nodeType": "StructuredDocumentation",
+              "src": "9430:757:86",
+              "text": " @notice Used to grant permission to the user to manage token's assets.\n @dev This differs from transfer approvals, as approvals are not cleared when the approved party accepts or\n  rejects an asset, or sets asset priorities. This approval is cleared on token transfer.\n @dev Only a single account can be approved at a time, so approving the `0x0` address clears previous approvals.\n @dev Requirements:\n  - The caller must own the token or be an approved operator.\n  - `tokenId` must exist.\n @dev Emits an {ApprovalForAssets} event.\n @param to Address of the account to grant the approval to\n @param tokenId ID of the token for which the approval to manage the assets is granted"
+            },
+            "functionSelector": "5ea72f36",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approveForAssets",
+            "nameLocation": "10201:16:86",
+            "parameters": {
+              "id": 34839,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34836,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "10226:2:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34841,
+                  "src": "10218:10:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34835,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10218:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34838,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "10238:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34841,
+                  "src": "10230:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34837,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10230:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10217:29:86"
+            },
+            "returnParameters": {
+              "id": 34840,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "10255:0:86"
+            },
+            "scope": 34868,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34849,
+            "nodeType": "FunctionDefinition",
+            "src": "10621:93:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34842,
+              "nodeType": "StructuredDocumentation",
+              "src": "10262:354:86",
+              "text": " @notice Used to retrieve the address of the account approved to manage assets of a given token.\n @dev Requirements:\n  - `tokenId` must exist.\n @param tokenId ID of the token for which to retrieve the approved address\n @return Address of the account that is approved to manage the specified token's assets"
+            },
+            "functionSelector": "e467a48f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getApprovedForAssets",
+            "nameLocation": "10630:20:86",
+            "parameters": {
+              "id": 34845,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34844,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "10668:7:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34849,
+                  "src": "10660:15:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34843,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10660:7:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10650:31:86"
+            },
+            "returnParameters": {
+              "id": 34848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34847,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34849,
+                  "src": "10705:7:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34846,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10705:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10704:9:86"
+            },
+            "scope": 34868,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34857,
+            "nodeType": "FunctionDefinition",
+            "src": "11317:100:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34850,
+              "nodeType": "StructuredDocumentation",
+              "src": "10720:592:86",
+              "text": " @notice Used to add or remove an operator of assets for the caller.\n @dev Operators can call {acceptAsset}, {rejectAsset}, {rejectAllAssets} or {setPriority} for any token\n  owned by the caller.\n @dev Requirements:\n  - The `operator` cannot be the caller.\n @dev Emits an {ApprovalForAllForAssets} event.\n @param operator Address of the account to which the operator role is granted or revoked from\n @param approved The boolean value indicating whether the operator role is being granted (`true`) or revoked\n  (`false`)"
+            },
+            "functionSelector": "8507dc28",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setApprovalForAllForAssets",
+            "nameLocation": "11326:26:86",
+            "parameters": {
+              "id": 34855,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34852,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nameLocation": "11370:8:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34857,
+                  "src": "11362:16:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34851,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "11362:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34854,
+                  "mutability": "mutable",
+                  "name": "approved",
+                  "nameLocation": "11393:8:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34857,
+                  "src": "11388:13:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34853,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "11388:4:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "11352:55:86"
+            },
+            "returnParameters": {
+              "id": 34856,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "11416:0:86"
+            },
+            "scope": 34868,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34867,
+            "nodeType": "FunctionDefinition",
+            "src": "11924:119:86",
+            "nodes": [],
+            "documentation": {
+              "id": 34858,
+              "nodeType": "StructuredDocumentation",
+              "src": "11423:496:86",
+              "text": " @notice Used to check whether the address has been granted the operator role by a given address or not.\n @dev See {setApprovalForAllForAssets}.\n @param owner Address of the account that we are checking for whether it has granted the operator role\n @param operator Address of the account that we are checking whether it has the operator role or not\n @return A boolean value indicating wehter the account we are checking has been granted the operator role"
+            },
+            "functionSelector": "22e6d160",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isApprovedForAllForAssets",
+            "nameLocation": "11933:25:86",
+            "parameters": {
+              "id": 34863,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34860,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "11976:5:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34867,
+                  "src": "11968:13:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34859,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "11968:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34862,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nameLocation": "11999:8:86",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34867,
+                  "src": "11991:16:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34861,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "11991:7:86",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "11958:55:86"
+            },
+            "returnParameters": {
+              "id": 34866,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34865,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34867,
+                  "src": "12037:4:86",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 34864,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "12037:4:86",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "12036:6:86"
+            },
+            "scope": 34868,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 34694,
+              "name": "IERC165",
+              "nameLocations": [
+                "271:7:86"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 28205,
+              "src": "271:7:86"
+            },
+            "id": 34695,
+            "nodeType": "InheritanceSpecifier",
+            "src": "271:7:86"
+          }
+        ],
+        "canonicalName": "IERC5773",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 34693,
+          "nodeType": "StructuredDocumentation",
+          "src": "133:115:86",
+          "text": " @title IERC5773\n @author RMRK team\n @notice Interface smart contract of the RMRK multi asset module."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          34868,
+          28205
+        ],
+        "name": "IERC5773",
+        "nameLocation": "259:8:86",
+        "scope": 34869,
+        "usedErrors": [],
+        "usedEvents": [
+          34700,
+          34710,
+          34719,
+          34726,
+          34731,
+          34740,
+          34749
+        ]
+      }
+    ],
+    "license": "Apache-2.0"
+  },
+  "id": 86
+}

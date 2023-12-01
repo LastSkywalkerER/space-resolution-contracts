@@ -6,7 +6,7 @@ import {IGameRegistry} from "./interfaces/IGameRegistry.sol";
 import {Position, PlayerStats, PlayerStatsResponse} from "./interfaces/Types.sol";
 
 contract GameLogic {
-    IGameRegistry gameRegistry;
+    IGameRegistry public gameRegistry;
 
     constructor(address gameRegistry_) {
         gameRegistry = IGameRegistry(gameRegistry_);

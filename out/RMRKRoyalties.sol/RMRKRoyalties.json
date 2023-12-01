@@ -1,0 +1,1636 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "RMRKRoyaltiesTooHigh",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "getRoyaltyPercentage",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRoyaltyRecipient",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "salePrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "royaltyInfo",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "royaltyAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newRoyaltyRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "updateRoyaltyRecipient",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getRoyaltyPercentage()": "59c8b7dd",
+    "getRoyaltyRecipient()": "95edc18c",
+    "royaltyInfo(uint256,uint256)": "2a55205a",
+    "updateRoyaltyRecipient(address)": "0fc499f5"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"RMRKRoyaltiesTooHigh\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"getRoyaltyPercentage\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRoyaltyRecipient\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"salePrice\",\"type\":\"uint256\"}],\"name\":\"royaltyInfo\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"royaltyAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newRoyaltyRecipient\",\"type\":\"address\"}],\"name\":\"updateRoyaltyRecipient\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"RMRK team\",\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"`royaltyPercentageBps` is expressed in basis points, so 1 basis point equals 0.01% and 500 basis points  equal 5%.\",\"params\":{\"royaltyPercentageBps\":\"The royalty percentage expressed in basis points\",\"royaltyRecipient\":\"Address to which royalties should be sent\"}},\"getRoyaltyPercentage()\":{\"returns\":{\"_0\":\"The royalty percentage expressed in the basis points\"}},\"getRoyaltyRecipient()\":{\"returns\":{\"_0\":\"Address of the recipient of royalties\"}},\"royaltyInfo(uint256,uint256)\":{\"params\":{\"salePrice\":\"Price of the token sale\",\"tokenId\":\"ID of the token for which the royalty info is being retrieved\"},\"returns\":{\"receiver\":\"The beneficiary receiving royalties of the sale\",\"royaltyAmount\":\"The value of the royalties recieved by the `receiver` from the sale\"}},\"updateRoyaltyRecipient(address)\":{\"details\":\"Custom access control has to be implemented to ensure that only the intended actors can update the  beneficiary.\",\"params\":{\"newRoyaltyRecipient\":\"Address of the new recipient of royalties\"}}},\"title\":\"RMRKRoyalties\",\"version\":1},\"userdoc\":{\"errors\":{\"RMRKRoyaltiesTooHigh()\":[{\"notice\":\"Attempting to set the royalties to a value higher than 100% (10000 in basis points)\"}]},\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Used to initiate the smart contract.\"},\"getRoyaltyPercentage()\":{\"notice\":\"Used to retrieve the specified royalty percentage.\"},\"getRoyaltyRecipient()\":{\"notice\":\"Used to retrieve the recipient of royalties.\"},\"royaltyInfo(uint256,uint256)\":{\"notice\":\"Used to retrieve the information about who shall receive royalties of a sale of the specified token and  how much they will be.\"},\"updateRoyaltyRecipient(address)\":{\"notice\":\"Used to update recipient of royalties.\"}},\"notice\":\"Smart contract of the RMRK Royalties module.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/RMRKRoyalties.sol\":\"RMRKRoyalties\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@rmrk-team/=node_modules/@rmrk-team/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/interfaces/IERC2981.sol\":{\"keccak256\":\"0x3976825a61df20457730b79ad0ac9c8908e3c7978ed9bf090c67137c91256b5c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0f3fe369b6d0e101844b425f1d08e35bf512962d0590b1f80decb8130c9a6890\",\"dweb:/ipfs/QmXCan6wX4qwJkdR1VvsYLeq8JTB2YxRHLucpuXpsKAvzQ\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/RMRKRoyalties.sol\":{\"keccak256\":\"0xf744b49d208b4d1e6c00ceb4650cb2c9e6b1ef547d4aaf80045f398b1154a4a6\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://896b29ade2d173ed093d94bc3d2880b748c37bf050dfac6bf1db42e035258203\",\"dweb:/ipfs/QmXbK7E3LTKxGquetSn5tWFpiFDDjFBWW4Lw7KwgT1x4T4\"]},\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/library/RMRKErrors.sol\":{\"keccak256\":\"0x7d6a3648047dca37d1e21550c723d960e4c9d3783e3d0efb84602266cce45b35\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://170064f8e2d6211e251a7610236beada23c8c598987cb3dbd62826007a4ca553\",\"dweb:/ipfs/QmSgM9T5Q2azFicGQsiXPG8YZSiDEGgRYeHBUe2iAcP3gN\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "RMRKRoyaltiesTooHigh"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getRoyaltyPercentage",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getRoyaltyRecipient",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "salePrice",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "royaltyInfo",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "receiver",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "royaltyAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newRoyaltyRecipient",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "updateRoyaltyRecipient"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "constructor": {
+            "details": "`royaltyPercentageBps` is expressed in basis points, so 1 basis point equals 0.01% and 500 basis points  equal 5%.",
+            "params": {
+              "royaltyPercentageBps": "The royalty percentage expressed in basis points",
+              "royaltyRecipient": "Address to which royalties should be sent"
+            }
+          },
+          "getRoyaltyPercentage()": {
+            "returns": {
+              "_0": "The royalty percentage expressed in the basis points"
+            }
+          },
+          "getRoyaltyRecipient()": {
+            "returns": {
+              "_0": "Address of the recipient of royalties"
+            }
+          },
+          "royaltyInfo(uint256,uint256)": {
+            "params": {
+              "salePrice": "Price of the token sale",
+              "tokenId": "ID of the token for which the royalty info is being retrieved"
+            },
+            "returns": {
+              "receiver": "The beneficiary receiving royalties of the sale",
+              "royaltyAmount": "The value of the royalties recieved by the `receiver` from the sale"
+            }
+          },
+          "updateRoyaltyRecipient(address)": {
+            "details": "Custom access control has to be implemented to ensure that only the intended actors can update the  beneficiary.",
+            "params": {
+              "newRoyaltyRecipient": "Address of the new recipient of royalties"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "constructor": {
+            "notice": "Used to initiate the smart contract."
+          },
+          "getRoyaltyPercentage()": {
+            "notice": "Used to retrieve the specified royalty percentage."
+          },
+          "getRoyaltyRecipient()": {
+            "notice": "Used to retrieve the recipient of royalties."
+          },
+          "royaltyInfo(uint256,uint256)": {
+            "notice": "Used to retrieve the information about who shall receive royalties of a sale of the specified token and  how much they will be."
+          },
+          "updateRoyaltyRecipient(address)": {
+            "notice": "Used to update recipient of royalties."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@rmrk-team/=node_modules/@rmrk-team/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/RMRKRoyalties.sol": "RMRKRoyalties"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/interfaces/IERC2981.sol": {
+        "keccak256": "0x3976825a61df20457730b79ad0ac9c8908e3c7978ed9bf090c67137c91256b5c",
+        "urls": [
+          "bzz-raw://0f3fe369b6d0e101844b425f1d08e35bf512962d0590b1f80decb8130c9a6890",
+          "dweb:/ipfs/QmXCan6wX4qwJkdR1VvsYLeq8JTB2YxRHLucpuXpsKAvzQ"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/RMRKRoyalties.sol": {
+        "keccak256": "0xf744b49d208b4d1e6c00ceb4650cb2c9e6b1ef547d4aaf80045f398b1154a4a6",
+        "urls": [
+          "bzz-raw://896b29ade2d173ed093d94bc3d2880b748c37bf050dfac6bf1db42e035258203",
+          "dweb:/ipfs/QmXbK7E3LTKxGquetSn5tWFpiFDDjFBWW4Lw7KwgT1x4T4"
+        ],
+        "license": "Apache-2.0"
+      },
+      "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/library/RMRKErrors.sol": {
+        "keccak256": "0x7d6a3648047dca37d1e21550c723d960e4c9d3783e3d0efb84602266cce45b35",
+        "urls": [
+          "bzz-raw://170064f8e2d6211e251a7610236beada23c8c598987cb3dbd62826007a4ca553",
+          "dweb:/ipfs/QmSgM9T5Q2azFicGQsiXPG8YZSiDEGgRYeHBUe2iAcP3gN"
+        ],
+        "license": "Apache-2.0"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/RMRKRoyalties.sol",
+    "id": 33447,
+    "exportedSymbols": {
+      "ERC721AddressZeroIsNotaValidOwner": [
+        33549
+      ],
+      "ERC721ApprovalToCurrentOwner": [
+        33552
+      ],
+      "ERC721ApproveCallerIsNotOwnerNorApprovedForAll": [
+        33555
+      ],
+      "ERC721ApproveToCaller": [
+        33561
+      ],
+      "ERC721ApprovedQueryForNonexistentToken": [
+        33558
+      ],
+      "ERC721InvalidTokenId": [
+        33564
+      ],
+      "ERC721MintToTheZeroAddress": [
+        33567
+      ],
+      "ERC721NotApprovedOrOwner": [
+        33570
+      ],
+      "ERC721TokenAlreadyMinted": [
+        33573
+      ],
+      "ERC721TransferFromIncorrectOwner": [
+        33576
+      ],
+      "ERC721TransferToNonReceiverImplementer": [
+        33579
+      ],
+      "ERC721TransferToTheZeroAddress": [
+        33582
+      ],
+      "IERC165": [
+        28205
+      ],
+      "IERC2981": [
+        27680
+      ],
+      "RMRKApprovalForAssetsToCurrentOwner": [
+        33585
+      ],
+      "RMRKApproveForAssetsCallerIsNotOwnerNorApprovedForAll": [
+        33588
+      ],
+      "RMRKAssetAlreadyExists": [
+        33745
+      ],
+      "RMRKBadConfig": [
+        33591
+      ],
+      "RMRKBadPriorityListLength": [
+        33594
+      ],
+      "RMRKCanOnlyDoBulkOperationsOnOwnedTokens": [
+        33784
+      ],
+      "RMRKCanOnlyDoBulkOperationsWithOneTokenAtATime": [
+        33787
+      ],
+      "RMRKCannotTransferSoulbound": [
+        33600
+      ],
+      "RMRKCatalogRequiredForParts": [
+        33597
+      ],
+      "RMRKChildAlreadyExists": [
+        33603
+      ],
+      "RMRKChildIndexOutOfRange": [
+        33606
+      ],
+      "RMRKChildNotFoundInParent": [
+        33609
+      ],
+      "RMRKCollaboratorArraysNotEqualLength": [
+        33612
+      ],
+      "RMRKCollectionAlreadyRegistered": [
+        33615
+      ],
+      "RMRKCollectionNotRegistered": [
+        33618
+      ],
+      "RMRKEquippableEquipNotAllowedByCatalog": [
+        33621
+      ],
+      "RMRKExpiredDeadline": [
+        33624
+      ],
+      "RMRKIdZeroForbidden": [
+        33627
+      ],
+      "RMRKIndexOutOfRange": [
+        33630
+      ],
+      "RMRKInvalidChildReclaim": [
+        33633
+      ],
+      "RMRKInvalidSignature": [
+        33636
+      ],
+      "RMRKIsNotContract": [
+        33639
+      ],
+      "RMRKLocked": [
+        33642
+      ],
+      "RMRKMaxPendingAssetsReached": [
+        33648
+      ],
+      "RMRKMaxPendingChildrenReached": [
+        33645
+      ],
+      "RMRKMaxRecursiveBurnsReached": [
+        33655
+      ],
+      "RMRKMintOverMax": [
+        33658
+      ],
+      "RMRKMintToNonRMRKNestableImplementer": [
+        33661
+      ],
+      "RMRKMintZero": [
+        33664
+      ],
+      "RMRKMismachedArrayLength": [
+        33667
+      ],
+      "RMRKMustUnequipFirst": [
+        33670
+      ],
+      "RMRKNestableTooDeep": [
+        33673
+      ],
+      "RMRKNestableTransferToDescendant": [
+        33676
+      ],
+      "RMRKNestableTransferToNonRMRKNestableImplementer": [
+        33679
+      ],
+      "RMRKNestableTransferToSelf": [
+        33682
+      ],
+      "RMRKNewContributorIsZeroAddress": [
+        33724
+      ],
+      "RMRKNewOwnerIsZeroAddress": [
+        33721
+      ],
+      "RMRKNoAssetMatchingId": [
+        33685
+      ],
+      "RMRKNotApprovedForAssetsOrOwner": [
+        33688
+      ],
+      "RMRKNotApprovedOrDirectOwner": [
+        33691
+      ],
+      "RMRKNotCollectionCollaborator": [
+        33694
+      ],
+      "RMRKNotCollectionIssuer": [
+        33697
+      ],
+      "RMRKNotCollectionIssuerOrCollaborator": [
+        33700
+      ],
+      "RMRKNotComposableAsset": [
+        33703
+      ],
+      "RMRKNotEquipped": [
+        33706
+      ],
+      "RMRKNotOwner": [
+        33709
+      ],
+      "RMRKNotOwnerOrContributor": [
+        33712
+      ],
+      "RMRKNotSpecificAddress": [
+        33715
+      ],
+      "RMRKNotTokenOwner": [
+        33718
+      ],
+      "RMRKOwnableNotImplemented": [
+        33727
+      ],
+      "RMRKParentIsNotNFT": [
+        33730
+      ],
+      "RMRKPartAlreadyExists": [
+        33733
+      ],
+      "RMRKPartDoesNotExist": [
+        33736
+      ],
+      "RMRKPartIsNotSlot": [
+        33739
+      ],
+      "RMRKPendingChildIndexOutOfRange": [
+        33742
+      ],
+      "RMRKRoyalties": [
+        33446
+      ],
+      "RMRKRoyaltiesTooHigh": [
+        33781
+      ],
+      "RMRKSlotAlreadyUsed": [
+        33748
+      ],
+      "RMRKTargetAssetCannotReceiveSlot": [
+        33751
+      ],
+      "RMRKTokenCannotBeEquippedWithAssetIntoSlot": [
+        33754
+      ],
+      "RMRKTokenDoesNotHaveAsset": [
+        33757
+      ],
+      "RMRKTokenHasNoAssets": [
+        33760
+      ],
+      "RMRKUnexpectedAssetId": [
+        33772
+      ],
+      "RMRKUnexpectedChildId": [
+        33763
+      ],
+      "RMRKUnexpectedNumberOfAssets": [
+        33766
+      ],
+      "RMRKUnexpectedNumberOfChildren": [
+        33769
+      ],
+      "RMRKUnexpectedParent": [
+        33775
+      ],
+      "RMRKWrongValueSent": [
+        33790
+      ],
+      "RMRKZeroLengthIdsPassed": [
+        33778
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:2953:80",
+    "nodes": [
+      {
+        "id": 33352,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:80",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 33353,
+        "nodeType": "ImportDirective",
+        "src": "66:57:80",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/interfaces/IERC2981.sol",
+        "file": "@openzeppelin/contracts/interfaces/IERC2981.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 33447,
+        "sourceUnit": 27681,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 33354,
+        "nodeType": "ImportDirective",
+        "src": "124:35:80",
+        "nodes": [],
+        "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/library/RMRKErrors.sol",
+        "file": "../library/RMRKErrors.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 33447,
+        "sourceUnit": 33791,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 33446,
+        "nodeType": "ContractDefinition",
+        "src": "270:2722:80",
+        "nodes": [
+          {
+            "id": 33358,
+            "nodeType": "VariableDeclaration",
+            "src": "392:33:80",
+            "nodes": [],
+            "constant": false,
+            "documentation": {
+              "id": 33356,
+              "nodeType": "StructuredDocumentation",
+              "src": "308:19:80",
+              "text": "is IERC2981 *"
+            },
+            "mutability": "mutable",
+            "name": "_royaltyRecipient",
+            "nameLocation": "408:17:80",
+            "scope": 33446,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 33357,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "392:7:80",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 33360,
+            "nodeType": "VariableDeclaration",
+            "src": "431:37:80",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "_royaltyPercentageBps",
+            "nameLocation": "447:21:80",
+            "scope": 33446,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 33359,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "431:7:80",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 33384,
+            "nodeType": "FunctionDefinition",
+            "src": "834:251:80",
+            "nodes": [],
+            "body": {
+              "id": 33383,
+              "nodeType": "Block",
+              "src": "902:183:80",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 33369,
+                        "name": "royaltyRecipient",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33363,
+                        "src": "933:16:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 33368,
+                      "name": "_setRoyaltyRecipient",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33401,
+                      "src": "912:20:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 33370,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "912:38:80",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 33371,
+                  "nodeType": "ExpressionStatement",
+                  "src": "912:38:80"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 33374,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 33372,
+                      "name": "royaltyPercentageBps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33365,
+                      "src": "964:20:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "3130303030",
+                      "id": 33373,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "988:5:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_10000_by_1",
+                        "typeString": "int_const 10000"
+                      },
+                      "value": "10000"
+                    },
+                    "src": "964:29:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 33378,
+                  "nodeType": "IfStatement",
+                  "src": "960:64:80",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 33375,
+                        "name": "RMRKRoyaltiesTooHigh",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33781,
+                        "src": "1002:20:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 33376,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1002:22:80",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 33377,
+                    "nodeType": "RevertStatement",
+                    "src": "995:29:80"
+                  }
+                },
+                {
+                  "expression": {
+                    "id": 33381,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 33379,
+                      "name": "_royaltyPercentageBps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33360,
+                      "src": "1034:21:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 33380,
+                      "name": "royaltyPercentageBps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33365,
+                      "src": "1058:20:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1034:44:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 33382,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1034:44:80"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 33361,
+              "nodeType": "StructuredDocumentation",
+              "src": "475:354:80",
+              "text": " @notice Used to initiate the smart contract.\n @dev `royaltyPercentageBps` is expressed in basis points, so 1 basis point equals 0.01% and 500 basis points\n  equal 5%.\n @param royaltyRecipient Address to which royalties should be sent\n @param royaltyPercentageBps The royalty percentage expressed in basis points"
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 33366,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33363,
+                  "mutability": "mutable",
+                  "name": "royaltyRecipient",
+                  "nameLocation": "854:16:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33384,
+                  "src": "846:24:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33362,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "846:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33365,
+                  "mutability": "mutable",
+                  "name": "royaltyPercentageBps",
+                  "nameLocation": "880:20:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33384,
+                  "src": "872:28:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33364,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "872:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "845:56:80"
+            },
+            "returnParameters": {
+              "id": 33367,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "902:0:80"
+            },
+            "scope": 33446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 33390,
+            "nodeType": "FunctionDefinition",
+            "src": "1369:92:80",
+            "nodes": [],
+            "documentation": {
+              "id": 33385,
+              "nodeType": "StructuredDocumentation",
+              "src": "1091:273:80",
+              "text": " @notice Used to update recipient of royalties.\n @dev Custom access control has to be implemented to ensure that only the intended actors can update the\n  beneficiary.\n @param newRoyaltyRecipient Address of the new recipient of royalties"
+            },
+            "functionSelector": "0fc499f5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateRoyaltyRecipient",
+            "nameLocation": "1378:22:80",
+            "parameters": {
+              "id": 33388,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33387,
+                  "mutability": "mutable",
+                  "name": "newRoyaltyRecipient",
+                  "nameLocation": "1418:19:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33390,
+                  "src": "1410:27:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33386,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1410:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1400:43:80"
+            },
+            "returnParameters": {
+              "id": 33389,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1460:0:80"
+            },
+            "scope": 33446,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "id": 33401,
+            "nodeType": "FunctionDefinition",
+            "src": "1612:124:80",
+            "nodes": [],
+            "body": {
+              "id": 33400,
+              "nodeType": "Block",
+              "src": "1680:56:80",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 33398,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 33396,
+                      "name": "_royaltyRecipient",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33358,
+                      "src": "1690:17:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 33397,
+                      "name": "newRoyaltyRecipient",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33393,
+                      "src": "1710:19:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1690:39:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 33399,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1690:39:80"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 33391,
+              "nodeType": "StructuredDocumentation",
+              "src": "1467:140:80",
+              "text": " @notice Used to update the royalty recipient.\n @param newRoyaltyRecipient Address of the new recipient of royalties"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setRoyaltyRecipient",
+            "nameLocation": "1621:20:80",
+            "parameters": {
+              "id": 33394,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33393,
+                  "mutability": "mutable",
+                  "name": "newRoyaltyRecipient",
+                  "nameLocation": "1650:19:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33401,
+                  "src": "1642:27:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33392,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1642:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1641:29:80"
+            },
+            "returnParameters": {
+              "id": 33395,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1680:0:80"
+            },
+            "scope": 33446,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 33410,
+            "nodeType": "FunctionDefinition",
+            "src": "1871:110:80",
+            "nodes": [],
+            "body": {
+              "id": 33409,
+              "nodeType": "Block",
+              "src": "1940:41:80",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 33407,
+                    "name": "_royaltyRecipient",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 33358,
+                    "src": "1957:17:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 33406,
+                  "id": 33408,
+                  "nodeType": "Return",
+                  "src": "1950:24:80"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 33402,
+              "nodeType": "StructuredDocumentation",
+              "src": "1742:124:80",
+              "text": " @notice Used to retrieve the recipient of royalties.\n @return Address of the recipient of royalties"
+            },
+            "functionSelector": "95edc18c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRoyaltyRecipient",
+            "nameLocation": "1880:19:80",
+            "parameters": {
+              "id": 33403,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1899:2:80"
+            },
+            "returnParameters": {
+              "id": 33406,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33405,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33410,
+                  "src": "1931:7:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33404,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1931:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1930:9:80"
+            },
+            "scope": 33446,
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "id": 33419,
+            "nodeType": "FunctionDefinition",
+            "src": "2137:115:80",
+            "nodes": [],
+            "body": {
+              "id": 33418,
+              "nodeType": "Block",
+              "src": "2207:45:80",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 33416,
+                    "name": "_royaltyPercentageBps",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 33360,
+                    "src": "2224:21:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 33415,
+                  "id": 33417,
+                  "nodeType": "Return",
+                  "src": "2217:28:80"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 33411,
+              "nodeType": "StructuredDocumentation",
+              "src": "1987:145:80",
+              "text": " @notice Used to retrieve the specified royalty percentage.\n @return The royalty percentage expressed in the basis points"
+            },
+            "functionSelector": "59c8b7dd",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRoyaltyPercentage",
+            "nameLocation": "2146:20:80",
+            "parameters": {
+              "id": 33412,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2166:2:80"
+            },
+            "returnParameters": {
+              "id": 33415,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33414,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33419,
+                  "src": "2198:7:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33413,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2198:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2197:9:80"
+            },
+            "scope": 33446,
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "id": 33445,
+            "nodeType": "FunctionDefinition",
+            "src": "2725:265:80",
+            "nodes": [],
+            "body": {
+              "id": 33444,
+              "nodeType": "Block",
+              "src": "2876:114:80",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 33433,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 33431,
+                      "name": "receiver",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33427,
+                      "src": "2886:8:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 33432,
+                      "name": "_royaltyRecipient",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33358,
+                      "src": "2897:17:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2886:28:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 33434,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2886:28:80"
+                },
+                {
+                  "expression": {
+                    "id": 33442,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 33435,
+                      "name": "royaltyAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33429,
+                      "src": "2924:13:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 33441,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "components": [
+                          {
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 33438,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "id": 33436,
+                              "name": "salePrice",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 33424,
+                              "src": "2941:9:80",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "id": 33437,
+                              "name": "_royaltyPercentageBps",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 33360,
+                              "src": "2953:21:80",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "2941:33:80",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "id": 33439,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "2940:35:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "/",
+                      "rightExpression": {
+                        "hexValue": "3130303030",
+                        "id": 33440,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2978:5:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10000_by_1",
+                          "typeString": "int_const 10000"
+                        },
+                        "value": "10000"
+                      },
+                      "src": "2940:43:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2924:59:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 33443,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2924:59:80"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 33420,
+              "nodeType": "StructuredDocumentation",
+              "src": "2258:462:80",
+              "text": " @notice Used to retrieve the information about who shall receive royalties of a sale of the specified token and\n  how much they will be.\n @param tokenId ID of the token for which the royalty info is being retrieved\n @param salePrice Price of the token sale\n @return receiver The beneficiary receiving royalties of the sale\n @return royaltyAmount The value of the royalties recieved by the `receiver` from the sale"
+            },
+            "functionSelector": "2a55205a",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "royaltyInfo",
+            "nameLocation": "2734:11:80",
+            "parameters": {
+              "id": 33425,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33422,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "2763:7:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33445,
+                  "src": "2755:15:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33421,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2755:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33424,
+                  "mutability": "mutable",
+                  "name": "salePrice",
+                  "nameLocation": "2788:9:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33445,
+                  "src": "2780:17:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33423,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2780:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2745:58:80"
+            },
+            "returnParameters": {
+              "id": 33430,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33427,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "2843:8:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33445,
+                  "src": "2835:16:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33426,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2835:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33429,
+                  "mutability": "mutable",
+                  "name": "royaltyAmount",
+                  "nameLocation": "2861:13:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33445,
+                  "src": "2853:21:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33428,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2853:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2834:41:80"
+            },
+            "scope": 33446,
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "external"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "RMRKRoyalties",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 33355,
+          "nodeType": "StructuredDocumentation",
+          "src": "161:108:80",
+          "text": " @title RMRKRoyalties\n @author RMRK team\n @notice Smart contract of the RMRK Royalties module."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          33446
+        ],
+        "name": "RMRKRoyalties",
+        "nameLocation": "288:13:80",
+        "scope": 33447,
+        "usedErrors": [
+          33781
+        ],
+        "usedEvents": []
+      }
+    ],
+    "license": "Apache-2.0"
+  },
+  "id": 80
+}

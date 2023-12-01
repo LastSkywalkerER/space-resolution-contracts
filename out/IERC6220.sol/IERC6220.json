@@ -1,0 +1,3586 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAllForAssets",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ApprovalForAssets",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "replacesId",
+          "type": "uint64"
+        }
+      ],
+      "name": "AssetAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "replacesId",
+          "type": "uint64"
+        }
+      ],
+      "name": "AssetAddedToTokens",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "AssetPrioritySet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "AssetRejected",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "AssetSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "slotPartId",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "childId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "childAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "childAssetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "ChildAssetEquipped",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "slotPartId",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "childId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "childAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "childAssetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "ChildAssetUnequipped",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "equippableGroupId",
+          "type": "uint64"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "slotPartId",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "parentAddress",
+          "type": "address"
+        }
+      ],
+      "name": "ValidParentEquippableGroupIdSet",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "acceptAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approveForAssets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "parent",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "slotId",
+          "type": "uint64"
+        }
+      ],
+      "name": "canTokenBeEquippedWithAssetIntoSlot",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "childIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "slotPartId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "childAssetId",
+              "type": "uint64"
+            }
+          ],
+          "internalType": "struct IERC6220.IntakeEquip",
+          "name": "data",
+          "type": "tuple"
+        }
+      ],
+      "name": "equip",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getActiveAssetPriorities",
+      "outputs": [
+        {
+          "internalType": "uint64[]",
+          "name": "",
+          "type": "uint64[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getActiveAssets",
+      "outputs": [
+        {
+          "internalType": "uint64[]",
+          "name": "",
+          "type": "uint64[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApprovedForAssets",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "getAssetAndEquippableData",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "metadataURI",
+          "type": "string"
+        },
+        {
+          "internalType": "uint64",
+          "name": "equippableGroupId",
+          "type": "uint64"
+        },
+        {
+          "internalType": "address",
+          "name": "catalogAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint64[]",
+          "name": "partIds",
+          "type": "uint64[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "getAssetMetadata",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "newAssetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "getAssetReplacements",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "targetCatalogAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint64",
+          "name": "slotPartId",
+          "type": "uint64"
+        }
+      ],
+      "name": "getEquipment",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "childAssetId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint256",
+              "name": "childId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "childEquippableAddress",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct IERC6220.Equipment",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPendingAssets",
+      "outputs": [
+        {
+          "internalType": "uint64[]",
+          "name": "",
+          "type": "uint64[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAllForAssets",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "childAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "childId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isChildEquipped",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxRejections",
+          "type": "uint256"
+        }
+      ],
+      "name": "rejectAllAssets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        }
+      ],
+      "name": "rejectAsset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAllForAssets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64[]",
+          "name": "priorities",
+          "type": "uint64[]"
+        }
+      ],
+      "name": "setPriority",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "slotPartId",
+          "type": "uint64"
+        }
+      ],
+      "name": "unequip",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "acceptAsset(uint256,uint256,uint64)": "fc3517c8",
+    "approveForAssets(address,uint256)": "5ea72f36",
+    "canTokenBeEquippedWithAssetIntoSlot(address,uint256,uint64,uint64)": "074334fb",
+    "equip((uint256,uint256,uint64,uint64,uint64))": "38dcf74c",
+    "getActiveAssetPriorities(uint256)": "5e94354a",
+    "getActiveAssets(uint256)": "7280281e",
+    "getApprovedForAssets(uint256)": "e467a48f",
+    "getAssetAndEquippableData(uint256,uint64)": "4e60edba",
+    "getAssetMetadata(uint256,uint64)": "5e2e3292",
+    "getAssetReplacements(uint256,uint64)": "df6f556b",
+    "getEquipment(uint256,address,uint64)": "7507e2ae",
+    "getPendingAssets(uint256)": "51532e5a",
+    "isApprovedForAllForAssets(address,address)": "22e6d160",
+    "isChildEquipped(uint256,address,uint256)": "ee1dffcf",
+    "rejectAllAssets(uint256,uint256)": "e7de4de4",
+    "rejectAsset(uint256,uint256,uint64)": "22f6da9c",
+    "setApprovalForAllForAssets(address,bool)": "8507dc28",
+    "setPriority(uint256,uint64[])": "de8e602c",
+    "supportsInterface(bytes4)": "01ffc9a7",
+    "unequip(uint256,uint64,uint64)": "c259a988"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAllForAssets\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"ApprovalForAssets\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"replacesId\",\"type\":\"uint64\"}],\"name\":\"AssetAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"replacesId\",\"type\":\"uint64\"}],\"name\":\"AssetAddedToTokens\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"AssetPrioritySet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"AssetRejected\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"AssetSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"slotPartId\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"childId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"childAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"childAssetId\",\"type\":\"uint64\"}],\"name\":\"ChildAssetEquipped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"slotPartId\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"childId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"childAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"childAssetId\",\"type\":\"uint64\"}],\"name\":\"ChildAssetUnequipped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"equippableGroupId\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"slotPartId\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"parentAddress\",\"type\":\"address\"}],\"name\":\"ValidParentEquippableGroupIdSet\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"acceptAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approveForAssets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"parent\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"slotId\",\"type\":\"uint64\"}],\"name\":\"canTokenBeEquippedWithAssetIntoSlot\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"childIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"slotPartId\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"childAssetId\",\"type\":\"uint64\"}],\"internalType\":\"struct IERC6220.IntakeEquip\",\"name\":\"data\",\"type\":\"tuple\"}],\"name\":\"equip\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getActiveAssetPriorities\",\"outputs\":[{\"internalType\":\"uint64[]\",\"name\":\"\",\"type\":\"uint64[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getActiveAssets\",\"outputs\":[{\"internalType\":\"uint64[]\",\"name\":\"\",\"type\":\"uint64[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getApprovedForAssets\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"getAssetAndEquippableData\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"},{\"internalType\":\"uint64\",\"name\":\"equippableGroupId\",\"type\":\"uint64\"},{\"internalType\":\"address\",\"name\":\"catalogAddress\",\"type\":\"address\"},{\"internalType\":\"uint64[]\",\"name\":\"partIds\",\"type\":\"uint64[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"getAssetMetadata\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"newAssetId\",\"type\":\"uint64\"}],\"name\":\"getAssetReplacements\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"targetCatalogAddress\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"slotPartId\",\"type\":\"uint64\"}],\"name\":\"getEquipment\",\"outputs\":[{\"components\":[{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"childAssetId\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"childId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"childEquippableAddress\",\"type\":\"address\"}],\"internalType\":\"struct IERC6220.Equipment\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getPendingAssets\",\"outputs\":[{\"internalType\":\"uint64[]\",\"name\":\"\",\"type\":\"uint64[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAllForAssets\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"childAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"childId\",\"type\":\"uint256\"}],\"name\":\"isChildEquipped\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxRejections\",\"type\":\"uint256\"}],\"name\":\"rejectAllAssets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"}],\"name\":\"rejectAsset\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAllForAssets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64[]\",\"name\":\"priorities\",\"type\":\"uint64[]\"}],\"name\":\"setPriority\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"assetId\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"slotPartId\",\"type\":\"uint64\"}],\"name\":\"unequip\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"RMRK team\",\"events\":{\"ApprovalForAllForAssets(address,address,bool)\":{\"params\":{\"approved\":\"Boolean value signifying whether the permission has been granted (`true`) or revoked (`false`)\",\"operator\":\"Address of the account that has been granted the approval to manage the token's assets on all of  the tokens\",\"owner\":\"Address of the account that has granted the approval for all assets on all of their tokens\"}},\"ApprovalForAssets(address,address,uint256)\":{\"details\":\"Approvals must be cleared on transfer\",\"params\":{\"approved\":\"Address of the account that has been granted approval to manage the token's assets\",\"owner\":\"Address of the account that has granted the approval for all token's assets\",\"tokenId\":\"ID of the token on which the approval was granted\"}},\"AssetAccepted(uint256,uint64,uint64)\":{\"params\":{\"assetId\":\"ID of the asset that was accepted\",\"replacesId\":\"ID of the asset that was replaced\",\"tokenId\":\"ID of the token that had a new asset accepted\"}},\"AssetAddedToTokens(uint256[],uint64,uint64)\":{\"params\":{\"assetId\":\"ID of the asset that has been added to the token's pending assets array\",\"replacesId\":\"ID of the asset that would be replaced\",\"tokenIds\":\"An array of token IDs that received a new pending asset\"}},\"AssetPrioritySet(uint256)\":{\"params\":{\"tokenId\":\"ID of the token that had the asset priority array updated\"}},\"AssetRejected(uint256,uint64)\":{\"params\":{\"assetId\":\"ID of the asset that was rejected\",\"tokenId\":\"ID of the token that had an asset rejected\"}},\"AssetSet(uint64)\":{\"params\":{\"assetId\":\"ID of the asset that was initialized\"}},\"ChildAssetEquipped(uint256,uint64,uint64,uint256,address,uint64)\":{\"params\":{\"assetId\":\"ID of the asset associated with the token we are equipping into\",\"childAddress\":\"Address of the child token's collection\",\"childAssetId\":\"ID of the asset associated with the token we are equipping\",\"childId\":\"ID of the child token we are equipping into the slot\",\"slotPartId\":\"ID of the slot we are using to equip\",\"tokenId\":\"ID of the token that had an asset equipped\"}},\"ChildAssetUnequipped(uint256,uint64,uint64,uint256,address,uint64)\":{\"params\":{\"assetId\":\"ID of the asset associated with the token we are unequipping out of\",\"childAddress\":\"Address of the collection that a token that is being unequipped belongs to\",\"childAssetId\":\"ID of the asset associated with the token we are unequipping\",\"childId\":\"ID of the token being unequipped\",\"slotPartId\":\"ID of the slot we are unequipping from\",\"tokenId\":\"ID of the token that had an asset unequipped\"}},\"ValidParentEquippableGroupIdSet(uint64,uint64,address)\":{\"params\":{\"equippableGroupId\":\"ID of the equippable group being marked as equippable into the slot associated with  `slotPartId` of the `parentAddress` collection\",\"parentAddress\":\"Address of the collection into which the parts belonging to `equippableGroupId` can be  equipped\",\"slotPartId\":\"ID of the slot part of the catalog into which the parts belonging to the equippable group  associated with `equippableGroupId` can be equipped\"}}},\"kind\":\"dev\",\"methods\":{\"acceptAsset(uint256,uint256,uint64)\":{\"details\":\"Migrates the asset from the token's pending asset array to the token's active asset array.Active assets cannot be removed by anyone, but can be replaced by a new asset.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - `index` must be in range of the length of the pending asset array.Emits an {AssetAccepted} event.\",\"params\":{\"assetId\":\"ID of the asset expected to be in the index\",\"index\":\"Index of the asset in the pending array to accept\",\"tokenId\":\"ID of the token for which to accept the pending asset\"}},\"approveForAssets(address,uint256)\":{\"details\":\"This differs from transfer approvals, as approvals are not cleared when the approved party accepts or  rejects an asset, or sets asset priorities. This approval is cleared on token transfer.Only a single account can be approved at a time, so approving the `0x0` address clears previous approvals.Requirements:  - The caller must own the token or be an approved operator.  - `tokenId` must exist.Emits an {ApprovalForAssets} event.\",\"params\":{\"to\":\"Address of the account to grant the approval to\",\"tokenId\":\"ID of the token for which the approval to manage the assets is granted\"}},\"canTokenBeEquippedWithAssetIntoSlot(address,uint256,uint64,uint64)\":{\"params\":{\"assetId\":\"ID of the asset associated with the token we want to equip\",\"parent\":\"Address of the parent token's smart contract\",\"slotId\":\"ID of the slot that we want to equip the token into\",\"tokenId\":\"ID of the token we want to equip\"},\"returns\":{\"_0\":\"A boolean indicating whether the token with the given asset can be equipped into the desired slot\"}},\"equip((uint256,uint256,uint64,uint64,uint64))\":{\"details\":\"The `IntakeEquip` stuct contains the following data:  [      tokenId,      childIndex,      assetId,      slotPartId,      childAssetId  ]\",\"params\":{\"data\":\"An `IntakeEquip` struct specifying the equip data\"}},\"getActiveAssetPriorities(uint256)\":{\"details\":\"Asset priorities are a non-sequential array of uint64 values with an array size equal to active asset  priorites.\",\"params\":{\"tokenId\":\"ID of the token for which to retrieve the priorities of the active assets\"},\"returns\":{\"_0\":\"An array of priorities of the active assets of the given token\"}},\"getActiveAssets(uint256)\":{\"details\":\"Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.You can safely get 10k\",\"params\":{\"tokenId\":\"ID of the token to retrieve the IDs of the active assets\"},\"returns\":{\"_0\":\"An array of active asset IDs of the given token\"}},\"getApprovedForAssets(uint256)\":{\"details\":\"Requirements:  - `tokenId` must exist.\",\"params\":{\"tokenId\":\"ID of the token for which to retrieve the approved address\"},\"returns\":{\"_0\":\"Address of the account that is approved to manage the specified token's assets\"}},\"getAssetAndEquippableData(uint256,uint64)\":{\"params\":{\"assetId\":\"ID of the asset of which we are retrieving\",\"tokenId\":\"ID of the token for which to retrieve the asset\"},\"returns\":{\"catalogAddress\":\"The address of the catalog the part belongs to\",\"equippableGroupId\":\"ID of the equippable group this asset belongs to\",\"metadataURI\":\"The metadata URI of the asset\",\"partIds\":\"An array of IDs of parts included in the asset\"}},\"getAssetMetadata(uint256,uint64)\":{\"details\":\"Assets are stored by reference mapping `_assets[assetId]`.Can be overriden to implement enumerate, fallback or other custom logic.\",\"params\":{\"assetId\":\"Asset Id, must be in the active assets array\",\"tokenId\":\"ID of the token from which to retrieve the asset metadata\"},\"returns\":{\"_0\":\"The metadata of the asset belonging to the specified index in the token's active assets  array\"}},\"getAssetReplacements(uint256,uint64)\":{\"details\":\"Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.\",\"params\":{\"newAssetId\":\"ID of the pending asset which will be accepted\",\"tokenId\":\"ID of the token to check\"},\"returns\":{\"_0\":\"ID of the asset which will be replaced\"}},\"getEquipment(uint256,address,uint64)\":{\"details\":\"The `Equipment` struct consists of the following data:  [      assetId,      childAssetId,      childId,      childEquippableAddress  ]\",\"params\":{\"slotPartId\":\"ID of the `Slot` part that we are checking for equipped objects\",\"targetCatalogAddress\":\"Address of the `Catalog` associated with the `Slot` part of the token\",\"tokenId\":\"ID of the token for which we are retrieving the equipped object\"},\"returns\":{\"_0\":\"The `Equipment` struct containing data about the equipped object\"}},\"getPendingAssets(uint256)\":{\"details\":\"Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.\",\"params\":{\"tokenId\":\"ID of the token to retrieve the IDs of the pending assets\"},\"returns\":{\"_0\":\"An array of pending asset IDs of the given token\"}},\"isApprovedForAllForAssets(address,address)\":{\"details\":\"See {setApprovalForAllForAssets}.\",\"params\":{\"operator\":\"Address of the account that we are checking whether it has the operator role or not\",\"owner\":\"Address of the account that we are checking for whether it has granted the operator role\"},\"returns\":{\"_0\":\"A boolean value indicating wehter the account we are checking has been granted the operator role\"}},\"isChildEquipped(uint256,address,uint256)\":{\"details\":\"This is used to prevent from transferring a child that is equipped.\",\"params\":{\"childAddress\":\"Address of the child token's smart contract\",\"childId\":\"ID of the child token\",\"tokenId\":\"ID of the parent token for which we are querying for\"},\"returns\":{\"_0\":\"A boolean value indicating whether the child token is equipped into the given token or not\"}},\"rejectAllAssets(uint256,uint256)\":{\"details\":\"Effecitvely deletes the pending array.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.Emits a {AssetRejected} event with assetId = 0.\",\"params\":{\"maxRejections\":\"Maximum number of expected assets to reject, used to prevent from rejecting assets which  arrive just before this operation.\",\"tokenId\":\"ID of the token of which to clear the pending array.\"}},\"rejectAsset(uint256,uint256,uint64)\":{\"details\":\"Removes the asset from the token's pending asset array.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - `index` must be in range of the length of the pending asset array.Emits a {AssetRejected} event.\",\"params\":{\"assetId\":\"ID of the asset expected to be in the index\",\"index\":\"Index of the asset in the pending array to be rejected\",\"tokenId\":\"ID of the token that the asset is being rejected from\"}},\"setApprovalForAllForAssets(address,bool)\":{\"details\":\"Operators can call {acceptAsset}, {rejectAsset}, {rejectAllAssets} or {setPriority} for any token  owned by the caller.Requirements:  - The `operator` cannot be the caller.Emits an {ApprovalForAllForAssets} event.\",\"params\":{\"approved\":\"The boolean value indicating whether the operator role is being granted (`true`) or revoked  (`false`)\",\"operator\":\"Address of the account to which the operator role is granted or revoked from\"}},\"setPriority(uint256,uint64[])\":{\"details\":\"The priority array is a non-sequential list of `uint64`s, where the lowest value is considered highest  priority.Value `0` of a priority is a special case equivalent to unitialized.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - The length of `priorities` must be equal the length of the active assets array.Emits a {AssetPrioritySet} event.\",\"params\":{\"priorities\":\"An array of priorities of active assets. The succesion of items in the priorities array  matches that of the succesion of items in the active array\",\"tokenId\":\"ID of the token to set the priorities for\"}},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"},\"unequip(uint256,uint64,uint64)\":{\"details\":\"This can only be called by the owner of the token or by an account that has been granted permission to  manage the given token by the current owner.\",\"params\":{\"assetId\":\"ID of the parent's asset that contains the `Slot` into which the child is equipped\",\"slotPartId\":\"ID of the `Slot` from which to unequip the child\",\"tokenId\":\"ID of the parent from which the child is being unequipped\"}}},\"title\":\"IERC6220\",\"version\":1},\"userdoc\":{\"events\":{\"ApprovalForAllForAssets(address,address,bool)\":{\"notice\":\"Used to notify listeners that owner has granted approval to the user to manage assets of all of their  tokens.\"},\"ApprovalForAssets(address,address,uint256)\":{\"notice\":\"Used to notify listeners that owner has granted an approval to the user to manage the assets of a  given token.\"},\"AssetAccepted(uint256,uint64,uint64)\":{\"notice\":\"Used to notify listeners that an asset object at `assetId` is accepted by the token and migrated  from token's pending assets array to active assets array of the token.\"},\"AssetAddedToTokens(uint256[],uint64,uint64)\":{\"notice\":\"Used to notify listeners that an asset object at `assetId` is added to token's pending asset  array.\"},\"AssetPrioritySet(uint256)\":{\"notice\":\"Used to notify listeners that token's prioritiy array is reordered.\"},\"AssetRejected(uint256,uint64)\":{\"notice\":\"Used to notify listeners that an asset object at `assetId` is rejected from token and is dropped  from the pending assets array of the token.\"},\"AssetSet(uint64)\":{\"notice\":\"Used to notify listeners that an asset object is initialized at `assetId`.\"},\"ChildAssetEquipped(uint256,uint64,uint64,uint256,address,uint64)\":{\"notice\":\"Used to notify listeners that a child's asset has been equipped into one of its parent assets.\"},\"ChildAssetUnequipped(uint256,uint64,uint64,uint256,address,uint64)\":{\"notice\":\"Used to notify listeners that a child's asset has been unequipped from one of its parent assets.\"},\"ValidParentEquippableGroupIdSet(uint64,uint64,address)\":{\"notice\":\"Used to notify listeners that the assets belonging to a `equippableGroupId` have been marked as  equippable into a given slot and parent\"}},\"kind\":\"user\",\"methods\":{\"acceptAsset(uint256,uint256,uint64)\":{\"notice\":\"Accepts an asset at from the pending array of given token.\"},\"approveForAssets(address,uint256)\":{\"notice\":\"Used to grant permission to the user to manage token's assets.\"},\"canTokenBeEquippedWithAssetIntoSlot(address,uint256,uint64,uint64)\":{\"notice\":\"Used to verify whether a token can be equipped into a given parent's slot.\"},\"equip((uint256,uint256,uint64,uint64,uint64))\":{\"notice\":\"Used to equip a child into a token.\"},\"getActiveAssetPriorities(uint256)\":{\"notice\":\"Used to retrieve the priorities of the active resoources of a given token.\"},\"getActiveAssets(uint256)\":{\"notice\":\"Used to retrieve IDs of the active assets of given token.\"},\"getApprovedForAssets(uint256)\":{\"notice\":\"Used to retrieve the address of the account approved to manage assets of a given token.\"},\"getAssetAndEquippableData(uint256,uint64)\":{\"notice\":\"Used to get the asset and equippable data associated with given `assetId`.\"},\"getAssetMetadata(uint256,uint64)\":{\"notice\":\"Used to fetch the asset metadata of the specified token's active asset with the given index.\"},\"getAssetReplacements(uint256,uint64)\":{\"notice\":\"Used to retrieve the asset that will be replaced if a given asset from the token's pending array  is accepted.\"},\"getEquipment(uint256,address,uint64)\":{\"notice\":\"Used to get the Equipment object equipped into the specified slot of the desired token.\"},\"getPendingAssets(uint256)\":{\"notice\":\"Used to retrieve IDs of the pending assets of given token.\"},\"isApprovedForAllForAssets(address,address)\":{\"notice\":\"Used to check whether the address has been granted the operator role by a given address or not.\"},\"isChildEquipped(uint256,address,uint256)\":{\"notice\":\"Used to check whether the token has a given child equipped.\"},\"rejectAllAssets(uint256,uint256)\":{\"notice\":\"Rejects all assets from the pending array of a given token.\"},\"rejectAsset(uint256,uint256,uint64)\":{\"notice\":\"Rejects an asset from the pending array of given token.\"},\"setApprovalForAllForAssets(address,bool)\":{\"notice\":\"Used to add or remove an operator of assets for the caller.\"},\"setPriority(uint256,uint64[])\":{\"notice\":\"Sets a new priority array for a given token.\"},\"unequip(uint256,uint64,uint64)\":{\"notice\":\"Used to unequip child from parent token.\"}},\"notice\":\"Interface smart contract of the RMRK equippable module.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/equippable/IERC6220.sol\":\"IERC6220\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@rmrk-team/=node_modules/@rmrk-team/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/equippable/IERC6220.sol\":{\"keccak256\":\"0x4fcd6ea56d18b4daee46873794c002ad78160ba4a07d4f49362313c38ec0e28a\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://bbc28006dd8439bc0e1f332679d36a4c8b8a46ae2e4f37a5e4c0bdaaab85655e\",\"dweb:/ipfs/QmU1eN6R97EhpUUsQWD4qoz3KCsyMHZ8GvihVPnAoEk5dU\"]},\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/multiasset/IERC5773.sol\":{\"keccak256\":\"0x4e5b78824f54620c5b610a5e2c944cd159b8b054065fabf3af2aaea2f3360d89\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://713b179262117f3ff772aed51aa26e48bf7e3ff5c7ec6588060a887e634fe0f1\",\"dweb:/ipfs/Qme2B9DrgB93HPQy96Pia23jzrkdmUrVQPHdAqCxA8dzYY\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ApprovalForAllForAssets",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "approved",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "ApprovalForAssets",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "replacesId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetAccepted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256[]",
+              "name": "tokenIds",
+              "type": "uint256[]",
+              "indexed": false
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "replacesId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetAddedToTokens",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetPrioritySet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetRejected",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "AssetSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "slotPartId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "childId",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "childAddress",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint64",
+              "name": "childAssetId",
+              "type": "uint64",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ChildAssetEquipped",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "slotPartId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "childId",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "childAddress",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint64",
+              "name": "childAssetId",
+              "type": "uint64",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ChildAssetUnequipped",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "equippableGroupId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "slotPartId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "parentAddress",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ValidParentEquippableGroupIdSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "acceptAsset"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "approveForAssets"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "parent",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "slotId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "canTokenBeEquippedWithAssetIntoSlot",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct IERC6220.IntakeEquip",
+              "name": "data",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "childIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "assetId",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "slotPartId",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "childAssetId",
+                  "type": "uint64"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "equip"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getActiveAssetPriorities",
+          "outputs": [
+            {
+              "internalType": "uint64[]",
+              "name": "",
+              "type": "uint64[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getActiveAssets",
+          "outputs": [
+            {
+              "internalType": "uint64[]",
+              "name": "",
+              "type": "uint64[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getApprovedForAssets",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAssetAndEquippableData",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "metadataURI",
+              "type": "string"
+            },
+            {
+              "internalType": "uint64",
+              "name": "equippableGroupId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "address",
+              "name": "catalogAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint64[]",
+              "name": "partIds",
+              "type": "uint64[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAssetMetadata",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "newAssetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAssetReplacements",
+          "outputs": [
+            {
+              "internalType": "uint64",
+              "name": "",
+              "type": "uint64"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "targetCatalogAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint64",
+              "name": "slotPartId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getEquipment",
+          "outputs": [
+            {
+              "internalType": "struct IERC6220.Equipment",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint64",
+                  "name": "assetId",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "childAssetId",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "childId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "childEquippableAddress",
+                  "type": "address"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPendingAssets",
+          "outputs": [
+            {
+              "internalType": "uint64[]",
+              "name": "",
+              "type": "uint64[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isApprovedForAllForAssets",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "childAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "childId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isChildEquipped",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxRejections",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "rejectAllAssets"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "rejectAsset"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "operator",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "approved",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setApprovalForAllForAssets"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64[]",
+              "name": "priorities",
+              "type": "uint64[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setPriority"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "assetId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "slotPartId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "unequip"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "acceptAsset(uint256,uint256,uint64)": {
+            "details": "Migrates the asset from the token's pending asset array to the token's active asset array.Active assets cannot be removed by anyone, but can be replaced by a new asset.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - `index` must be in range of the length of the pending asset array.Emits an {AssetAccepted} event.",
+            "params": {
+              "assetId": "ID of the asset expected to be in the index",
+              "index": "Index of the asset in the pending array to accept",
+              "tokenId": "ID of the token for which to accept the pending asset"
+            }
+          },
+          "approveForAssets(address,uint256)": {
+            "details": "This differs from transfer approvals, as approvals are not cleared when the approved party accepts or  rejects an asset, or sets asset priorities. This approval is cleared on token transfer.Only a single account can be approved at a time, so approving the `0x0` address clears previous approvals.Requirements:  - The caller must own the token or be an approved operator.  - `tokenId` must exist.Emits an {ApprovalForAssets} event.",
+            "params": {
+              "to": "Address of the account to grant the approval to",
+              "tokenId": "ID of the token for which the approval to manage the assets is granted"
+            }
+          },
+          "canTokenBeEquippedWithAssetIntoSlot(address,uint256,uint64,uint64)": {
+            "params": {
+              "assetId": "ID of the asset associated with the token we want to equip",
+              "parent": "Address of the parent token's smart contract",
+              "slotId": "ID of the slot that we want to equip the token into",
+              "tokenId": "ID of the token we want to equip"
+            },
+            "returns": {
+              "_0": "A boolean indicating whether the token with the given asset can be equipped into the desired slot"
+            }
+          },
+          "equip((uint256,uint256,uint64,uint64,uint64))": {
+            "details": "The `IntakeEquip` stuct contains the following data:  [      tokenId,      childIndex,      assetId,      slotPartId,      childAssetId  ]",
+            "params": {
+              "data": "An `IntakeEquip` struct specifying the equip data"
+            }
+          },
+          "getActiveAssetPriorities(uint256)": {
+            "details": "Asset priorities are a non-sequential array of uint64 values with an array size equal to active asset  priorites.",
+            "params": {
+              "tokenId": "ID of the token for which to retrieve the priorities of the active assets"
+            },
+            "returns": {
+              "_0": "An array of priorities of the active assets of the given token"
+            }
+          },
+          "getActiveAssets(uint256)": {
+            "details": "Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.You can safely get 10k",
+            "params": {
+              "tokenId": "ID of the token to retrieve the IDs of the active assets"
+            },
+            "returns": {
+              "_0": "An array of active asset IDs of the given token"
+            }
+          },
+          "getApprovedForAssets(uint256)": {
+            "details": "Requirements:  - `tokenId` must exist.",
+            "params": {
+              "tokenId": "ID of the token for which to retrieve the approved address"
+            },
+            "returns": {
+              "_0": "Address of the account that is approved to manage the specified token's assets"
+            }
+          },
+          "getAssetAndEquippableData(uint256,uint64)": {
+            "params": {
+              "assetId": "ID of the asset of which we are retrieving",
+              "tokenId": "ID of the token for which to retrieve the asset"
+            },
+            "returns": {
+              "catalogAddress": "The address of the catalog the part belongs to",
+              "equippableGroupId": "ID of the equippable group this asset belongs to",
+              "metadataURI": "The metadata URI of the asset",
+              "partIds": "An array of IDs of parts included in the asset"
+            }
+          },
+          "getAssetMetadata(uint256,uint64)": {
+            "details": "Assets are stored by reference mapping `_assets[assetId]`.Can be overriden to implement enumerate, fallback or other custom logic.",
+            "params": {
+              "assetId": "Asset Id, must be in the active assets array",
+              "tokenId": "ID of the token from which to retrieve the asset metadata"
+            },
+            "returns": {
+              "_0": "The metadata of the asset belonging to the specified index in the token's active assets  array"
+            }
+          },
+          "getAssetReplacements(uint256,uint64)": {
+            "details": "Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.",
+            "params": {
+              "newAssetId": "ID of the pending asset which will be accepted",
+              "tokenId": "ID of the token to check"
+            },
+            "returns": {
+              "_0": "ID of the asset which will be replaced"
+            }
+          },
+          "getEquipment(uint256,address,uint64)": {
+            "details": "The `Equipment` struct consists of the following data:  [      assetId,      childAssetId,      childId,      childEquippableAddress  ]",
+            "params": {
+              "slotPartId": "ID of the `Slot` part that we are checking for equipped objects",
+              "targetCatalogAddress": "Address of the `Catalog` associated with the `Slot` part of the token",
+              "tokenId": "ID of the token for which we are retrieving the equipped object"
+            },
+            "returns": {
+              "_0": "The `Equipment` struct containing data about the equipped object"
+            }
+          },
+          "getPendingAssets(uint256)": {
+            "details": "Asset data is stored by reference, in order to access the data corresponding to the ID, call  `getAssetMetadata(tokenId, assetId)`.",
+            "params": {
+              "tokenId": "ID of the token to retrieve the IDs of the pending assets"
+            },
+            "returns": {
+              "_0": "An array of pending asset IDs of the given token"
+            }
+          },
+          "isApprovedForAllForAssets(address,address)": {
+            "details": "See {setApprovalForAllForAssets}.",
+            "params": {
+              "operator": "Address of the account that we are checking whether it has the operator role or not",
+              "owner": "Address of the account that we are checking for whether it has granted the operator role"
+            },
+            "returns": {
+              "_0": "A boolean value indicating wehter the account we are checking has been granted the operator role"
+            }
+          },
+          "isChildEquipped(uint256,address,uint256)": {
+            "details": "This is used to prevent from transferring a child that is equipped.",
+            "params": {
+              "childAddress": "Address of the child token's smart contract",
+              "childId": "ID of the child token",
+              "tokenId": "ID of the parent token for which we are querying for"
+            },
+            "returns": {
+              "_0": "A boolean value indicating whether the child token is equipped into the given token or not"
+            }
+          },
+          "rejectAllAssets(uint256,uint256)": {
+            "details": "Effecitvely deletes the pending array.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.Emits a {AssetRejected} event with assetId = 0.",
+            "params": {
+              "maxRejections": "Maximum number of expected assets to reject, used to prevent from rejecting assets which  arrive just before this operation.",
+              "tokenId": "ID of the token of which to clear the pending array."
+            }
+          },
+          "rejectAsset(uint256,uint256,uint64)": {
+            "details": "Removes the asset from the token's pending asset array.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - `index` must be in range of the length of the pending asset array.Emits a {AssetRejected} event.",
+            "params": {
+              "assetId": "ID of the asset expected to be in the index",
+              "index": "Index of the asset in the pending array to be rejected",
+              "tokenId": "ID of the token that the asset is being rejected from"
+            }
+          },
+          "setApprovalForAllForAssets(address,bool)": {
+            "details": "Operators can call {acceptAsset}, {rejectAsset}, {rejectAllAssets} or {setPriority} for any token  owned by the caller.Requirements:  - The `operator` cannot be the caller.Emits an {ApprovalForAllForAssets} event.",
+            "params": {
+              "approved": "The boolean value indicating whether the operator role is being granted (`true`) or revoked  (`false`)",
+              "operator": "Address of the account to which the operator role is granted or revoked from"
+            }
+          },
+          "setPriority(uint256,uint64[])": {
+            "details": "The priority array is a non-sequential list of `uint64`s, where the lowest value is considered highest  priority.Value `0` of a priority is a special case equivalent to unitialized.Requirements:  - The caller must own the token or be approved to manage the token's assets  - `tokenId` must exist.  - The length of `priorities` must be equal the length of the active assets array.Emits a {AssetPrioritySet} event.",
+            "params": {
+              "priorities": "An array of priorities of active assets. The succesion of items in the priorities array  matches that of the succesion of items in the active array",
+              "tokenId": "ID of the token to set the priorities for"
+            }
+          },
+          "supportsInterface(bytes4)": {
+            "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+          },
+          "unequip(uint256,uint64,uint64)": {
+            "details": "This can only be called by the owner of the token or by an account that has been granted permission to  manage the given token by the current owner.",
+            "params": {
+              "assetId": "ID of the parent's asset that contains the `Slot` into which the child is equipped",
+              "slotPartId": "ID of the `Slot` from which to unequip the child",
+              "tokenId": "ID of the parent from which the child is being unequipped"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "acceptAsset(uint256,uint256,uint64)": {
+            "notice": "Accepts an asset at from the pending array of given token."
+          },
+          "approveForAssets(address,uint256)": {
+            "notice": "Used to grant permission to the user to manage token's assets."
+          },
+          "canTokenBeEquippedWithAssetIntoSlot(address,uint256,uint64,uint64)": {
+            "notice": "Used to verify whether a token can be equipped into a given parent's slot."
+          },
+          "equip((uint256,uint256,uint64,uint64,uint64))": {
+            "notice": "Used to equip a child into a token."
+          },
+          "getActiveAssetPriorities(uint256)": {
+            "notice": "Used to retrieve the priorities of the active resoources of a given token."
+          },
+          "getActiveAssets(uint256)": {
+            "notice": "Used to retrieve IDs of the active assets of given token."
+          },
+          "getApprovedForAssets(uint256)": {
+            "notice": "Used to retrieve the address of the account approved to manage assets of a given token."
+          },
+          "getAssetAndEquippableData(uint256,uint64)": {
+            "notice": "Used to get the asset and equippable data associated with given `assetId`."
+          },
+          "getAssetMetadata(uint256,uint64)": {
+            "notice": "Used to fetch the asset metadata of the specified token's active asset with the given index."
+          },
+          "getAssetReplacements(uint256,uint64)": {
+            "notice": "Used to retrieve the asset that will be replaced if a given asset from the token's pending array  is accepted."
+          },
+          "getEquipment(uint256,address,uint64)": {
+            "notice": "Used to get the Equipment object equipped into the specified slot of the desired token."
+          },
+          "getPendingAssets(uint256)": {
+            "notice": "Used to retrieve IDs of the pending assets of given token."
+          },
+          "isApprovedForAllForAssets(address,address)": {
+            "notice": "Used to check whether the address has been granted the operator role by a given address or not."
+          },
+          "isChildEquipped(uint256,address,uint256)": {
+            "notice": "Used to check whether the token has a given child equipped."
+          },
+          "rejectAllAssets(uint256,uint256)": {
+            "notice": "Rejects all assets from the pending array of a given token."
+          },
+          "rejectAsset(uint256,uint256,uint64)": {
+            "notice": "Rejects an asset from the pending array of given token."
+          },
+          "setApprovalForAllForAssets(address,bool)": {
+            "notice": "Used to add or remove an operator of assets for the caller."
+          },
+          "setPriority(uint256,uint64[])": {
+            "notice": "Sets a new priority array for a given token."
+          },
+          "unequip(uint256,uint64,uint64)": {
+            "notice": "Used to unequip child from parent token."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@rmrk-team/=node_modules/@rmrk-team/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/equippable/IERC6220.sol": "IERC6220"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/equippable/IERC6220.sol": {
+        "keccak256": "0x4fcd6ea56d18b4daee46873794c002ad78160ba4a07d4f49362313c38ec0e28a",
+        "urls": [
+          "bzz-raw://bbc28006dd8439bc0e1f332679d36a4c8b8a46ae2e4f37a5e4c0bdaaab85655e",
+          "dweb:/ipfs/QmU1eN6R97EhpUUsQWD4qoz3KCsyMHZ8GvihVPnAoEk5dU"
+        ],
+        "license": "Apache-2.0"
+      },
+      "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/multiasset/IERC5773.sol": {
+        "keccak256": "0x4e5b78824f54620c5b610a5e2c944cd159b8b054065fabf3af2aaea2f3360d89",
+        "urls": [
+          "bzz-raw://713b179262117f3ff772aed51aa26e48bf7e3ff5c7ec6588060a887e634fe0f1",
+          "dweb:/ipfs/Qme2B9DrgB93HPQy96Pia23jzrkdmUrVQPHdAqCxA8dzYY"
+        ],
+        "license": "Apache-2.0"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/equippable/IERC6220.sol",
+    "id": 28683,
+    "exportedSymbols": {
+      "IERC165": [
+        28205
+      ],
+      "IERC5773": [
+        34868
+      ],
+      "IERC6220": [
+        28682
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:7757:77",
+    "nodes": [
+      {
+        "id": 28543,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:77",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 28544,
+        "nodeType": "ImportDirective",
+        "src": "66:36:77",
+        "nodes": [],
+        "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/multiasset/IERC5773.sol",
+        "file": "../multiasset/IERC5773.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 28683,
+        "sourceUnit": 34869,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 28682,
+        "nodeType": "ContractDefinition",
+        "src": "219:7577:77",
+        "nodes": [
+          {
+            "id": 28557,
+            "nodeType": "StructDefinition",
+            "src": "634:142:77",
+            "nodes": [],
+            "canonicalName": "IERC6220.Equipment",
+            "documentation": {
+              "id": 28548,
+              "nodeType": "StructuredDocumentation",
+              "src": "256:373:77",
+              "text": " @notice Used to store the core structure of the `Equippable` RMRK lego.\n @return assetId The ID of the asset equipping a child\n @return childAssetId The ID of the asset used as equipment\n @return childId The ID of token that is equipped\n @return childEquippableAddress Address of the collection to which the child asset belongs to"
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 28550,
+                "mutability": "mutable",
+                "name": "assetId",
+                "nameLocation": "668:7:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28557,
+                "src": "661:14:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 28549,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "661:6:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28552,
+                "mutability": "mutable",
+                "name": "childAssetId",
+                "nameLocation": "692:12:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28557,
+                "src": "685:19:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 28551,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "685:6:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28554,
+                "mutability": "mutable",
+                "name": "childId",
+                "nameLocation": "722:7:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28557,
+                "src": "714:15:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 28553,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "714:7:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28556,
+                "mutability": "mutable",
+                "name": "childEquippableAddress",
+                "nameLocation": "747:22:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28557,
+                "src": "739:30:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 28555,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "739:7:77",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Equipment",
+            "nameLocation": "641:9:77",
+            "scope": 28682,
+            "visibility": "public"
+          },
+          {
+            "id": 28569,
+            "nodeType": "StructDefinition",
+            "src": "1262:159:77",
+            "nodes": [],
+            "canonicalName": "IERC6220.IntakeEquip",
+            "documentation": {
+              "id": 28558,
+              "nodeType": "StructuredDocumentation",
+              "src": "782:475:77",
+              "text": " @notice Used to provide a struct for inputing equip data.\n @dev Only used for input and not storage of data.\n @return tokenId ID of the token we are managing\n @return childIndex Index of a child in the list of token's active children\n @return assetId ID of the asset that we are equipping into\n @return slotPartId ID of the slot part that we are using to equip\n @return childAssetId ID of the asset that we are equipping"
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 28560,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "1299:7:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28569,
+                "src": "1291:15:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 28559,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1291:7:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28562,
+                "mutability": "mutable",
+                "name": "childIndex",
+                "nameLocation": "1324:10:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28569,
+                "src": "1316:18:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 28561,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1316:7:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28564,
+                "mutability": "mutable",
+                "name": "assetId",
+                "nameLocation": "1351:7:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28569,
+                "src": "1344:14:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 28563,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1344:6:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28566,
+                "mutability": "mutable",
+                "name": "slotPartId",
+                "nameLocation": "1375:10:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28569,
+                "src": "1368:17:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 28565,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1368:6:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28568,
+                "mutability": "mutable",
+                "name": "childAssetId",
+                "nameLocation": "1402:12:77",
+                "nodeType": "VariableDeclaration",
+                "scope": 28569,
+                "src": "1395:19:77",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 28567,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1395:6:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "IntakeEquip",
+            "nameLocation": "1269:11:77",
+            "scope": 28682,
+            "visibility": "public"
+          },
+          {
+            "id": 28584,
+            "nodeType": "EventDefinition",
+            "src": "1994:215:77",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 28570,
+              "nodeType": "StructuredDocumentation",
+              "src": "1427:562:77",
+              "text": " @notice Used to notify listeners that a child's asset has been equipped into one of its parent assets.\n @param tokenId ID of the token that had an asset equipped\n @param assetId ID of the asset associated with the token we are equipping into\n @param slotPartId ID of the slot we are using to equip\n @param childId ID of the child token we are equipping into the slot\n @param childAddress Address of the child token's collection\n @param childAssetId ID of the asset associated with the token we are equipping"
+            },
+            "eventSelector": "1f5de02b1d9c93ca468f54630e1daf13f6dc458a63f8061ff73e85bf9bc38884",
+            "name": "ChildAssetEquipped",
+            "nameLocation": "2000:18:77",
+            "parameters": {
+              "id": 28583,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28572,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "2044:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28584,
+                  "src": "2028:23:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28571,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2028:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28574,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "2076:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28584,
+                  "src": "2061:22:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28573,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2061:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28576,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "slotPartId",
+                  "nameLocation": "2108:10:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28584,
+                  "src": "2093:25:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28575,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2093:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28578,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "childId",
+                  "nameLocation": "2136:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28584,
+                  "src": "2128:15:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28577,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2128:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28580,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "childAddress",
+                  "nameLocation": "2161:12:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28584,
+                  "src": "2153:20:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28579,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2153:7:77",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28582,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "childAssetId",
+                  "nameLocation": "2190:12:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28584,
+                  "src": "2183:19:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28581,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2183:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2018:190:77"
+            }
+          },
+          {
+            "id": 28599,
+            "nodeType": "EventDefinition",
+            "src": "2809:217:77",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 28585,
+              "nodeType": "StructuredDocumentation",
+              "src": "2215:589:77",
+              "text": " @notice Used to notify listeners that a child's asset has been unequipped from one of its parent assets.\n @param tokenId ID of the token that had an asset unequipped\n @param assetId ID of the asset associated with the token we are unequipping out of\n @param slotPartId ID of the slot we are unequipping from\n @param childId ID of the token being unequipped\n @param childAddress Address of the collection that a token that is being unequipped belongs to\n @param childAssetId ID of the asset associated with the token we are unequipping"
+            },
+            "eventSelector": "438e039ebbba8f290f3b5d41aaf3295eccc9b5e6b0e1d52ace700772afb7da13",
+            "name": "ChildAssetUnequipped",
+            "nameLocation": "2815:20:77",
+            "parameters": {
+              "id": 28598,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28587,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "2861:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28599,
+                  "src": "2845:23:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28586,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2845:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28589,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "2893:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28599,
+                  "src": "2878:22:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28588,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2878:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28591,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "slotPartId",
+                  "nameLocation": "2925:10:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28599,
+                  "src": "2910:25:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28590,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2910:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28593,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "childId",
+                  "nameLocation": "2953:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28599,
+                  "src": "2945:15:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28592,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2945:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28595,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "childAddress",
+                  "nameLocation": "2978:12:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28599,
+                  "src": "2970:20:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28594,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2970:7:77",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28597,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "childAssetId",
+                  "nameLocation": "3007:12:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28599,
+                  "src": "3000:19:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28596,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3000:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2835:190:77"
+            }
+          },
+          {
+            "id": 28608,
+            "nodeType": "EventDefinition",
+            "src": "3685:152:77",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 28600,
+              "nodeType": "StructuredDocumentation",
+              "src": "3032:648:77",
+              "text": " @notice Used to notify listeners that the assets belonging to a `equippableGroupId` have been marked as\n  equippable into a given slot and parent\n @param equippableGroupId ID of the equippable group being marked as equippable into the slot associated with\n  `slotPartId` of the `parentAddress` collection\n @param slotPartId ID of the slot part of the catalog into which the parts belonging to the equippable group\n  associated with `equippableGroupId` can be equipped\n @param parentAddress Address of the collection into which the parts belonging to `equippableGroupId` can be\n  equipped"
+            },
+            "eventSelector": "5b5af0622001a9b735a56357ddc1abd65e6a640126498674daf9d2fb05160725",
+            "name": "ValidParentEquippableGroupIdSet",
+            "nameLocation": "3691:31:77",
+            "parameters": {
+              "id": 28607,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28602,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "equippableGroupId",
+                  "nameLocation": "3747:17:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28608,
+                  "src": "3732:32:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28601,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3732:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28604,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "slotPartId",
+                  "nameLocation": "3789:10:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28608,
+                  "src": "3774:25:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28603,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3774:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28606,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "parentAddress",
+                  "nameLocation": "3817:13:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28608,
+                  "src": "3809:21:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28605,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3809:7:77",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3722:114:77"
+            }
+          },
+          {
+            "id": 28615,
+            "nodeType": "FunctionDefinition",
+            "src": "4179:49:77",
+            "nodes": [],
+            "documentation": {
+              "id": 28609,
+              "nodeType": "StructuredDocumentation",
+              "src": "3843:331:77",
+              "text": " @notice Used to equip a child into a token.\n @dev The `IntakeEquip` stuct contains the following data:\n  [\n      tokenId,\n      childIndex,\n      assetId,\n      slotPartId,\n      childAssetId\n  ]\n @param data An `IntakeEquip` struct specifying the equip data"
+            },
+            "functionSelector": "38dcf74c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "equip",
+            "nameLocation": "4188:5:77",
+            "parameters": {
+              "id": 28613,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28612,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "4213:4:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28615,
+                  "src": "4194:23:77",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_IntakeEquip_$28569_memory_ptr",
+                    "typeString": "struct IERC6220.IntakeEquip"
+                  },
+                  "typeName": {
+                    "id": 28611,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 28610,
+                      "name": "IntakeEquip",
+                      "nameLocations": [
+                        "4194:11:77"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 28569,
+                      "src": "4194:11:77"
+                    },
+                    "referencedDeclaration": 28569,
+                    "src": "4194:11:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_IntakeEquip_$28569_storage_ptr",
+                      "typeString": "struct IERC6220.IntakeEquip"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4193:25:77"
+            },
+            "returnParameters": {
+              "id": 28614,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4227:0:77"
+            },
+            "scope": 28682,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28625,
+            "nodeType": "FunctionDefinition",
+            "src": "4733:108:77",
+            "nodes": [],
+            "documentation": {
+              "id": 28616,
+              "nodeType": "StructuredDocumentation",
+              "src": "4234:494:77",
+              "text": " @notice Used to unequip child from parent token.\n @dev This can only be called by the owner of the token or by an account that has been granted permission to\n  manage the given token by the current owner.\n @param tokenId ID of the parent from which the child is being unequipped\n @param assetId ID of the parent's asset that contains the `Slot` into which the child is equipped\n @param slotPartId ID of the `Slot` from which to unequip the child"
+            },
+            "functionSelector": "c259a988",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unequip",
+            "nameLocation": "4742:7:77",
+            "parameters": {
+              "id": 28623,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28618,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "4767:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28625,
+                  "src": "4759:15:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28617,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4759:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28620,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "4791:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28625,
+                  "src": "4784:14:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28619,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4784:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28622,
+                  "mutability": "mutable",
+                  "name": "slotPartId",
+                  "nameLocation": "4815:10:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28625,
+                  "src": "4808:17:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28621,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4808:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4749:82:77"
+            },
+            "returnParameters": {
+              "id": 28624,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4840:0:77"
+            },
+            "scope": 28682,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28637,
+            "nodeType": "FunctionDefinition",
+            "src": "5314:140:77",
+            "nodes": [],
+            "documentation": {
+              "id": 28626,
+              "nodeType": "StructuredDocumentation",
+              "src": "4847:462:77",
+              "text": " @notice Used to check whether the token has a given child equipped.\n @dev This is used to prevent from transferring a child that is equipped.\n @param tokenId ID of the parent token for which we are querying for\n @param childAddress Address of the child token's smart contract\n @param childId ID of the child token\n @return A boolean value indicating whether the child token is equipped into the given token or not"
+            },
+            "functionSelector": "ee1dffcf",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isChildEquipped",
+            "nameLocation": "5323:15:77",
+            "parameters": {
+              "id": 28633,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28628,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "5356:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28637,
+                  "src": "5348:15:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28627,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5348:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28630,
+                  "mutability": "mutable",
+                  "name": "childAddress",
+                  "nameLocation": "5381:12:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28637,
+                  "src": "5373:20:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28629,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5373:7:77",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28632,
+                  "mutability": "mutable",
+                  "name": "childId",
+                  "nameLocation": "5411:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28637,
+                  "src": "5403:15:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28631,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5403:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5338:86:77"
+            },
+            "returnParameters": {
+              "id": 28636,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28635,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28637,
+                  "src": "5448:4:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 28634,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5448:4:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5447:6:77"
+            },
+            "scope": 28682,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28651,
+            "nodeType": "FunctionDefinition",
+            "src": "5954:176:77",
+            "nodes": [],
+            "documentation": {
+              "id": 28638,
+              "nodeType": "StructuredDocumentation",
+              "src": "5460:489:77",
+              "text": " @notice Used to verify whether a token can be equipped into a given parent's slot.\n @param parent Address of the parent token's smart contract\n @param tokenId ID of the token we want to equip\n @param assetId ID of the asset associated with the token we want to equip\n @param slotId ID of the slot that we want to equip the token into\n @return A boolean indicating whether the token with the given asset can be equipped into the desired slot"
+            },
+            "functionSelector": "074334fb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canTokenBeEquippedWithAssetIntoSlot",
+            "nameLocation": "5963:35:77",
+            "parameters": {
+              "id": 28647,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28640,
+                  "mutability": "mutable",
+                  "name": "parent",
+                  "nameLocation": "6016:6:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28651,
+                  "src": "6008:14:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28639,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6008:7:77",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28642,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "6040:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28651,
+                  "src": "6032:15:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28641,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6032:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28644,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "6064:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28651,
+                  "src": "6057:14:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28643,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6057:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28646,
+                  "mutability": "mutable",
+                  "name": "slotId",
+                  "nameLocation": "6088:6:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28651,
+                  "src": "6081:13:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28645,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6081:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5998:102:77"
+            },
+            "returnParameters": {
+              "id": 28650,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28649,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28651,
+                  "src": "6124:4:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 28648,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6124:4:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6123:6:77"
+            },
+            "scope": 28682,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28664,
+            "nodeType": "FunctionDefinition",
+            "src": "6805:159:77",
+            "nodes": [],
+            "documentation": {
+              "id": 28652,
+              "nodeType": "StructuredDocumentation",
+              "src": "6136:664:77",
+              "text": " @notice Used to get the Equipment object equipped into the specified slot of the desired token.\n @dev The `Equipment` struct consists of the following data:\n  [\n      assetId,\n      childAssetId,\n      childId,\n      childEquippableAddress\n  ]\n @param tokenId ID of the token for which we are retrieving the equipped object\n @param targetCatalogAddress Address of the `Catalog` associated with the `Slot` part of the token\n @param slotPartId ID of the `Slot` part that we are checking for equipped objects\n @return The `Equipment` struct containing data about the equipped object"
+            },
+            "functionSelector": "7507e2ae",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEquipment",
+            "nameLocation": "6814:12:77",
+            "parameters": {
+              "id": 28659,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28654,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "6844:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28664,
+                  "src": "6836:15:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28653,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6836:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28656,
+                  "mutability": "mutable",
+                  "name": "targetCatalogAddress",
+                  "nameLocation": "6869:20:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28664,
+                  "src": "6861:28:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28655,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6861:7:77",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28658,
+                  "mutability": "mutable",
+                  "name": "slotPartId",
+                  "nameLocation": "6906:10:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28664,
+                  "src": "6899:17:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28657,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6899:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6826:96:77"
+            },
+            "returnParameters": {
+              "id": 28663,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28662,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28664,
+                  "src": "6946:16:77",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Equipment_$28557_memory_ptr",
+                    "typeString": "struct IERC6220.Equipment"
+                  },
+                  "typeName": {
+                    "id": 28661,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 28660,
+                      "name": "Equipment",
+                      "nameLocations": [
+                        "6946:9:77"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 28557,
+                      "src": "6946:9:77"
+                    },
+                    "referencedDeclaration": 28557,
+                    "src": "6946:9:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Equipment_$28557_storage_ptr",
+                      "typeString": "struct IERC6220.Equipment"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6945:18:77"
+            },
+            "scope": 28682,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28681,
+            "nodeType": "FunctionDefinition",
+            "src": "7497:297:77",
+            "nodes": [],
+            "documentation": {
+              "id": 28665,
+              "nodeType": "StructuredDocumentation",
+              "src": "6970:522:77",
+              "text": " @notice Used to get the asset and equippable data associated with given `assetId`.\n @param tokenId ID of the token for which to retrieve the asset\n @param assetId ID of the asset of which we are retrieving\n @return metadataURI The metadata URI of the asset\n @return equippableGroupId ID of the equippable group this asset belongs to\n @return catalogAddress The address of the catalog the part belongs to\n @return partIds An array of IDs of parts included in the asset"
+            },
+            "functionSelector": "4e60edba",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAssetAndEquippableData",
+            "nameLocation": "7506:25:77",
+            "parameters": {
+              "id": 28670,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28667,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "7549:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28681,
+                  "src": "7541:15:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28666,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7541:7:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28669,
+                  "mutability": "mutable",
+                  "name": "assetId",
+                  "nameLocation": "7573:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28681,
+                  "src": "7566:14:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28668,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7566:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7531:55:77"
+            },
+            "returnParameters": {
+              "id": 28680,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28672,
+                  "mutability": "mutable",
+                  "name": "metadataURI",
+                  "nameLocation": "7661:11:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28681,
+                  "src": "7647:25:77",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 28671,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7647:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28674,
+                  "mutability": "mutable",
+                  "name": "equippableGroupId",
+                  "nameLocation": "7693:17:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28681,
+                  "src": "7686:24:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28673,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7686:6:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28676,
+                  "mutability": "mutable",
+                  "name": "catalogAddress",
+                  "nameLocation": "7732:14:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28681,
+                  "src": "7724:22:77",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28675,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7724:7:77",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28679,
+                  "mutability": "mutable",
+                  "name": "partIds",
+                  "nameLocation": "7776:7:77",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28681,
+                  "src": "7760:23:77",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint64_$dyn_memory_ptr",
+                    "typeString": "uint64[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 28677,
+                      "name": "uint64",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "7760:6:77",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "id": 28678,
+                    "nodeType": "ArrayTypeName",
+                    "src": "7760:8:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint64_$dyn_storage_ptr",
+                      "typeString": "uint64[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7633:160:77"
+            },
+            "scope": 28682,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 28546,
+              "name": "IERC5773",
+              "nameLocations": [
+                "241:8:77"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 34868,
+              "src": "241:8:77"
+            },
+            "id": 28547,
+            "nodeType": "InheritanceSpecifier",
+            "src": "241:8:77"
+          }
+        ],
+        "canonicalName": "IERC6220",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 28545,
+          "nodeType": "StructuredDocumentation",
+          "src": "104:114:77",
+          "text": " @title IERC6220\n @author RMRK team\n @notice Interface smart contract of the RMRK equippable module."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          28682,
+          34868,
+          28205
+        ],
+        "name": "IERC6220",
+        "nameLocation": "229:8:77",
+        "scope": 28683,
+        "usedErrors": [],
+        "usedEvents": [
+          28584,
+          28599,
+          28608,
+          34700,
+          34710,
+          34719,
+          34726,
+          34731,
+          34740,
+          34749
+        ]
+      }
+    ],
+    "license": "Apache-2.0"
+  },
+  "id": 77
+}

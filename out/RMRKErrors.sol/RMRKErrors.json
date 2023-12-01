@@ -1,0 +1,2011 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/library/RMRKErrors.sol",
+    "id": 33791,
+    "exportedSymbols": {
+      "ERC721AddressZeroIsNotaValidOwner": [
+        33549
+      ],
+      "ERC721ApprovalToCurrentOwner": [
+        33552
+      ],
+      "ERC721ApproveCallerIsNotOwnerNorApprovedForAll": [
+        33555
+      ],
+      "ERC721ApproveToCaller": [
+        33561
+      ],
+      "ERC721ApprovedQueryForNonexistentToken": [
+        33558
+      ],
+      "ERC721InvalidTokenId": [
+        33564
+      ],
+      "ERC721MintToTheZeroAddress": [
+        33567
+      ],
+      "ERC721NotApprovedOrOwner": [
+        33570
+      ],
+      "ERC721TokenAlreadyMinted": [
+        33573
+      ],
+      "ERC721TransferFromIncorrectOwner": [
+        33576
+      ],
+      "ERC721TransferToNonReceiverImplementer": [
+        33579
+      ],
+      "ERC721TransferToTheZeroAddress": [
+        33582
+      ],
+      "RMRKApprovalForAssetsToCurrentOwner": [
+        33585
+      ],
+      "RMRKApproveForAssetsCallerIsNotOwnerNorApprovedForAll": [
+        33588
+      ],
+      "RMRKAssetAlreadyExists": [
+        33745
+      ],
+      "RMRKBadConfig": [
+        33591
+      ],
+      "RMRKBadPriorityListLength": [
+        33594
+      ],
+      "RMRKCanOnlyDoBulkOperationsOnOwnedTokens": [
+        33784
+      ],
+      "RMRKCanOnlyDoBulkOperationsWithOneTokenAtATime": [
+        33787
+      ],
+      "RMRKCannotTransferSoulbound": [
+        33600
+      ],
+      "RMRKCatalogRequiredForParts": [
+        33597
+      ],
+      "RMRKChildAlreadyExists": [
+        33603
+      ],
+      "RMRKChildIndexOutOfRange": [
+        33606
+      ],
+      "RMRKChildNotFoundInParent": [
+        33609
+      ],
+      "RMRKCollaboratorArraysNotEqualLength": [
+        33612
+      ],
+      "RMRKCollectionAlreadyRegistered": [
+        33615
+      ],
+      "RMRKCollectionNotRegistered": [
+        33618
+      ],
+      "RMRKEquippableEquipNotAllowedByCatalog": [
+        33621
+      ],
+      "RMRKExpiredDeadline": [
+        33624
+      ],
+      "RMRKIdZeroForbidden": [
+        33627
+      ],
+      "RMRKIndexOutOfRange": [
+        33630
+      ],
+      "RMRKInvalidChildReclaim": [
+        33633
+      ],
+      "RMRKInvalidSignature": [
+        33636
+      ],
+      "RMRKIsNotContract": [
+        33639
+      ],
+      "RMRKLocked": [
+        33642
+      ],
+      "RMRKMaxPendingAssetsReached": [
+        33648
+      ],
+      "RMRKMaxPendingChildrenReached": [
+        33645
+      ],
+      "RMRKMaxRecursiveBurnsReached": [
+        33655
+      ],
+      "RMRKMintOverMax": [
+        33658
+      ],
+      "RMRKMintToNonRMRKNestableImplementer": [
+        33661
+      ],
+      "RMRKMintZero": [
+        33664
+      ],
+      "RMRKMismachedArrayLength": [
+        33667
+      ],
+      "RMRKMustUnequipFirst": [
+        33670
+      ],
+      "RMRKNestableTooDeep": [
+        33673
+      ],
+      "RMRKNestableTransferToDescendant": [
+        33676
+      ],
+      "RMRKNestableTransferToNonRMRKNestableImplementer": [
+        33679
+      ],
+      "RMRKNestableTransferToSelf": [
+        33682
+      ],
+      "RMRKNewContributorIsZeroAddress": [
+        33724
+      ],
+      "RMRKNewOwnerIsZeroAddress": [
+        33721
+      ],
+      "RMRKNoAssetMatchingId": [
+        33685
+      ],
+      "RMRKNotApprovedForAssetsOrOwner": [
+        33688
+      ],
+      "RMRKNotApprovedOrDirectOwner": [
+        33691
+      ],
+      "RMRKNotCollectionCollaborator": [
+        33694
+      ],
+      "RMRKNotCollectionIssuer": [
+        33697
+      ],
+      "RMRKNotCollectionIssuerOrCollaborator": [
+        33700
+      ],
+      "RMRKNotComposableAsset": [
+        33703
+      ],
+      "RMRKNotEquipped": [
+        33706
+      ],
+      "RMRKNotOwner": [
+        33709
+      ],
+      "RMRKNotOwnerOrContributor": [
+        33712
+      ],
+      "RMRKNotSpecificAddress": [
+        33715
+      ],
+      "RMRKNotTokenOwner": [
+        33718
+      ],
+      "RMRKOwnableNotImplemented": [
+        33727
+      ],
+      "RMRKParentIsNotNFT": [
+        33730
+      ],
+      "RMRKPartAlreadyExists": [
+        33733
+      ],
+      "RMRKPartDoesNotExist": [
+        33736
+      ],
+      "RMRKPartIsNotSlot": [
+        33739
+      ],
+      "RMRKPendingChildIndexOutOfRange": [
+        33742
+      ],
+      "RMRKRoyaltiesTooHigh": [
+        33781
+      ],
+      "RMRKSlotAlreadyUsed": [
+        33748
+      ],
+      "RMRKTargetAssetCannotReceiveSlot": [
+        33751
+      ],
+      "RMRKTokenCannotBeEquippedWithAssetIntoSlot": [
+        33754
+      ],
+      "RMRKTokenDoesNotHaveAsset": [
+        33757
+      ],
+      "RMRKTokenHasNoAssets": [
+        33760
+      ],
+      "RMRKUnexpectedAssetId": [
+        33772
+      ],
+      "RMRKUnexpectedChildId": [
+        33763
+      ],
+      "RMRKUnexpectedNumberOfAssets": [
+        33766
+      ],
+      "RMRKUnexpectedNumberOfChildren": [
+        33769
+      ],
+      "RMRKUnexpectedParent": [
+        33775
+      ],
+      "RMRKWrongValueSent": [
+        33790
+      ],
+      "RMRKZeroLengthIdsPassed": [
+        33778
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:9953:83",
+    "nodes": [
+      {
+        "id": 33546,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:83",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 33549,
+        "nodeType": "ErrorDefinition",
+        "src": "375:42:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33547,
+          "nodeType": "StructuredDocumentation",
+          "src": "326:49:83",
+          "text": "Attempting to grant the token to 0x0 address"
+        },
+        "errorSelector": "77722866",
+        "name": "ERC721AddressZeroIsNotaValidOwner",
+        "nameLocation": "381:33:83",
+        "parameters": {
+          "id": 33548,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "414:2:83"
+        }
+      },
+      {
+        "id": 33552,
+        "nodeType": "ErrorDefinition",
+        "src": "485:37:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33550,
+          "nodeType": "StructuredDocumentation",
+          "src": "418:67:83",
+          "text": "Attempting to grant approval to the current owner of the token"
+        },
+        "errorSelector": "0591db6d",
+        "name": "ERC721ApprovalToCurrentOwner",
+        "nameLocation": "491:28:83",
+        "parameters": {
+          "id": 33551,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "519:2:83"
+        }
+      },
+      {
+        "id": 33555,
+        "nodeType": "ErrorDefinition",
+        "src": "621:55:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33553,
+          "nodeType": "StructuredDocumentation",
+          "src": "523:98:83",
+          "text": "Attempting to grant approval when not being owner or approved for all should not be permitted"
+        },
+        "errorSelector": "982462b2",
+        "name": "ERC721ApproveCallerIsNotOwnerNorApprovedForAll",
+        "nameLocation": "627:46:83",
+        "parameters": {
+          "id": 33554,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "673:2:83"
+        }
+      },
+      {
+        "id": 33558,
+        "nodeType": "ErrorDefinition",
+        "src": "760:47:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33556,
+          "nodeType": "StructuredDocumentation",
+          "src": "677:83:83",
+          "text": "Attempting to get approvals for a token owned by 0x0 (considered non-existent)"
+        },
+        "errorSelector": "1a790064",
+        "name": "ERC721ApprovedQueryForNonexistentToken",
+        "nameLocation": "766:38:83",
+        "parameters": {
+          "id": 33557,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "804:2:83"
+        }
+      },
+      {
+        "id": 33561,
+        "nodeType": "ErrorDefinition",
+        "src": "849:30:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33559,
+          "nodeType": "StructuredDocumentation",
+          "src": "808:41:83",
+          "text": "Attempting to grant approval to self"
+        },
+        "errorSelector": "2dee66e4",
+        "name": "ERC721ApproveToCaller",
+        "nameLocation": "855:21:83",
+        "parameters": {
+          "id": 33560,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "876:2:83"
+        }
+      },
+      {
+        "id": 33564,
+        "nodeType": "ErrorDefinition",
+        "src": "922:29:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33562,
+          "nodeType": "StructuredDocumentation",
+          "src": "880:42:83",
+          "text": "Attempting to use an invalid token ID"
+        },
+        "errorSelector": "89ba7e10",
+        "name": "ERC721InvalidTokenId",
+        "nameLocation": "928:20:83",
+        "parameters": {
+          "id": 33563,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "948:2:83"
+        }
+      },
+      {
+        "id": 33567,
+        "nodeType": "ErrorDefinition",
+        "src": "990:35:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33565,
+          "nodeType": "StructuredDocumentation",
+          "src": "952:38:83",
+          "text": "Attempting to mint to 0x0 address"
+        },
+        "errorSelector": "25bd6bd3",
+        "name": "ERC721MintToTheZeroAddress",
+        "nameLocation": "996:26:83",
+        "parameters": {
+          "id": 33566,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1022:2:83"
+        }
+      },
+      {
+        "id": 33570,
+        "nodeType": "ErrorDefinition",
+        "src": "1108:33:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33568,
+          "nodeType": "StructuredDocumentation",
+          "src": "1026:82:83",
+          "text": "Attempting to manage a token without being its owner or approved by the owner"
+        },
+        "errorSelector": "2728a9d0",
+        "name": "ERC721NotApprovedOrOwner",
+        "nameLocation": "1114:24:83",
+        "parameters": {
+          "id": 33569,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1138:2:83"
+        }
+      },
+      {
+        "id": 33573,
+        "nodeType": "ErrorDefinition",
+        "src": "1189:33:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33571,
+          "nodeType": "StructuredDocumentation",
+          "src": "1142:47:83",
+          "text": "Attempting to mint an already minted token"
+        },
+        "errorSelector": "c5a8d371",
+        "name": "ERC721TokenAlreadyMinted",
+        "nameLocation": "1195:24:83",
+        "parameters": {
+          "id": 33572,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1219:2:83"
+        }
+      },
+      {
+        "id": 33576,
+        "nodeType": "ErrorDefinition",
+        "src": "1298:41:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33574,
+          "nodeType": "StructuredDocumentation",
+          "src": "1223:75:83",
+          "text": "Attempting to transfer the token from an address that is not the owner"
+        },
+        "errorSelector": "e146af6f",
+        "name": "ERC721TransferFromIncorrectOwner",
+        "nameLocation": "1304:32:83",
+        "parameters": {
+          "id": 33575,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1336:2:83"
+        }
+      },
+      {
+        "id": 33579,
+        "nodeType": "ErrorDefinition",
+        "src": "1422:47:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33577,
+          "nodeType": "StructuredDocumentation",
+          "src": "1340:82:83",
+          "text": "Attempting to safe transfer to an address that is unable to receive the token"
+        },
+        "errorSelector": "bcb56637",
+        "name": "ERC721TransferToNonReceiverImplementer",
+        "nameLocation": "1428:38:83",
+        "parameters": {
+          "id": 33578,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1466:2:83"
+        }
+      },
+      {
+        "id": 33582,
+        "nodeType": "ErrorDefinition",
+        "src": "1524:39:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33580,
+          "nodeType": "StructuredDocumentation",
+          "src": "1470:54:83",
+          "text": "Attempting to transfer the token to a 0x0 address"
+        },
+        "errorSelector": "e3d91bfc",
+        "name": "ERC721TransferToTheZeroAddress",
+        "nameLocation": "1530:30:83",
+        "parameters": {
+          "id": 33581,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1560:2:83"
+        }
+      },
+      {
+        "id": 33585,
+        "nodeType": "ErrorDefinition",
+        "src": "1630:44:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33583,
+          "nodeType": "StructuredDocumentation",
+          "src": "1564:66:83",
+          "text": "Attempting to grant approval of assets to their current owner"
+        },
+        "errorSelector": "75f45abd",
+        "name": "RMRKApprovalForAssetsToCurrentOwner",
+        "nameLocation": "1636:35:83",
+        "parameters": {
+          "id": 33584,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1671:2:83"
+        }
+      },
+      {
+        "id": 33588,
+        "nodeType": "ErrorDefinition",
+        "src": "1763:62:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33586,
+          "nodeType": "StructuredDocumentation",
+          "src": "1675:88:83",
+          "text": "Attempting to grant approval of assets without being the caller or approved for all"
+        },
+        "errorSelector": "af45d292",
+        "name": "RMRKApproveForAssetsCallerIsNotOwnerNorApprovedForAll",
+        "nameLocation": "1769:53:83",
+        "parameters": {
+          "id": 33587,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1822:2:83"
+        }
+      },
+      {
+        "id": 33591,
+        "nodeType": "ErrorDefinition",
+        "src": "1880:22:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33589,
+          "nodeType": "StructuredDocumentation",
+          "src": "1826:54:83",
+          "text": "Attempting to incorrectly configue a Catalog item"
+        },
+        "errorSelector": "0b654073",
+        "name": "RMRKBadConfig",
+        "nameLocation": "1886:13:83",
+        "parameters": {
+          "id": 33590,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1899:2:83"
+        }
+      },
+      {
+        "id": 33594,
+        "nodeType": "ErrorDefinition",
+        "src": "2017:34:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33592,
+          "nodeType": "StructuredDocumentation",
+          "src": "1903:114:83",
+          "text": "Attempting to set the priorities with an array of length that doesn't match the length of active assets array"
+        },
+        "errorSelector": "6b037c3a",
+        "name": "RMRKBadPriorityListLength",
+        "nameLocation": "2023:25:83",
+        "parameters": {
+          "id": 33593,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2048:2:83"
+        }
+      },
+      {
+        "id": 33597,
+        "nodeType": "ErrorDefinition",
+        "src": "2141:36:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33595,
+          "nodeType": "StructuredDocumentation",
+          "src": "2052:89:83",
+          "text": "Attempting to add an asset entry with `Part`s, without setting the `Catalog` address"
+        },
+        "errorSelector": "206b5a0e",
+        "name": "RMRKCatalogRequiredForParts",
+        "nameLocation": "2147:27:83",
+        "parameters": {
+          "id": 33596,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2174:2:83"
+        }
+      },
+      {
+        "id": 33600,
+        "nodeType": "ErrorDefinition",
+        "src": "2243:36:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33598,
+          "nodeType": "StructuredDocumentation",
+          "src": "2178:65:83",
+          "text": "Attempting to transfer a soulbound (non-transferrable) token"
+        },
+        "errorSelector": "f25f5906",
+        "name": "RMRKCannotTransferSoulbound",
+        "nameLocation": "2249:27:83",
+        "parameters": {
+          "id": 33599,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2276:2:83"
+        }
+      },
+      {
+        "id": 33603,
+        "nodeType": "ErrorDefinition",
+        "src": "2344:31:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33601,
+          "nodeType": "StructuredDocumentation",
+          "src": "2280:64:83",
+          "text": "Attempting to accept a child that has already been accepted"
+        },
+        "errorSelector": "188a4973",
+        "name": "RMRKChildAlreadyExists",
+        "nameLocation": "2350:22:83",
+        "parameters": {
+          "id": 33602,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2372:2:83"
+        }
+      },
+      {
+        "id": 33606,
+        "nodeType": "ErrorDefinition",
+        "src": "2472:33:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33604,
+          "nodeType": "StructuredDocumentation",
+          "src": "2376:96:83",
+          "text": "Attempting to interact with a child, using index that is higher than the number of children"
+        },
+        "errorSelector": "ca7cc84a",
+        "name": "RMRKChildIndexOutOfRange",
+        "nameLocation": "2478:24:83",
+        "parameters": {
+          "id": 33605,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2502:2:83"
+        }
+      },
+      {
+        "id": 33609,
+        "nodeType": "ErrorDefinition",
+        "src": "2591:34:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33607,
+          "nodeType": "StructuredDocumentation",
+          "src": "2506:85:83",
+          "text": "Attempting to find the index of a child token on a parent which does not own it."
+        },
+        "errorSelector": "9746ef3f",
+        "name": "RMRKChildNotFoundInParent",
+        "nameLocation": "2597:25:83",
+        "parameters": {
+          "id": 33608,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2622:2:83"
+        }
+      },
+      {
+        "id": 33612,
+        "nodeType": "ErrorDefinition",
+        "src": "2731:45:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33610,
+          "nodeType": "StructuredDocumentation",
+          "src": "2626:105:83",
+          "text": "Attempting to pass collaborator address array and collaborator permission array of different lengths"
+        },
+        "errorSelector": "a4852b55",
+        "name": "RMRKCollaboratorArraysNotEqualLength",
+        "nameLocation": "2737:36:83",
+        "parameters": {
+          "id": 33611,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2773:2:83"
+        }
+      },
+      {
+        "id": 33615,
+        "nodeType": "ErrorDefinition",
+        "src": "2844:40:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33613,
+          "nodeType": "StructuredDocumentation",
+          "src": "2777:67:83",
+          "text": "Attempting to register a collection that is already registered"
+        },
+        "errorSelector": "06690ea2",
+        "name": "RMRKCollectionAlreadyRegistered",
+        "nameLocation": "2850:31:83",
+        "parameters": {
+          "id": 33614,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2881:2:83"
+        }
+      },
+      {
+        "id": 33618,
+        "nodeType": "ErrorDefinition",
+        "src": "2961:36:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33616,
+          "nodeType": "StructuredDocumentation",
+          "src": "2885:76:83",
+          "text": "Attempting to manage or interact with colleciton that is not registered"
+        },
+        "errorSelector": "7724e5e2",
+        "name": "RMRKCollectionNotRegistered",
+        "nameLocation": "2967:27:83",
+        "parameters": {
+          "id": 33617,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2994:2:83"
+        }
+      },
+      {
+        "id": 33621,
+        "nodeType": "ErrorDefinition",
+        "src": "3072:47:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33619,
+          "nodeType": "StructuredDocumentation",
+          "src": "2998:74:83",
+          "text": "Attempting to equip a `Part` with a child not approved by the Catalog"
+        },
+        "errorSelector": "e451dfea",
+        "name": "RMRKEquippableEquipNotAllowedByCatalog",
+        "nameLocation": "3078:38:83",
+        "parameters": {
+          "id": 33620,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3116:2:83"
+        }
+      },
+      {
+        "id": 33624,
+        "nodeType": "ErrorDefinition",
+        "src": "3168:28:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33622,
+          "nodeType": "StructuredDocumentation",
+          "src": "3120:48:83",
+          "text": "Attempting to pass an epired ECDSA deadline"
+        },
+        "errorSelector": "ec0dda1d",
+        "name": "RMRKExpiredDeadline",
+        "nameLocation": "3174:19:83",
+        "parameters": {
+          "id": 33623,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3193:2:83"
+        }
+      },
+      {
+        "id": 33627,
+        "nodeType": "ErrorDefinition",
+        "src": "3366:28:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33625,
+          "nodeType": "StructuredDocumentation",
+          "src": "3197:169:83",
+          "text": "Attempting to use ID 0, which is not supported\n @dev The ID 0 in RMRK suite is reserved for empty values. Guarding against its use ensures the expected operation"
+        },
+        "errorSelector": "12c33ce3",
+        "name": "RMRKIdZeroForbidden",
+        "nameLocation": "3372:19:83",
+        "parameters": {
+          "id": 33626,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3391:2:83"
+        }
+      },
+      {
+        "id": 33630,
+        "nodeType": "ErrorDefinition",
+        "src": "3479:28:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33628,
+          "nodeType": "StructuredDocumentation",
+          "src": "3395:84:83",
+          "text": "Attempting to interact with an asset, using index greater than number of assets"
+        },
+        "errorSelector": "0757d521",
+        "name": "RMRKIndexOutOfRange",
+        "nameLocation": "3485:19:83",
+        "parameters": {
+          "id": 33629,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3504:2:83"
+        }
+      },
+      {
+        "id": 33633,
+        "nodeType": "ErrorDefinition",
+        "src": "3566:32:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33631,
+          "nodeType": "StructuredDocumentation",
+          "src": "3508:58:83",
+          "text": "Attempting to reclaim a child that can't be reclaimed"
+        },
+        "errorSelector": "3ece0949",
+        "name": "RMRKInvalidChildReclaim",
+        "nameLocation": "3572:23:83",
+        "parameters": {
+          "id": 33632,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3595:2:83"
+        }
+      },
+      {
+        "id": 33636,
+        "nodeType": "ErrorDefinition",
+        "src": "3649:29:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33634,
+          "nodeType": "StructuredDocumentation",
+          "src": "3599:50:83",
+          "text": "Attempting to use and invalid ECDSA signature"
+        },
+        "errorSelector": "32dde8a9",
+        "name": "RMRKInvalidSignature",
+        "nameLocation": "3655:20:83",
+        "parameters": {
+          "id": 33635,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3675:2:83"
+        }
+      },
+      {
+        "id": 33639,
+        "nodeType": "ErrorDefinition",
+        "src": "3769:26:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33637,
+          "nodeType": "StructuredDocumentation",
+          "src": "3679:90:83",
+          "text": "Attempting to interact with an end-user account when the contract account is expected"
+        },
+        "errorSelector": "b9d31147",
+        "name": "RMRKIsNotContract",
+        "nameLocation": "3775:17:83",
+        "parameters": {
+          "id": 33638,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3792:2:83"
+        }
+      },
+      {
+        "id": 33642,
+        "nodeType": "ErrorDefinition",
+        "src": "3869:19:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33640,
+          "nodeType": "StructuredDocumentation",
+          "src": "3796:73:83",
+          "text": "Attempting to interact with a contract that had its operation locked"
+        },
+        "errorSelector": "ed1fa96f",
+        "name": "RMRKLocked",
+        "nameLocation": "3875:10:83",
+        "parameters": {
+          "id": 33641,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3885:2:83"
+        }
+      },
+      {
+        "id": 33645,
+        "nodeType": "ErrorDefinition",
+        "src": "4009:38:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33643,
+          "nodeType": "StructuredDocumentation",
+          "src": "3889:120:83",
+          "text": "Attempting to add a pending child after the number of pending children has reached the limit (default limit is 128)"
+        },
+        "errorSelector": "a53c8c05",
+        "name": "RMRKMaxPendingChildrenReached",
+        "nameLocation": "4015:29:83",
+        "parameters": {
+          "id": 33644,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4044:2:83"
+        }
+      },
+      {
+        "id": 33648,
+        "nodeType": "ErrorDefinition",
+        "src": "4171:36:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33646,
+          "nodeType": "StructuredDocumentation",
+          "src": "4048:123:83",
+          "text": "Attempting to add a pending asset after the number of pending assets has reached the limit (default limit is\n  128)"
+        },
+        "errorSelector": "bade3a7b",
+        "name": "RMRKMaxPendingAssetsReached",
+        "nameLocation": "4177:27:83",
+        "parameters": {
+          "id": 33647,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4204:2:83"
+        }
+      },
+      {
+        "id": 33655,
+        "nodeType": "ErrorDefinition",
+        "src": "4517:75:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33649,
+          "nodeType": "StructuredDocumentation",
+          "src": "4208:309:83",
+          "text": "Attempting to burn a total number of recursive children higher than maximum set\n @param childContract Address of the collection smart contract in which the maximum number of recursive burns was reached\n @param childId ID of the child token at which the maximum number of recursive burns was reached"
+        },
+        "errorSelector": "6177b250",
+        "name": "RMRKMaxRecursiveBurnsReached",
+        "nameLocation": "4523:28:83",
+        "parameters": {
+          "id": 33654,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 33651,
+              "mutability": "mutable",
+              "name": "childContract",
+              "nameLocation": "4560:13:83",
+              "nodeType": "VariableDeclaration",
+              "scope": 33655,
+              "src": "4552:21:83",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "typeName": {
+                "id": 33650,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "4552:7:83",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 33653,
+              "mutability": "mutable",
+              "name": "childId",
+              "nameLocation": "4583:7:83",
+              "nodeType": "VariableDeclaration",
+              "scope": 33655,
+              "src": "4575:15:83",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              },
+              "typeName": {
+                "id": 33652,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "4575:7:83",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "4551:40:83"
+        }
+      },
+      {
+        "id": 33658,
+        "nodeType": "ErrorDefinition",
+        "src": "4703:24:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33656,
+          "nodeType": "StructuredDocumentation",
+          "src": "4593:110:83",
+          "text": "Attempting to mint a number of tokens that would cause the total supply to be greater than maximum supply"
+        },
+        "errorSelector": "bd239bf6",
+        "name": "RMRKMintOverMax",
+        "nameLocation": "4709:15:83",
+        "parameters": {
+          "id": 33657,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4724:2:83"
+        }
+      },
+      {
+        "id": 33661,
+        "nodeType": "ErrorDefinition",
+        "src": "4815:45:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33659,
+          "nodeType": "StructuredDocumentation",
+          "src": "4728:87:83",
+          "text": "Attempting to mint a nested token to a smart contract that doesn't support nesting"
+        },
+        "errorSelector": "fbd5d8b9",
+        "name": "RMRKMintToNonRMRKNestableImplementer",
+        "nameLocation": "4821:36:83",
+        "parameters": {
+          "id": 33660,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4857:2:83"
+        }
+      },
+      {
+        "id": 33664,
+        "nodeType": "ErrorDefinition",
+        "src": "4896:21:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33662,
+          "nodeType": "StructuredDocumentation",
+          "src": "4861:35:83",
+          "text": "Attempting to mint zero tokens"
+        },
+        "errorSelector": "376bec4d",
+        "name": "RMRKMintZero",
+        "nameLocation": "4902:12:83",
+        "parameters": {
+          "id": 33663,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4914:2:83"
+        }
+      },
+      {
+        "id": 33667,
+        "nodeType": "ErrorDefinition",
+        "src": "4983:33:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33665,
+          "nodeType": "StructuredDocumentation",
+          "src": "4918:65:83",
+          "text": "Attempting to pass complementary arrays of different lengths"
+        },
+        "errorSelector": "0d2d5a09",
+        "name": "RMRKMismachedArrayLength",
+        "nameLocation": "4989:24:83",
+        "parameters": {
+          "id": 33666,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "5013:2:83"
+        }
+      },
+      {
+        "id": 33670,
+        "nodeType": "ErrorDefinition",
+        "src": "5076:29:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33668,
+          "nodeType": "StructuredDocumentation",
+          "src": "5017:59:83",
+          "text": "Attempting to transfer a child before it is unequipped"
+        },
+        "errorSelector": "18677274",
+        "name": "RMRKMustUnequipFirst",
+        "nameLocation": "5082:20:83",
+        "parameters": {
+          "id": 33669,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "5102:2:83"
+        }
+      },
+      {
+        "id": 33673,
+        "nodeType": "ErrorDefinition",
+        "src": "5202:28:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33671,
+          "nodeType": "StructuredDocumentation",
+          "src": "5106:96:83",
+          "text": "Attempting to nest a child over the nestable limit (current limit is 100 levels of nesting)"
+        },
+        "errorSelector": "6934d7a0",
+        "name": "RMRKNestableTooDeep",
+        "nameLocation": "5208:19:83",
+        "parameters": {
+          "id": 33672,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "5227:2:83"
+        }
+      },
+      {
+        "id": 33676,
+        "nodeType": "ErrorDefinition",
+        "src": "5346:41:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33674,
+          "nodeType": "StructuredDocumentation",
+          "src": "5231:115:83",
+          "text": "Attempting to nest the token to own descendant, which would create a loop and leave the looped tokens in limbo"
+        },
+        "errorSelector": "48a87cda",
+        "name": "RMRKNestableTransferToDescendant",
+        "nameLocation": "5352:32:83",
+        "parameters": {
+          "id": 33675,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "5384:2:83"
+        }
+      },
+      {
+        "id": 33679,
+        "nodeType": "ErrorDefinition",
+        "src": "5470:57:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33677,
+          "nodeType": "StructuredDocumentation",
+          "src": "5388:82:83",
+          "text": "Attempting to nest the token to a smart contract that doesn't support nesting"
+        },
+        "errorSelector": "5e13b1cc",
+        "name": "RMRKNestableTransferToNonRMRKNestableImplementer",
+        "nameLocation": "5476:48:83",
+        "parameters": {
+          "id": 33678,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "5524:2:83"
+        }
+      },
+      {
+        "id": 33682,
+        "nodeType": "ErrorDefinition",
+        "src": "5573:35:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33680,
+          "nodeType": "StructuredDocumentation",
+          "src": "5528:45:83",
+          "text": "Attempting to nest the token into itself"
+        },
+        "errorSelector": "3d76b107",
+        "name": "RMRKNestableTransferToSelf",
+        "nameLocation": "5579:26:83",
+        "parameters": {
+          "id": 33681,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "5605:2:83"
+        }
+      },
+      {
+        "id": 33685,
+        "nodeType": "ErrorDefinition",
+        "src": "5672:30:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33683,
+          "nodeType": "StructuredDocumentation",
+          "src": "5609:63:83",
+          "text": "Attempting to interact with an asset that can not be found"
+        },
+        "errorSelector": "554bdff2",
+        "name": "RMRKNoAssetMatchingId",
+        "nameLocation": "5678:21:83",
+        "parameters": {
+          "id": 33684,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "5699:2:83"
+        }
+      },
+      {
+        "id": 33688,
+        "nodeType": "ErrorDefinition",
+        "src": "5811:40:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33686,
+          "nodeType": "StructuredDocumentation",
+          "src": "5703:108:83",
+          "text": "Attempting to manage an asset without owning it or having been granted permission by the owner to do so"
+        },
+        "errorSelector": "5d648329",
+        "name": "RMRKNotApprovedForAssetsOrOwner",
+        "nameLocation": "5817:31:83",
+        "parameters": {
+          "id": 33687,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "5848:2:83"
+        }
+      },
+      {
+        "id": 33691,
+        "nodeType": "ErrorDefinition",
+        "src": "6169:37:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33689,
+          "nodeType": "StructuredDocumentation",
+          "src": "5852:317:83",
+          "text": "Attempting to interact with a token without being its owner or having been granted permission by the\n  owner to do so\n @dev When a token is nested, only the direct owner (NFT parent) can mange it. In that case, approved addresses are\n  not allowed to manage it, in order to ensure the expected behaviour"
+        },
+        "errorSelector": "8be79306",
+        "name": "RMRKNotApprovedOrDirectOwner",
+        "nameLocation": "6175:28:83",
+        "parameters": {
+          "id": 33690,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "6203:2:83"
+        }
+      },
+      {
+        "id": 33694,
+        "nodeType": "ErrorDefinition",
+        "src": "6289:38:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33692,
+          "nodeType": "StructuredDocumentation",
+          "src": "6207:82:83",
+          "text": "Attempting to manage a collection without being the collection's collaborator"
+        },
+        "errorSelector": "f72b87f1",
+        "name": "RMRKNotCollectionCollaborator",
+        "nameLocation": "6295:29:83",
+        "parameters": {
+          "id": 33693,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "6324:2:83"
+        }
+      },
+      {
+        "id": 33697,
+        "nodeType": "ErrorDefinition",
+        "src": "6403:32:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33695,
+          "nodeType": "StructuredDocumentation",
+          "src": "6328:75:83",
+          "text": "Attemting to manage a collection without being the collection's issuer"
+        },
+        "errorSelector": "8eecf884",
+        "name": "RMRKNotCollectionIssuer",
+        "nameLocation": "6409:23:83",
+        "parameters": {
+          "id": 33696,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "6432:2:83"
+        }
+      },
+      {
+        "id": 33700,
+        "nodeType": "ErrorDefinition",
+        "src": "6528:46:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33698,
+          "nodeType": "StructuredDocumentation",
+          "src": "6436:92:83",
+          "text": "Attempting to manage a collection without being the collection's issuer or collaborator"
+        },
+        "errorSelector": "552ee552",
+        "name": "RMRKNotCollectionIssuerOrCollaborator",
+        "nameLocation": "6534:37:83",
+        "parameters": {
+          "id": 33699,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "6571:2:83"
+        }
+      },
+      {
+        "id": 33703,
+        "nodeType": "ErrorDefinition",
+        "src": "6647:31:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33701,
+          "nodeType": "StructuredDocumentation",
+          "src": "6575:72:83",
+          "text": "Attempting to compose an asset wihtout having an associated Catalog"
+        },
+        "errorSelector": "7a062578",
+        "name": "RMRKNotComposableAsset",
+        "nameLocation": "6653:22:83",
+        "parameters": {
+          "id": 33702,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "6675:2:83"
+        }
+      },
+      {
+        "id": 33706,
+        "nodeType": "ErrorDefinition",
+        "src": "6733:24:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33704,
+          "nodeType": "StructuredDocumentation",
+          "src": "6679:54:83",
+          "text": "Attempting to unequip an item that isn't equipped"
+        },
+        "errorSelector": "5f79f75c",
+        "name": "RMRKNotEquipped",
+        "nameLocation": "6739:15:83",
+        "parameters": {
+          "id": 33705,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "6754:2:83"
+        }
+      },
+      {
+        "id": 33709,
+        "nodeType": "ErrorDefinition",
+        "src": "6853:21:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33707,
+          "nodeType": "StructuredDocumentation",
+          "src": "6758:95:83",
+          "text": "Attempting to interact with a management function without being the smart contract's owner"
+        },
+        "errorSelector": "38c5ab1e",
+        "name": "RMRKNotOwner",
+        "nameLocation": "6859:12:83",
+        "parameters": {
+          "id": 33708,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "6871:2:83"
+        }
+      },
+      {
+        "id": 33712,
+        "nodeType": "ErrorDefinition",
+        "src": "6975:34:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33710,
+          "nodeType": "StructuredDocumentation",
+          "src": "6875:100:83",
+          "text": "Attempting to interact with a function without being the owner or contributor of the collection"
+        },
+        "errorSelector": "1eca1670",
+        "name": "RMRKNotOwnerOrContributor",
+        "nameLocation": "6981:25:83",
+        "parameters": {
+          "id": 33711,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7006:2:83"
+        }
+      },
+      {
+        "id": 33715,
+        "nodeType": "ErrorDefinition",
+        "src": "7083:31:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33713,
+          "nodeType": "StructuredDocumentation",
+          "src": "7010:73:83",
+          "text": "Attempting to manage a collection without being the specific address"
+        },
+        "errorSelector": "aecee4ab",
+        "name": "RMRKNotSpecificAddress",
+        "nameLocation": "7089:22:83",
+        "parameters": {
+          "id": 33714,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7111:2:83"
+        }
+      },
+      {
+        "id": 33718,
+        "nodeType": "ErrorDefinition",
+        "src": "7172:26:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33716,
+          "nodeType": "StructuredDocumentation",
+          "src": "7115:57:83",
+          "text": "Attempting to manage a token without being its owner"
+        },
+        "errorSelector": "5992700d",
+        "name": "RMRKNotTokenOwner",
+        "nameLocation": "7178:17:83",
+        "parameters": {
+          "id": 33717,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7195:2:83"
+        }
+      },
+      {
+        "id": 33721,
+        "nodeType": "ErrorDefinition",
+        "src": "7259:34:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33719,
+          "nodeType": "StructuredDocumentation",
+          "src": "7199:60:83",
+          "text": "Attempting to transfer the ownership to the 0x0 address"
+        },
+        "errorSelector": "4ece6ecf",
+        "name": "RMRKNewOwnerIsZeroAddress",
+        "nameLocation": "7265:25:83",
+        "parameters": {
+          "id": 33720,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7290:2:83"
+        }
+      },
+      {
+        "id": 33724,
+        "nodeType": "ErrorDefinition",
+        "src": "7350:40:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33722,
+          "nodeType": "StructuredDocumentation",
+          "src": "7294:56:83",
+          "text": "Attempting to assign a 0x0 address as a contributor"
+        },
+        "errorSelector": "b5c09380",
+        "name": "RMRKNewContributorIsZeroAddress",
+        "nameLocation": "7356:31:83",
+        "parameters": {
+          "id": 33723,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7387:2:83"
+        }
+      },
+      {
+        "id": 33727,
+        "nodeType": "ErrorDefinition",
+        "src": "7457:34:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33725,
+          "nodeType": "StructuredDocumentation",
+          "src": "7391:66:83",
+          "text": "Attemtping to use `Ownable` interface without implementing it"
+        },
+        "errorSelector": "e39a0d7e",
+        "name": "RMRKOwnableNotImplemented",
+        "nameLocation": "7463:25:83",
+        "parameters": {
+          "id": 33726,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7488:2:83"
+        }
+      },
+      {
+        "id": 33730,
+        "nodeType": "ErrorDefinition",
+        "src": "7570:27:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33728,
+          "nodeType": "StructuredDocumentation",
+          "src": "7492:78:83",
+          "text": "Attempting an operation requiring the token being nested, while it is not"
+        },
+        "errorSelector": "1b5d4e8a",
+        "name": "RMRKParentIsNotNFT",
+        "nameLocation": "7576:18:83",
+        "parameters": {
+          "id": 33729,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7594:2:83"
+        }
+      },
+      {
+        "id": 33733,
+        "nodeType": "ErrorDefinition",
+        "src": "7661:30:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33731,
+          "nodeType": "StructuredDocumentation",
+          "src": "7598:63:83",
+          "text": "Attempting to add a `Part` with an ID that is already used"
+        },
+        "errorSelector": "0fbdf8dd",
+        "name": "RMRKPartAlreadyExists",
+        "nameLocation": "7667:21:83",
+        "parameters": {
+          "id": 33732,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7688:2:83"
+        }
+      },
+      {
+        "id": 33736,
+        "nodeType": "ErrorDefinition",
+        "src": "7742:29:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33734,
+          "nodeType": "StructuredDocumentation",
+          "src": "7692:50:83",
+          "text": "Attempting to use a `Part` that doesn't exist"
+        },
+        "errorSelector": "1eb80604",
+        "name": "RMRKPartDoesNotExist",
+        "nameLocation": "7748:20:83",
+        "parameters": {
+          "id": 33735,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7768:2:83"
+        }
+      },
+      {
+        "id": 33739,
+        "nodeType": "ErrorDefinition",
+        "src": "7861:26:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33737,
+          "nodeType": "StructuredDocumentation",
+          "src": "7772:89:83",
+          "text": "Attempting to use a `Part` that is `Fixed` when `Slot` kind of `Part` should be used"
+        },
+        "errorSelector": "ae6a3b77",
+        "name": "RMRKPartIsNotSlot",
+        "nameLocation": "7867:17:83",
+        "parameters": {
+          "id": 33738,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "7884:2:83"
+        }
+      },
+      {
+        "id": 33742,
+        "nodeType": "ErrorDefinition",
+        "src": "7990:40:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33740,
+          "nodeType": "StructuredDocumentation",
+          "src": "7888:102:83",
+          "text": "Attempting to interact with a pending child using an index greater than the size of pending array"
+        },
+        "errorSelector": "da22687f",
+        "name": "RMRKPendingChildIndexOutOfRange",
+        "nameLocation": "7996:31:83",
+        "parameters": {
+          "id": 33741,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8027:2:83"
+        }
+      },
+      {
+        "id": 33745,
+        "nodeType": "ErrorDefinition",
+        "src": "8101:31:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33743,
+          "nodeType": "StructuredDocumentation",
+          "src": "8031:70:83",
+          "text": "Attempting to add an asset using an ID that has already been used"
+        },
+        "errorSelector": "8fe3c310",
+        "name": "RMRKAssetAlreadyExists",
+        "nameLocation": "8107:22:83",
+        "parameters": {
+          "id": 33744,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8129:2:83"
+        }
+      },
+      {
+        "id": 33748,
+        "nodeType": "ErrorDefinition",
+        "src": "8211:28:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33746,
+          "nodeType": "StructuredDocumentation",
+          "src": "8133:78:83",
+          "text": "Attempting to equip an item into a slot that already has an item equipped"
+        },
+        "errorSelector": "bd0650ab",
+        "name": "RMRKSlotAlreadyUsed",
+        "nameLocation": "8217:19:83",
+        "parameters": {
+          "id": 33747,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8236:2:83"
+        }
+      },
+      {
+        "id": 33751,
+        "nodeType": "ErrorDefinition",
+        "src": "8327:41:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33749,
+          "nodeType": "StructuredDocumentation",
+          "src": "8240:87:83",
+          "text": "Attempting to equip an item into a `Slot` that the target asset does not implement"
+        },
+        "errorSelector": "4ef44ed5",
+        "name": "RMRKTargetAssetCannotReceiveSlot",
+        "nameLocation": "8333:32:83",
+        "parameters": {
+          "id": 33750,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8365:2:83"
+        }
+      },
+      {
+        "id": 33754,
+        "nodeType": "ErrorDefinition",
+        "src": "8470:51:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33752,
+          "nodeType": "StructuredDocumentation",
+          "src": "8369:101:83",
+          "text": "Attempting to equip a child into a `Slot` and parent that the child's collection doesn't support"
+        },
+        "errorSelector": "2c36cd33",
+        "name": "RMRKTokenCannotBeEquippedWithAssetIntoSlot",
+        "nameLocation": "8476:42:83",
+        "parameters": {
+          "id": 33753,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8518:2:83"
+        }
+      },
+      {
+        "id": 33757,
+        "nodeType": "ErrorDefinition",
+        "src": "8587:34:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33755,
+          "nodeType": "StructuredDocumentation",
+          "src": "8522:65:83",
+          "text": "Attempting to compose a NFT of a token without active assets"
+        },
+        "errorSelector": "dcc947e8",
+        "name": "RMRKTokenDoesNotHaveAsset",
+        "nameLocation": "8593:25:83",
+        "parameters": {
+          "id": 33756,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8618:2:83"
+        }
+      },
+      {
+        "id": 33760,
+        "nodeType": "ErrorDefinition",
+        "src": "8708:29:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33758,
+          "nodeType": "StructuredDocumentation",
+          "src": "8622:86:83",
+          "text": "Attempting to determine the asset with the top priority on a token without assets"
+        },
+        "errorSelector": "3456866f",
+        "name": "RMRKTokenHasNoAssets",
+        "nameLocation": "8714:20:83",
+        "parameters": {
+          "id": 33759,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8734:2:83"
+        }
+      },
+      {
+        "id": 33763,
+        "nodeType": "ErrorDefinition",
+        "src": "8835:30:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33761,
+          "nodeType": "StructuredDocumentation",
+          "src": "8738:97:83",
+          "text": "Attempting to accept or transfer a child which does not match the one at the specified index"
+        },
+        "errorSelector": "e707e582",
+        "name": "RMRKUnexpectedChildId",
+        "nameLocation": "8841:21:83",
+        "parameters": {
+          "id": 33762,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8862:2:83"
+        }
+      },
+      {
+        "id": 33766,
+        "nodeType": "ErrorDefinition",
+        "src": "8952:37:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33764,
+          "nodeType": "StructuredDocumentation",
+          "src": "8866:86:83",
+          "text": "Attempting to reject all pending assets but more assets than expected are pending"
+        },
+        "errorSelector": "5134ce89",
+        "name": "RMRKUnexpectedNumberOfAssets",
+        "nameLocation": "8958:28:83",
+        "parameters": {
+          "id": 33765,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "8986:2:83"
+        }
+      },
+      {
+        "id": 33769,
+        "nodeType": "ErrorDefinition",
+        "src": "9082:39:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33767,
+          "nodeType": "StructuredDocumentation",
+          "src": "8990:92:83",
+          "text": "Attempting to reject all pending children but children assets than expected are pending"
+        },
+        "errorSelector": "3ce62f16",
+        "name": "RMRKUnexpectedNumberOfChildren",
+        "nameLocation": "9088:30:83",
+        "parameters": {
+          "id": 33768,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "9118:2:83"
+        }
+      },
+      {
+        "id": 33772,
+        "nodeType": "ErrorDefinition",
+        "src": "9218:30:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33770,
+          "nodeType": "StructuredDocumentation",
+          "src": "9122:96:83",
+          "text": "Attempting to accept or reject an asset which does not match the one at the specified index"
+        },
+        "errorSelector": "78eeeecf",
+        "name": "RMRKUnexpectedAssetId",
+        "nameLocation": "9224:21:83",
+        "parameters": {
+          "id": 33771,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "9245:2:83"
+        }
+      },
+      {
+        "id": 33775,
+        "nodeType": "ErrorDefinition",
+        "src": "9337:29:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33773,
+          "nodeType": "StructuredDocumentation",
+          "src": "9249:88:83",
+          "text": "Attempting an operation expecting a parent to the token which is not the actual one"
+        },
+        "errorSelector": "f5c46968",
+        "name": "RMRKUnexpectedParent",
+        "nameLocation": "9343:20:83",
+        "parameters": {
+          "id": 33774,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "9363:2:83"
+        }
+      },
+      {
+        "id": 33778,
+        "nodeType": "ErrorDefinition",
+        "src": "9481:32:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33776,
+          "nodeType": "StructuredDocumentation",
+          "src": "9367:114:83",
+          "text": "Attempting not to pass an empty array of equippable addresses when adding or setting the equippable addresses"
+        },
+        "errorSelector": "5d8ff4f4",
+        "name": "RMRKZeroLengthIdsPassed",
+        "nameLocation": "9487:23:83",
+        "parameters": {
+          "id": 33777,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "9510:2:83"
+        }
+      },
+      {
+        "id": 33781,
+        "nodeType": "ErrorDefinition",
+        "src": "9602:29:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33779,
+          "nodeType": "StructuredDocumentation",
+          "src": "9514:88:83",
+          "text": "Attempting to set the royalties to a value higher than 100% (10000 in basis points)"
+        },
+        "errorSelector": "800c30ba",
+        "name": "RMRKRoyaltiesTooHigh",
+        "nameLocation": "9608:20:83",
+        "parameters": {
+          "id": 33780,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "9628:2:83"
+        }
+      },
+      {
+        "id": 33784,
+        "nodeType": "ErrorDefinition",
+        "src": "9713:49:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33782,
+          "nodeType": "StructuredDocumentation",
+          "src": "9632:81:83",
+          "text": "Attempting to do a bulk operation on a token that is not owned by the caller"
+        },
+        "errorSelector": "5d2be9c6",
+        "name": "RMRKCanOnlyDoBulkOperationsOnOwnedTokens",
+        "nameLocation": "9719:40:83",
+        "parameters": {
+          "id": 33783,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "9759:2:83"
+        }
+      },
+      {
+        "id": 33787,
+        "nodeType": "ErrorDefinition",
+        "src": "9832:55:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33785,
+          "nodeType": "StructuredDocumentation",
+          "src": "9763:69:83",
+          "text": "Attempting to do a bulk operation with multiple tokens at a time"
+        },
+        "errorSelector": "411ba6b7",
+        "name": "RMRKCanOnlyDoBulkOperationsWithOneTokenAtATime",
+        "nameLocation": "9838:46:83",
+        "parameters": {
+          "id": 33786,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "9884:2:83"
+        }
+      },
+      {
+        "id": 33790,
+        "nodeType": "ErrorDefinition",
+        "src": "9965:27:83",
+        "nodes": [],
+        "documentation": {
+          "id": 33788,
+          "nodeType": "StructuredDocumentation",
+          "src": "9888:77:83",
+          "text": "Attempting to pay with native token with a value different than expected"
+        },
+        "errorSelector": "36ce5e43",
+        "name": "RMRKWrongValueSent",
+        "nameLocation": "9971:18:83",
+        "parameters": {
+          "id": 33789,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "9989:2:83"
+        }
+      }
+    ],
+    "license": "Apache-2.0"
+  },
+  "id": 83
+}

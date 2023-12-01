@@ -1,0 +1,277 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "RMRK_INTERFACE",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061010e806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80638d4f3bf5146037578063ffa1ad74146062575b600080fd5b604463524d524b60e01b81565b6040516001600160e01b031990911681526020015b60405180910390f35b6085604051806040016040528060058152602001640322e322e360dc1b81525081565b60405160599190600060208083528351808285015260005b8181101560b757858101830151858201604001528201609d565b506000604082860101526040601f19601f830116850101925050509291505056fea26469706673582212204af32edbfaf276c916ecdc6a8da61c0836fc280666096b276d373ac353d4722564736f6c63430008150033",
+    "sourceMap": "285:281:76:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80638d4f3bf5146037578063ffa1ad74146062575b600080fd5b604463524d524b60e01b81565b6040516001600160e01b031990911681526020015b60405180910390f35b6085604051806040016040528060058152602001640322e322e360dc1b81525081565b60405160599190600060208083528351808285015260005b8181101560b757858101830151858201604001528201609d565b506000604082860101526040601f19601f830116850101925050509291505056fea26469706673582212204af32edbfaf276c916ecdc6a8da61c0836fc280666096b276d373ac353d4722564736f6c63430008150033",
+    "sourceMap": "285:281:76:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;490:50;;-1:-1:-1;;;490:50:76;;;;;-1:-1:-1;;;;;;176:33:98;;;158:52;;146:2;131:18;490:50:76;;;;;;;;444:40;;;;;;;;;;;;;;;-1:-1:-1;;;444:40:76;;;;;;;;;;;333:4:98;362:2;391;380:9;373:21;423:6;417:13;466:6;461:2;450:9;446:18;439:34;491:1;501:140;515:6;512:1;509:13;501:140;;;610:14;;;606:23;;600:30;576:17;;;595:2;572:26;565:66;530:10;;501:140;;;505:3;690:1;685:2;676:6;665:9;661:22;657:31;650:42;760:2;753;749:7;744:2;736:6;732:15;728:29;717:9;713:45;709:54;701:62;;;;221:548;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "RMRK_INTERFACE()": "8d4f3bf5",
+    "VERSION()": "ffa1ad74"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"RMRK_INTERFACE\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"RMRK team\",\"details\":\"This is currently just a passthrough contract which allows for granular editing of base-level ERC721 functions.\",\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"VERSION\":{\"return\":\"Version identifier of the smart contract\",\"returns\":{\"_0\":\"Version identifier of the smart contract\"}}},\"title\":\"RMRKCore\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"VERSION()\":{\"notice\":\"Version of the @rmrk-team/evm-contracts package\"}},\"notice\":\"Smart contract of the RMRK core module.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/core/RMRKCore.sol\":\"RMRKCore\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@rmrk-team/=node_modules/@rmrk-team/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/core/RMRKCore.sol\":{\"keccak256\":\"0x2aed82db53e50724cefa3ee8ca62e7b9e4fb170a2b324cd5f518914480ba9b5b\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://962a4c262e1710c8b0f3bb94f77513ee3aa1e561c85d9acb06960f36ede3bba7\",\"dweb:/ipfs/QmTQKxurANXy8HCtdLLcaxfwCPMoVJPKpYxtsj9CwiYQaZ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "RMRK_INTERFACE",
+          "outputs": [
+            {
+              "internalType": "bytes4",
+              "name": "",
+              "type": "bytes4"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "VERSION",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "VERSION()": {
+            "notice": "Version of the @rmrk-team/evm-contracts package"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@rmrk-team/=node_modules/@rmrk-team/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/core/RMRKCore.sol": "RMRKCore"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/core/RMRKCore.sol": {
+        "keccak256": "0x2aed82db53e50724cefa3ee8ca62e7b9e4fb170a2b324cd5f518914480ba9b5b",
+        "urls": [
+          "bzz-raw://962a4c262e1710c8b0f3bb94f77513ee3aa1e561c85d9acb06960f36ede3bba7",
+          "dweb:/ipfs/QmTQKxurANXy8HCtdLLcaxfwCPMoVJPKpYxtsj9CwiYQaZ"
+        ],
+        "license": "Apache-2.0"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/core/RMRKCore.sol",
+    "id": 28542,
+    "exportedSymbols": {
+      "RMRKCore": [
+        28541
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:527:76",
+    "nodes": [
+      {
+        "id": 28532,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:76",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 28541,
+        "nodeType": "ContractDefinition",
+        "src": "285:281:76",
+        "nodes": [
+          {
+            "id": 28537,
+            "nodeType": "VariableDeclaration",
+            "src": "444:40:76",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 28534,
+              "nodeType": "StructuredDocumentation",
+              "src": "309:130:76",
+              "text": " @notice Version of the @rmrk-team/evm-contracts package\n @return Version identifier of the smart contract"
+            },
+            "functionSelector": "ffa1ad74",
+            "mutability": "constant",
+            "name": "VERSION",
+            "nameLocation": "467:7:76",
+            "scope": 28541,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 28535,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "444:6:76",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "hexValue": "322e322e30",
+              "id": 28536,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "477:7:76",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_c3370ec04d3fde248d4ca6dba2b404616edc2a8aabef2176407cb0399c4bec87",
+                "typeString": "literal_string \"2.2.0\""
+              },
+              "value": "2.2.0"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 28540,
+            "nodeType": "VariableDeclaration",
+            "src": "490:50:76",
+            "nodes": [],
+            "constant": true,
+            "functionSelector": "8d4f3bf5",
+            "mutability": "constant",
+            "name": "RMRK_INTERFACE",
+            "nameLocation": "513:14:76",
+            "scope": 28541,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 28538,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "490:6:76",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "hexValue": "30783532344435323442",
+              "id": 28539,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "530:10:76",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1380799051_by_1",
+                "typeString": "int_const 1380799051"
+              },
+              "value": "0x524D524B"
+            },
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "RMRKCore",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 28533,
+          "nodeType": "StructuredDocumentation",
+          "src": "66:218:76",
+          "text": " @title RMRKCore\n @author RMRK team\n @notice Smart contract of the RMRK core module.\n @dev This is currently just a passthrough contract which allows for granular editing of base-level ERC721 functions."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          28541
+        ],
+        "name": "RMRKCore",
+        "nameLocation": "294:8:76",
+        "scope": 28542,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "Apache-2.0"
+  },
+  "id": 76
+}

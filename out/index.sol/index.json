@@ -1,0 +1,211 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "node_modules/@latticexyz/store/src/codegen/index.sol",
+    "id": 14095,
+    "exportedSymbols": {
+      "Hooks": [
+        15919
+      ],
+      "ResourceIds": [
+        16674
+      ],
+      "ResourceIdsTableId": [
+        15978
+      ],
+      "StoreHooks": [
+        18438
+      ],
+      "StoreHooksTableId": [
+        16743
+      ],
+      "Tables": [
+        21416
+      ],
+      "TablesData": [
+        18522
+      ],
+      "TablesTableId": [
+        18501
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:342:34",
+    "nodes": [
+      {
+        "id": 14082,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:34",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 14085,
+        "nodeType": "ImportDirective",
+        "src": "108:72:34",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/store/src/codegen/tables/StoreHooks.sol",
+        "file": "./tables/StoreHooks.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 14095,
+        "sourceUnit": 18439,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 14083,
+              "name": "StoreHooks",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 18438,
+              "src": "117:10:34",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 14084,
+              "name": "StoreHooksTableId",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 16743,
+              "src": "129:17:34",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 14089,
+        "nodeType": "ImportDirective",
+        "src": "181:72:34",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/store/src/codegen/tables/Tables.sol",
+        "file": "./tables/Tables.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 14095,
+        "sourceUnit": 21417,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 14086,
+              "name": "Tables",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 21416,
+              "src": "190:6:34",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 14087,
+              "name": "TablesData",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 18522,
+              "src": "198:10:34",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 14088,
+              "name": "TablesTableId",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 18501,
+              "src": "210:13:34",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 14092,
+        "nodeType": "ImportDirective",
+        "src": "254:75:34",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/store/src/codegen/tables/ResourceIds.sol",
+        "file": "./tables/ResourceIds.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 14095,
+        "sourceUnit": 16685,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 14090,
+              "name": "ResourceIds",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 16674,
+              "src": "263:11:34",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 14091,
+              "name": "ResourceIdsTableId",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 15978,
+              "src": "276:18:34",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 14094,
+        "nodeType": "ImportDirective",
+        "src": "330:43:34",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/store/src/codegen/tables/Hooks.sol",
+        "file": "./tables/Hooks.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 14095,
+        "sourceUnit": 15920,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 14093,
+              "name": "Hooks",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 15919,
+              "src": "339:5:34",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 34
+}

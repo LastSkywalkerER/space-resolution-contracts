@@ -7,7 +7,7 @@ import {Position, PlayerStats, PlayerStatsResponse} from "../interfaces/Types.so
 contract GameSystem is System {
     uint public bulletPrice = 0.001 ether;
 
-    function start(int256[3][] calldata ethersPosition_) external {
+    function start(Position[] calldata ethersPosition_) external {
         bytes32 entityId = bytes32(uint256(uint160((_msgSender()))));
 
         EthersData memory ethers = Ethers.get(entityId);
@@ -20,7 +20,7 @@ contract GameSystem is System {
             EthersArrangement.set(
                 entityId,
                 i,
-                EthersArrangementData({x: ethersPosition_[i][0], y: ethersPosition_[i][1], z: ethersPosition_[i][2]})
+                EthersArrangementData({x: ethersPosition_[i].x, y: ethersPosition_[i].y, z: ethersPosition_[i].z})
             );
 
             unchecked {

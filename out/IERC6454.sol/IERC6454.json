@@ -1,0 +1,427 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "isTransferable",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isTransferable(uint256,address,address)": "91a6262f",
+    "supportsInterface(bytes4)": "01ffc9a7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"isTransferable\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"RMRK team\",\"kind\":\"dev\",\"methods\":{\"isTransferable(uint256,address,address)\":{\"details\":\"If this function returns `false`, the transfer of the token MUST revert execution.If the tokenId does not exist, this method MUST revert execution, unless the token is being checked for  minting.\",\"params\":{\"from\":\"Address from which the token is being transferred\",\"to\":\"Address to which the token is being transferred\",\"tokenId\":\"ID of the token being checked\"},\"returns\":{\"_0\":\"Boolean value indicating whether the given token is transferable\"}},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"}},\"title\":\"IERC6454\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isTransferable(uint256,address,address)\":{\"notice\":\"Used to check whether the given token is transferable or not.\"}},\"notice\":\"A minimal extension to identify the transferability of Non-Fungible Tokens.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/soulbound/IERC6454.sol\":\"IERC6454\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@rmrk-team/=node_modules/@rmrk-team/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/soulbound/IERC6454.sol\":{\"keccak256\":\"0xc454f771a51a947da311e00a7b290f635f94b191cc036fc5211bc631155cbabb\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://b880a1aa41b2a90d4bab0935924a606b394212bf0ce9e7cabcb097f3c57ccdae\",\"dweb:/ipfs/QmWjHUxLtyiUVRupZGK6nvhoXdUUZPZHu3JZUcfEJC2dKf\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isTransferable",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "isTransferable(uint256,address,address)": {
+            "details": "If this function returns `false`, the transfer of the token MUST revert execution.If the tokenId does not exist, this method MUST revert execution, unless the token is being checked for  minting.",
+            "params": {
+              "from": "Address from which the token is being transferred",
+              "to": "Address to which the token is being transferred",
+              "tokenId": "ID of the token being checked"
+            },
+            "returns": {
+              "_0": "Boolean value indicating whether the given token is transferable"
+            }
+          },
+          "supportsInterface(bytes4)": {
+            "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "isTransferable(uint256,address,address)": {
+            "notice": "Used to check whether the given token is transferable or not."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@rmrk-team/=node_modules/@rmrk-team/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/soulbound/IERC6454.sol": "IERC6454"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/soulbound/IERC6454.sol": {
+        "keccak256": "0xc454f771a51a947da311e00a7b290f635f94b191cc036fc5211bc631155cbabb",
+        "urls": [
+          "bzz-raw://b880a1aa41b2a90d4bab0935924a606b394212bf0ce9e7cabcb097f3c57ccdae",
+          "dweb:/ipfs/QmWjHUxLtyiUVRupZGK6nvhoXdUUZPZHu3JZUcfEJC2dKf"
+        ],
+        "license": "Apache-2.0"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/extension/soulbound/IERC6454.sol",
+    "id": 33466,
+    "exportedSymbols": {
+      "IERC165": [
+        28205
+      ],
+      "IERC6454": [
+        33465
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:980:81",
+    "nodes": [
+      {
+        "id": 33448,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:81",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 33449,
+        "nodeType": "ImportDirective",
+        "src": "66:65:81",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 33466,
+        "sourceUnit": 28206,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 33465,
+        "nodeType": "ContractDefinition",
+        "src": "268:751:81",
+        "nodes": [
+          {
+            "id": 33464,
+            "nodeType": "FunctionDefinition",
+            "src": "891:126:81",
+            "nodes": [],
+            "documentation": {
+              "id": 33453,
+              "nodeType": "StructuredDocumentation",
+              "src": "304:582:81",
+              "text": " @notice Used to check whether the given token is transferable or not.\n @dev If this function returns `false`, the transfer of the token MUST revert execution.\n @dev If the tokenId does not exist, this method MUST revert execution, unless the token is being checked for\n  minting.\n @param tokenId ID of the token being checked\n @param from Address from which the token is being transferred\n @param to Address to which the token is being transferred\n @return Boolean value indicating whether the given token is transferable"
+            },
+            "functionSelector": "91a6262f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isTransferable",
+            "nameLocation": "900:14:81",
+            "parameters": {
+              "id": 33460,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33455,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "932:7:81",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33464,
+                  "src": "924:15:81",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33454,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "924:7:81",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33457,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "957:4:81",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33464,
+                  "src": "949:12:81",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33456,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "949:7:81",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33459,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "979:2:81",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33464,
+                  "src": "971:10:81",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "971:7:81",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "914:73:81"
+            },
+            "returnParameters": {
+              "id": 33463,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33462,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33464,
+                  "src": "1011:4:81",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 33461,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1011:4:81",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1010:6:81"
+            },
+            "scope": 33465,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 33451,
+              "name": "IERC165",
+              "nameLocations": [
+                "290:7:81"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 28205,
+              "src": "290:7:81"
+            },
+            "id": 33452,
+            "nodeType": "InheritanceSpecifier",
+            "src": "290:7:81"
+          }
+        ],
+        "canonicalName": "IERC6454",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 33450,
+          "nodeType": "StructuredDocumentation",
+          "src": "133:134:81",
+          "text": " @title IERC6454\n @author RMRK team\n @notice A minimal extension to identify the transferability of Non-Fungible Tokens."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          33465,
+          28205
+        ],
+        "name": "IERC6454",
+        "nameLocation": "278:8:81",
+        "scope": 33466,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "Apache-2.0"
+  },
+  "id": 81
+}

@@ -5,6 +5,12 @@
     "main": "index.js",
     "scripts": {
         "build:mud": "rimraf src/codegen && mud tablegen && mud worldgen",
+        "build:abi-ts": "mud abi-ts",
+        "deploy:testnet": "yarn build:mud && mud deploy --rpc https://follower.testnet-chain.linfra.xyz",
+        "deploy:goerli": "yarn build:mud && mud deploy --rpc https://goerli.infura.io/v3/57b7823b502145a9b4abcc6f383f049d",
+        "deploy:optimism": "yarn build:mud && mud deploy --rpc https://optimism-goerli.infura.io/v3/d7110c1add02415b923402c67dce0311",
+        "deploy:arbitrum": "yarn build:mud && mud deploy --rpc https://arbitrum-goerli.infura.io/v3/d7110c1add02415b923402c67dce0311",
+        "deploy:immutable": "yarn build:mud && mud deploy --rpc https://rpc.testnet.immutable.com/ --id 13473",
         "lint": "hardhat check && eslint ./test",
         "lint:fix": "eslint --fix --ext js,.jsx,.ts,.tsx .",
         "lint:fix-cache": "eslint --fix --cache --ext js,.jsx,.ts,.tsx .",
@@ -41,25 +47,26 @@
         "eslint-plugin-import": "^2.25.2",
         "eslint-plugin-n": "^15.0.0",
         "eslint-plugin-promise": "^6.0.0",
+        "ethers": "5",
         "hardhat": "^2.14.0",
         "hardhat-deploy": "^0.11.29",
         "hardhat-gas-reporter": "^1.0.9",
         "hardhat-prettier": "^0.0.1",
         "prettier-plugin-solidity": "^1.1.3",
         "solhint": "^3.4.1",
-        "solhint-plugin-prettier": "^0.0.5",
         "solhint-config-mud": "2.0.0-next.14",
         "solhint-plugin-mud": "2.0.0-next.14",
+        "solhint-plugin-prettier": "^0.0.5",
         "solidity-coverage": "^0.8.2",
         "ts-node": "^10.9.1",
         "typechain": "^8.2.0",
         "typescript": "*"
     },
     "dependencies": {
-        "@rmrk-team/evm-contracts": "^2.2.0",
         "@latticexyz/cli": "2.0.0-next.14",
         "@latticexyz/schema-type": "2.0.0-next.14",
         "@latticexyz/store": "2.0.0-next.14",
-        "@latticexyz/world": "2.0.0-next.14"
+        "@latticexyz/world": "2.0.0-next.14",
+        "@rmrk-team/evm-contracts": "^2.2.0"
     }
 }

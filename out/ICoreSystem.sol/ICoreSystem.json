@@ -1,0 +1,119 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"This interface is automatically generated from the corresponding system contract. Do not edit manually.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"ICoreSystem\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@latticexyz/world/src/codegen/interfaces/ICoreSystem.sol\":\"ICoreSystem\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@rmrk-team/=node_modules/@rmrk-team/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@latticexyz/world/src/codegen/interfaces/ICoreSystem.sol\":{\"keccak256\":\"0xf837b53eaa348da3b3650e0b7159de02d3f84897d96e487ece2f932c272dbe57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fbdc52e9e519c8c6d4a00caf4de08688eb8eb34dbfc6236308f281d7cf05b51b\",\"dweb:/ipfs/QmWnogXiA5KA6JGxCTJR5W1MNFowrH7baSAYhSXjV1xM47\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@rmrk-team/=node_modules/@rmrk-team/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@latticexyz/world/src/codegen/interfaces/ICoreSystem.sol": "ICoreSystem"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@latticexyz/world/src/codegen/interfaces/ICoreSystem.sol": {
+        "keccak256": "0xf837b53eaa348da3b3650e0b7159de02d3f84897d96e487ece2f932c272dbe57",
+        "urls": [
+          "bzz-raw://fbdc52e9e519c8c6d4a00caf4de08688eb8eb34dbfc6236308f281d7cf05b51b",
+          "dweb:/ipfs/QmWnogXiA5KA6JGxCTJR5W1MNFowrH7baSAYhSXjV1xM47"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@latticexyz/world/src/codegen/interfaces/ICoreSystem.sol",
+    "id": 27408,
+    "exportedSymbols": {
+      "ICoreSystem": [
+        27407
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:245:60",
+    "nodes": [
+      {
+        "id": 27405,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:60",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 27407,
+        "nodeType": "ContractDefinition",
+        "src": "250:26:60",
+        "nodes": [],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICoreSystem",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 27406,
+          "nodeType": "StructuredDocumentation",
+          "src": "108:141:60",
+          "text": " @title ICoreSystem\n @dev This interface is automatically generated from the corresponding system contract. Do not edit manually."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          27407
+        ],
+        "name": "ICoreSystem",
+        "nameLocation": "260:11:60",
+        "scope": 27408,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 60
+}

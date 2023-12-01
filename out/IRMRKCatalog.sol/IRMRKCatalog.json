@@ -1,0 +1,1990 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "partId",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "equippableAddresses",
+          "type": "address[]"
+        }
+      ],
+      "name": "AddedEquippables",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "partId",
+          "type": "uint64"
+        },
+        {
+          "indexed": true,
+          "internalType": "enum IRMRKCatalog.ItemType",
+          "name": "itemType",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "zIndex",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "equippableAddresses",
+          "type": "address[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "metadataURI",
+          "type": "string"
+        }
+      ],
+      "name": "AddedPart",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "partId",
+          "type": "uint64"
+        }
+      ],
+      "name": "SetEquippableToAll",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "partId",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "equippableAddresses",
+          "type": "address[]"
+        }
+      ],
+      "name": "SetEquippables",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "partId",
+          "type": "uint64"
+        },
+        {
+          "internalType": "address",
+          "name": "targetAddress",
+          "type": "address"
+        }
+      ],
+      "name": "checkIsEquippable",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "partId",
+          "type": "uint64"
+        }
+      ],
+      "name": "checkIsEquippableToAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMetadataURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "partId",
+          "type": "uint64"
+        }
+      ],
+      "name": "getPart",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum IRMRKCatalog.ItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "z",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address[]",
+              "name": "equippable",
+              "type": "address[]"
+            },
+            {
+              "internalType": "string",
+              "name": "metadataURI",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IRMRKCatalog.Part",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64[]",
+          "name": "partIds",
+          "type": "uint64[]"
+        }
+      ],
+      "name": "getParts",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum IRMRKCatalog.ItemType",
+              "name": "itemType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "z",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address[]",
+              "name": "equippable",
+              "type": "address[]"
+            },
+            {
+              "internalType": "string",
+              "name": "metadataURI",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IRMRKCatalog.Part[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getType",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "checkIsEquippable(uint64,address)": "dcb79d56",
+    "checkIsEquippableToAll(uint64)": "dc477d2f",
+    "getMetadataURI()": "86a92af7",
+    "getPart(uint64)": "d297ac43",
+    "getParts(uint64[])": "9806c6ec",
+    "getType()": "15dae03e",
+    "supportsInterface(bytes4)": "01ffc9a7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"partId\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"equippableAddresses\",\"type\":\"address[]\"}],\"name\":\"AddedEquippables\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"partId\",\"type\":\"uint64\"},{\"indexed\":true,\"internalType\":\"enum IRMRKCatalog.ItemType\",\"name\":\"itemType\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"zIndex\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"equippableAddresses\",\"type\":\"address[]\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"}],\"name\":\"AddedPart\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"partId\",\"type\":\"uint64\"}],\"name\":\"SetEquippableToAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"partId\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"address[]\",\"name\":\"equippableAddresses\",\"type\":\"address[]\"}],\"name\":\"SetEquippables\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"partId\",\"type\":\"uint64\"},{\"internalType\":\"address\",\"name\":\"targetAddress\",\"type\":\"address\"}],\"name\":\"checkIsEquippable\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"partId\",\"type\":\"uint64\"}],\"name\":\"checkIsEquippableToAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMetadataURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"partId\",\"type\":\"uint64\"}],\"name\":\"getPart\",\"outputs\":[{\"components\":[{\"internalType\":\"enum IRMRKCatalog.ItemType\",\"name\":\"itemType\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"z\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"equippable\",\"type\":\"address[]\"},{\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"}],\"internalType\":\"struct IRMRKCatalog.Part\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64[]\",\"name\":\"partIds\",\"type\":\"uint64[]\"}],\"name\":\"getParts\",\"outputs\":[{\"components\":[{\"internalType\":\"enum IRMRKCatalog.ItemType\",\"name\":\"itemType\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"z\",\"type\":\"uint8\"},{\"internalType\":\"address[]\",\"name\":\"equippable\",\"type\":\"address[]\"},{\"internalType\":\"string\",\"name\":\"metadataURI\",\"type\":\"string\"}],\"internalType\":\"struct IRMRKCatalog.Part[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getType\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"RMRK team\",\"events\":{\"AddedEquippables(uint64,address[])\":{\"details\":\"It is emitted when new addresses are marked as equippable for `partId`.\",\"params\":{\"equippableAddresses\":\"An array of the new addresses that can equip this part\",\"partId\":\"ID of the part that had new equippable addresses added\"}},\"AddedPart(uint64,uint8,uint8,address[],string)\":{\"details\":\"It is emitted when a new part is added.\",\"params\":{\"equippableAddresses\":\"An array of addresses that can equip this part\",\"itemType\":\"Enum value specifying whether the part is `None`, `Slot` and `Fixed`\",\"metadataURI\":\"The metadata URI of the part\",\"partId\":\"ID of the part that was added\",\"zIndex\":\"An uint specifying the z value of the part. It is used to specify the depth which the part should  be rendered at\"}},\"SetEquippableToAll(uint64)\":{\"details\":\"It is emitted when a given part is marked as equippable by any.\",\"params\":{\"partId\":\"ID of the part marked as equippable by any address\"}},\"SetEquippables(uint64,address[])\":{\"details\":\"It is emitted when the existing list of addresses marked as equippable for `partId` is overwritten by a new one.\",\"params\":{\"equippableAddresses\":\"The new, full, list of addresses that can equip this part\",\"partId\":\"ID of the part whose list of equippable addresses was overwritten\"}}},\"kind\":\"dev\",\"methods\":{\"checkIsEquippable(uint64,address)\":{\"details\":\"Returns true if a collection may equip asset with `partId`.\",\"params\":{\"partId\":\"The ID of the part that we are checking\",\"targetAddress\":\"The address that we are checking for whether the part can be equipped into it or not\"},\"returns\":{\"_0\":\"The status indicating whether the `targetAddress` can be equipped into `Part` with `partId` or not\"}},\"checkIsEquippableToAll(uint64)\":{\"details\":\"Returns true if part is equippable to all.\",\"params\":{\"partId\":\"ID of the part that we are checking\"},\"returns\":{\"_0\":\"The status indicating whether the part with `partId` can be equipped by any address or not\"}},\"getMetadataURI()\":{\"returns\":{\"_0\":\"Catalog metadata URI\"}},\"getPart(uint64)\":{\"params\":{\"partId\":\"ID of the part that we are retrieving\"},\"returns\":{\"_0\":\"The `Part` struct associated with given `partId`\"}},\"getParts(uint64[])\":{\"params\":{\"partIds\":\"An array of part IDs that we want to retrieve\"},\"returns\":{\"_0\":\"An array of `Part` structs associated with given `partIds`\"}},\"getType()\":{\"returns\":{\"_0\":\"`itemType` of the associated Catalog\"}},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"}},\"title\":\"IRMRKCatalog\",\"version\":1},\"userdoc\":{\"events\":{\"AddedEquippables(uint64,address[])\":{\"notice\":\"Event to announce new equippables to the part.\"},\"AddedPart(uint64,uint8,uint8,address[],string)\":{\"notice\":\"Event to announce addition of a new part.\"},\"SetEquippableToAll(uint64)\":{\"notice\":\"Event to announce that a given part can be equipped by any address.\"},\"SetEquippables(uint64,address[])\":{\"notice\":\"Event to announce the overriding of equippable addresses of the part.\"}},\"kind\":\"user\",\"methods\":{\"checkIsEquippable(uint64,address)\":{\"notice\":\"Used to check whether the given address is allowed to equip the desired `Part`.\"},\"checkIsEquippableToAll(uint64)\":{\"notice\":\"Used to check if the part is equippable by all addresses.\"},\"getMetadataURI()\":{\"notice\":\"Used to return the metadata URI of the associated Catalog.\"},\"getPart(uint64)\":{\"notice\":\"Used to retrieve a `Part` with id `partId`\"},\"getParts(uint64[])\":{\"notice\":\"Used to retrieve multiple parts at the same time.\"},\"getType()\":{\"notice\":\"Used to return the `itemType` of the associated Catalog\"}},\"notice\":\"An interface Catalog for RMRK equippable module.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/catalog/IRMRKCatalog.sol\":\"IRMRKCatalog\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@rmrk-team/=node_modules/@rmrk-team/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"node_modules/@rmrk-team/evm-contracts/contracts/RMRK/catalog/IRMRKCatalog.sol\":{\"keccak256\":\"0xf14074edcd3bcef665f17659d206465bd9ea5cd7999acf28065e623f88f04a86\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://c967f0cc9fbf3dd16f8759d051220e750b8fca69ec503f33bf25c95ef5486403\",\"dweb:/ipfs/QmecpKwQKAPrd85Pi2jKTWfEjFrg2ZudjmMNEFhtxRbrat\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "partId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "address[]",
+              "name": "equippableAddresses",
+              "type": "address[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AddedEquippables",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "partId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "enum IRMRKCatalog.ItemType",
+              "name": "itemType",
+              "type": "uint8",
+              "indexed": true
+            },
+            {
+              "internalType": "uint8",
+              "name": "zIndex",
+              "type": "uint8",
+              "indexed": false
+            },
+            {
+              "internalType": "address[]",
+              "name": "equippableAddresses",
+              "type": "address[]",
+              "indexed": false
+            },
+            {
+              "internalType": "string",
+              "name": "metadataURI",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AddedPart",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "partId",
+              "type": "uint64",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "SetEquippableToAll",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "partId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "address[]",
+              "name": "equippableAddresses",
+              "type": "address[]",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "SetEquippables",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "partId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "address",
+              "name": "targetAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "checkIsEquippable",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "partId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "checkIsEquippableToAll",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getMetadataURI",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "partId",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPart",
+          "outputs": [
+            {
+              "internalType": "struct IRMRKCatalog.Part",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "enum IRMRKCatalog.ItemType",
+                  "name": "itemType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "z",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "equippable",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "string",
+                  "name": "metadataURI",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64[]",
+              "name": "partIds",
+              "type": "uint64[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getParts",
+          "outputs": [
+            {
+              "internalType": "struct IRMRKCatalog.Part[]",
+              "name": "",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "enum IRMRKCatalog.ItemType",
+                  "name": "itemType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "z",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "equippable",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "string",
+                  "name": "metadataURI",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getType",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "checkIsEquippable(uint64,address)": {
+            "details": "Returns true if a collection may equip asset with `partId`.",
+            "params": {
+              "partId": "The ID of the part that we are checking",
+              "targetAddress": "The address that we are checking for whether the part can be equipped into it or not"
+            },
+            "returns": {
+              "_0": "The status indicating whether the `targetAddress` can be equipped into `Part` with `partId` or not"
+            }
+          },
+          "checkIsEquippableToAll(uint64)": {
+            "details": "Returns true if part is equippable to all.",
+            "params": {
+              "partId": "ID of the part that we are checking"
+            },
+            "returns": {
+              "_0": "The status indicating whether the part with `partId` can be equipped by any address or not"
+            }
+          },
+          "getMetadataURI()": {
+            "returns": {
+              "_0": "Catalog metadata URI"
+            }
+          },
+          "getPart(uint64)": {
+            "params": {
+              "partId": "ID of the part that we are retrieving"
+            },
+            "returns": {
+              "_0": "The `Part` struct associated with given `partId`"
+            }
+          },
+          "getParts(uint64[])": {
+            "params": {
+              "partIds": "An array of part IDs that we want to retrieve"
+            },
+            "returns": {
+              "_0": "An array of `Part` structs associated with given `partIds`"
+            }
+          },
+          "getType()": {
+            "returns": {
+              "_0": "`itemType` of the associated Catalog"
+            }
+          },
+          "supportsInterface(bytes4)": {
+            "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "checkIsEquippable(uint64,address)": {
+            "notice": "Used to check whether the given address is allowed to equip the desired `Part`."
+          },
+          "checkIsEquippableToAll(uint64)": {
+            "notice": "Used to check if the part is equippable by all addresses."
+          },
+          "getMetadataURI()": {
+            "notice": "Used to return the metadata URI of the associated Catalog."
+          },
+          "getPart(uint64)": {
+            "notice": "Used to retrieve a `Part` with id `partId`"
+          },
+          "getParts(uint64[])": {
+            "notice": "Used to retrieve multiple parts at the same time."
+          },
+          "getType()": {
+            "notice": "Used to return the `itemType` of the associated Catalog"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@rmrk-team/=node_modules/@rmrk-team/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/catalog/IRMRKCatalog.sol": "IRMRKCatalog"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/catalog/IRMRKCatalog.sol": {
+        "keccak256": "0xf14074edcd3bcef665f17659d206465bd9ea5cd7999acf28065e623f88f04a86",
+        "urls": [
+          "bzz-raw://c967f0cc9fbf3dd16f8759d051220e750b8fca69ec503f33bf25c95ef5486403",
+          "dweb:/ipfs/QmecpKwQKAPrd85Pi2jKTWfEjFrg2ZudjmMNEFhtxRbrat"
+        ],
+        "license": "Apache-2.0"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@rmrk-team/evm-contracts/contracts/RMRK/catalog/IRMRKCatalog.sol",
+    "id": 28531,
+    "exportedSymbols": {
+      "IERC165": [
+        28205
+      ],
+      "IRMRKCatalog": [
+        28530
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:6190:75",
+    "nodes": [
+      {
+        "id": 28415,
+        "nodeType": "PragmaDirective",
+        "src": "40:24:75",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 28416,
+        "nodeType": "ImportDirective",
+        "src": "66:65:75",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 28531,
+        "sourceUnit": 28206,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 28530,
+        "nodeType": "ContractDefinition",
+        "src": "245:5984:75",
+        "nodes": [
+          {
+            "id": 28434,
+            "nodeType": "EventDefinition",
+            "src": "831:177:75",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 28420,
+              "nodeType": "StructuredDocumentation",
+              "src": "285:541:75",
+              "text": " @notice Event to announce addition of a new part.\n @dev It is emitted when a new part is added.\n @param partId ID of the part that was added\n @param itemType Enum value specifying whether the part is `None`, `Slot` and `Fixed`\n @param zIndex An uint specifying the z value of the part. It is used to specify the depth which the part should\n  be rendered at\n @param equippableAddresses An array of addresses that can equip this part\n @param metadataURI The metadata URI of the part"
+            },
+            "eventSelector": "c4715b52aed3b9dfb2fbdc63e39e234892ec1dd3811d2c671646dbfd3d32d92e",
+            "name": "AddedPart",
+            "nameLocation": "837:9:75",
+            "parameters": {
+              "id": 28433,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28422,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "partId",
+                  "nameLocation": "871:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28434,
+                  "src": "856:21:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28421,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "856:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28425,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "itemType",
+                  "nameLocation": "904:8:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28434,
+                  "src": "887:25:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ItemType_$28460",
+                    "typeString": "enum IRMRKCatalog.ItemType"
+                  },
+                  "typeName": {
+                    "id": 28424,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 28423,
+                      "name": "ItemType",
+                      "nameLocations": [
+                        "887:8:75"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 28460,
+                      "src": "887:8:75"
+                    },
+                    "referencedDeclaration": 28460,
+                    "src": "887:8:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ItemType_$28460",
+                      "typeString": "enum IRMRKCatalog.ItemType"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28427,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "zIndex",
+                  "nameLocation": "928:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28434,
+                  "src": "922:12:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 28426,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "922:5:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28430,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "equippableAddresses",
+                  "nameLocation": "954:19:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28434,
+                  "src": "944:29:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 28428,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "944:7:75",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 28429,
+                    "nodeType": "ArrayTypeName",
+                    "src": "944:9:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28432,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "metadataURI",
+                  "nameLocation": "990:11:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28434,
+                  "src": "983:18:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 28431,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "983:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "846:161:75"
+            }
+          },
+          {
+            "id": 28442,
+            "nodeType": "EventDefinition",
+            "src": "1341:99:75",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 28435,
+              "nodeType": "StructuredDocumentation",
+              "src": "1014:322:75",
+              "text": " @notice Event to announce new equippables to the part.\n @dev It is emitted when new addresses are marked as equippable for `partId`.\n @param partId ID of the part that had new equippable addresses added\n @param equippableAddresses An array of the new addresses that can equip this part"
+            },
+            "eventSelector": "379edf7304a765a58c7eba1fef9bc8675355bf31e276de44d60da39bb04c76ba",
+            "name": "AddedEquippables",
+            "nameLocation": "1347:16:75",
+            "parameters": {
+              "id": 28441,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28437,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "partId",
+                  "nameLocation": "1388:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28442,
+                  "src": "1373:21:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28436,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1373:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28440,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "equippableAddresses",
+                  "nameLocation": "1414:19:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28442,
+                  "src": "1404:29:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 28438,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1404:7:75",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 28439,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1404:9:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1363:76:75"
+            }
+          },
+          {
+            "id": 28450,
+            "nodeType": "EventDefinition",
+            "src": "1851:75:75",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 28443,
+              "nodeType": "StructuredDocumentation",
+              "src": "1446:400:75",
+              "text": " @notice Event to announce the overriding of equippable addresses of the part.\n @dev It is emitted when the existing list of addresses marked as equippable for `partId` is overwritten by a new one.\n @param partId ID of the part whose list of equippable addresses was overwritten\n @param equippableAddresses The new, full, list of addresses that can equip this part"
+            },
+            "eventSelector": "507a75726ac34d3eb68ebf61f034616ee2030c6193bd4a9efb7e131de6c6adcc",
+            "name": "SetEquippables",
+            "nameLocation": "1857:14:75",
+            "parameters": {
+              "id": 28449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28445,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "partId",
+                  "nameLocation": "1887:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28450,
+                  "src": "1872:21:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28444,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1872:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28448,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "equippableAddresses",
+                  "nameLocation": "1905:19:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28450,
+                  "src": "1895:29:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 28446,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1895:7:75",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 28447,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1895:9:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1871:54:75"
+            }
+          },
+          {
+            "id": 28455,
+            "nodeType": "EventDefinition",
+            "src": "2179:48:75",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 28451,
+              "nodeType": "StructuredDocumentation",
+              "src": "1932:242:75",
+              "text": " @notice Event to announce that a given part can be equipped by any address.\n @dev It is emitted when a given part is marked as equippable by any.\n @param partId ID of the part marked as equippable by any address"
+            },
+            "eventSelector": "540b0b22993accb6c2b7b0f4a5bd1b7e6419708ef2a68c39f09f01c848ba4fbc",
+            "name": "SetEquippableToAll",
+            "nameLocation": "2185:18:75",
+            "parameters": {
+              "id": 28454,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28453,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "partId",
+                  "nameLocation": "2219:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28455,
+                  "src": "2204:21:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28452,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2204:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2203:23:75"
+            }
+          },
+          {
+            "id": 28460,
+            "nodeType": "EnumDefinition",
+            "src": "2389:63:75",
+            "nodes": [],
+            "canonicalName": "IRMRKCatalog.ItemType",
+            "documentation": {
+              "id": 28456,
+              "nodeType": "StructuredDocumentation",
+              "src": "2233:151:75",
+              "text": " @notice Used to define a type of the item. Possible values are `None`, `Slot` or `Fixed`.\n @dev Used for fixed and slot parts."
+            },
+            "members": [
+              {
+                "id": 28457,
+                "name": "None",
+                "nameLocation": "2413:4:75",
+                "nodeType": "EnumValue",
+                "src": "2413:4:75"
+              },
+              {
+                "id": 28458,
+                "name": "Slot",
+                "nameLocation": "2427:4:75",
+                "nodeType": "EnumValue",
+                "src": "2427:4:75"
+              },
+              {
+                "id": 28459,
+                "name": "Fixed",
+                "nameLocation": "2441:5:75",
+                "nodeType": "EnumValue",
+                "src": "2441:5:75"
+              }
+            ],
+            "name": "ItemType",
+            "nameLocation": "2394:8:75"
+          },
+          {
+            "id": 28472,
+            "nodeType": "StructDefinition",
+            "src": "3244:205:75",
+            "nodes": [],
+            "canonicalName": "IRMRKCatalog.Part",
+            "documentation": {
+              "id": 28461,
+              "nodeType": "StructuredDocumentation",
+              "src": "2458:781:75",
+              "text": " @notice The integral structure of a standard RMRK catalog item defining it.\n @dev Requires a minimum of 3 storage slots per catalog item, equivalent to roughly 60,000 gas as of Berlin hard\n  fork (April 14, 2021), though 5-7 storage slots is more realistic, given the standard length of an IPFS URI.\n  This will result in between 25,000,000 and 35,000,000 gas per 250 assets--the maximum block size of Ethereum\n  mainnet is 30M at peak usage.\n @return itemType The item type of the part\n @return z The z value of the part defining how it should be rendered when presenting the full NFT\n @return equippable The array of addresses allowed to be equipped in this part\n @return metadataURI The metadata URI of the part"
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 28464,
+                "mutability": "mutable",
+                "name": "itemType",
+                "nameLocation": "3275:8:75",
+                "nodeType": "VariableDeclaration",
+                "scope": 28472,
+                "src": "3266:17:75",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ItemType_$28460",
+                  "typeString": "enum IRMRKCatalog.ItemType"
+                },
+                "typeName": {
+                  "id": 28463,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 28462,
+                    "name": "ItemType",
+                    "nameLocations": [
+                      "3266:8:75"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 28460,
+                    "src": "3266:8:75"
+                  },
+                  "referencedDeclaration": 28460,
+                  "src": "3266:8:75",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ItemType_$28460",
+                    "typeString": "enum IRMRKCatalog.ItemType"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28466,
+                "mutability": "mutable",
+                "name": "z",
+                "nameLocation": "3308:1:75",
+                "nodeType": "VariableDeclaration",
+                "scope": 28472,
+                "src": "3302:7:75",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 28465,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3302:5:75",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28469,
+                "mutability": "mutable",
+                "name": "equippable",
+                "nameLocation": "3338:10:75",
+                "nodeType": "VariableDeclaration",
+                "scope": 28472,
+                "src": "3328:20:75",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 28467,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3328:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 28468,
+                  "nodeType": "ArrayTypeName",
+                  "src": "3328:9:75",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28471,
+                "mutability": "mutable",
+                "name": "metadataURI",
+                "nameLocation": "3417:11:75",
+                "nodeType": "VariableDeclaration",
+                "scope": 28472,
+                "src": "3410:18:75",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 28470,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3410:6:75",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Part",
+            "nameLocation": "3251:4:75",
+            "scope": 28530,
+            "visibility": "public"
+          },
+          {
+            "id": 28479,
+            "nodeType": "StructDefinition",
+            "src": "4183:69:75",
+            "nodes": [],
+            "canonicalName": "IRMRKCatalog.IntakeStruct",
+            "documentation": {
+              "id": 28473,
+              "nodeType": "StructuredDocumentation",
+              "src": "3455:723:75",
+              "text": " @notice The structure used to add a new `Part`.\n @dev The part is added with specified ID, so you have to make sure that you are using an unused `partId`,\n  otherwise the addition of the part vill be reverted.\n @dev The full `IntakeStruct` looks like this:\n  [\n          partID,\n      [\n          itemType,\n          z,\n          [\n               permittedCollectionAddress0,\n               permittedCollectionAddress1,\n               permittedCollectionAddress2\n           ],\n           metadataURI\n       ]\n   ]\n @return partId ID to be assigned to the `Part`\n @return part A `Part` to be added"
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 28475,
+                "mutability": "mutable",
+                "name": "partId",
+                "nameLocation": "4220:6:75",
+                "nodeType": "VariableDeclaration",
+                "scope": 28479,
+                "src": "4213:13:75",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 28474,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "4213:6:75",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28478,
+                "mutability": "mutable",
+                "name": "part",
+                "nameLocation": "4241:4:75",
+                "nodeType": "VariableDeclaration",
+                "scope": 28479,
+                "src": "4236:9:75",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Part_$28472_storage_ptr",
+                  "typeString": "struct IRMRKCatalog.Part"
+                },
+                "typeName": {
+                  "id": 28477,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 28476,
+                    "name": "Part",
+                    "nameLocations": [
+                      "4236:4:75"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 28472,
+                    "src": "4236:4:75"
+                  },
+                  "referencedDeclaration": 28472,
+                  "src": "4236:4:75",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Part_$28472_storage_ptr",
+                    "typeString": "struct IRMRKCatalog.Part"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "IntakeStruct",
+            "nameLocation": "4190:12:75",
+            "scope": 28530,
+            "visibility": "public"
+          },
+          {
+            "id": 28485,
+            "nodeType": "FunctionDefinition",
+            "src": "4384:64:75",
+            "nodes": [],
+            "documentation": {
+              "id": 28480,
+              "nodeType": "StructuredDocumentation",
+              "src": "4258:121:75",
+              "text": " @notice Used to return the metadata URI of the associated Catalog.\n @return Catalog metadata URI"
+            },
+            "functionSelector": "86a92af7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMetadataURI",
+            "nameLocation": "4393:14:75",
+            "parameters": {
+              "id": 28481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4407:2:75"
+            },
+            "returnParameters": {
+              "id": 28484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28483,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28485,
+                  "src": "4433:13:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 28482,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4433:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4432:15:75"
+            },
+            "scope": 28530,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28491,
+            "nodeType": "FunctionDefinition",
+            "src": "4593:57:75",
+            "nodes": [],
+            "documentation": {
+              "id": 28486,
+              "nodeType": "StructuredDocumentation",
+              "src": "4454:134:75",
+              "text": " @notice Used to return the `itemType` of the associated Catalog\n @return `itemType` of the associated Catalog"
+            },
+            "functionSelector": "15dae03e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getType",
+            "nameLocation": "4602:7:75",
+            "parameters": {
+              "id": 28487,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4609:2:75"
+            },
+            "returnParameters": {
+              "id": 28490,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28489,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28491,
+                  "src": "4635:13:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 28488,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4635:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4634:15:75"
+            },
+            "scope": 28530,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28501,
+            "nodeType": "FunctionDefinition",
+            "src": "5127:116:75",
+            "nodes": [],
+            "documentation": {
+              "id": 28492,
+              "nodeType": "StructuredDocumentation",
+              "src": "4656:466:75",
+              "text": " @notice Used to check whether the given address is allowed to equip the desired `Part`.\n @dev Returns true if a collection may equip asset with `partId`.\n @param partId The ID of the part that we are checking\n @param targetAddress The address that we are checking for whether the part can be equipped into it or not\n @return The status indicating whether the `targetAddress` can be equipped into `Part` with `partId` or not"
+            },
+            "functionSelector": "dcb79d56",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkIsEquippable",
+            "nameLocation": "5136:17:75",
+            "parameters": {
+              "id": 28497,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28494,
+                  "mutability": "mutable",
+                  "name": "partId",
+                  "nameLocation": "5170:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28501,
+                  "src": "5163:13:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28493,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5163:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28496,
+                  "mutability": "mutable",
+                  "name": "targetAddress",
+                  "nameLocation": "5194:13:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28501,
+                  "src": "5186:21:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28495,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5186:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5153:60:75"
+            },
+            "returnParameters": {
+              "id": 28500,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28499,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28501,
+                  "src": "5237:4:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 28498,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5237:4:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5236:6:75"
+            },
+            "scope": 28530,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28509,
+            "nodeType": "FunctionDefinition",
+            "src": "5556:76:75",
+            "nodes": [],
+            "documentation": {
+              "id": 28502,
+              "nodeType": "StructuredDocumentation",
+              "src": "5249:302:75",
+              "text": " @notice Used to check if the part is equippable by all addresses.\n @dev Returns true if part is equippable to all.\n @param partId ID of the part that we are checking\n @return The status indicating whether the part with `partId` can be equipped by any address or not"
+            },
+            "functionSelector": "dc477d2f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkIsEquippableToAll",
+            "nameLocation": "5565:22:75",
+            "parameters": {
+              "id": 28505,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28504,
+                  "mutability": "mutable",
+                  "name": "partId",
+                  "nameLocation": "5595:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28509,
+                  "src": "5588:13:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28503,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5588:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5587:15:75"
+            },
+            "returnParameters": {
+              "id": 28508,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28507,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28509,
+                  "src": "5626:4:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 28506,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5626:4:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5625:6:75"
+            },
+            "scope": 28530,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28518,
+            "nodeType": "FunctionDefinition",
+            "src": "5835:68:75",
+            "nodes": [],
+            "documentation": {
+              "id": 28510,
+              "nodeType": "StructuredDocumentation",
+              "src": "5638:192:75",
+              "text": " @notice Used to retrieve a `Part` with id `partId`\n @param partId ID of the part that we are retrieving\n @return The `Part` struct associated with given `partId`"
+            },
+            "functionSelector": "d297ac43",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPart",
+            "nameLocation": "5844:7:75",
+            "parameters": {
+              "id": 28513,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28512,
+                  "mutability": "mutable",
+                  "name": "partId",
+                  "nameLocation": "5859:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28518,
+                  "src": "5852:13:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 28511,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5852:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5851:15:75"
+            },
+            "returnParameters": {
+              "id": 28517,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28516,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28518,
+                  "src": "5890:11:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Part_$28472_memory_ptr",
+                    "typeString": "struct IRMRKCatalog.Part"
+                  },
+                  "typeName": {
+                    "id": 28515,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 28514,
+                      "name": "Part",
+                      "nameLocations": [
+                        "5890:4:75"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 28472,
+                      "src": "5890:4:75"
+                    },
+                    "referencedDeclaration": 28472,
+                    "src": "5890:4:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Part_$28472_storage_ptr",
+                      "typeString": "struct IRMRKCatalog.Part"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5889:13:75"
+            },
+            "scope": 28530,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28529,
+            "nodeType": "FunctionDefinition",
+            "src": "6132:95:75",
+            "nodes": [],
+            "documentation": {
+              "id": 28519,
+              "nodeType": "StructuredDocumentation",
+              "src": "5909:218:75",
+              "text": " @notice Used to retrieve multiple parts at the same time.\n @param partIds An array of part IDs that we want to retrieve\n @return An array of `Part` structs associated with given `partIds`"
+            },
+            "functionSelector": "9806c6ec",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getParts",
+            "nameLocation": "6141:8:75",
+            "parameters": {
+              "id": 28523,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28522,
+                  "mutability": "mutable",
+                  "name": "partIds",
+                  "nameLocation": "6175:7:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28529,
+                  "src": "6159:23:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint64_$dyn_memory_ptr",
+                    "typeString": "uint64[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 28520,
+                      "name": "uint64",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6159:6:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint64",
+                        "typeString": "uint64"
+                      }
+                    },
+                    "id": 28521,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6159:8:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint64_$dyn_storage_ptr",
+                      "typeString": "uint64[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6149:39:75"
+            },
+            "returnParameters": {
+              "id": 28528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28527,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28529,
+                  "src": "6212:13:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Part_$28472_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct IRMRKCatalog.Part[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 28525,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 28524,
+                        "name": "Part",
+                        "nameLocations": [
+                          "6212:4:75"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 28472,
+                        "src": "6212:4:75"
+                      },
+                      "referencedDeclaration": 28472,
+                      "src": "6212:4:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Part_$28472_storage_ptr",
+                        "typeString": "struct IRMRKCatalog.Part"
+                      }
+                    },
+                    "id": 28526,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6212:6:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Part_$28472_storage_$dyn_storage_ptr",
+                      "typeString": "struct IRMRKCatalog.Part[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6211:15:75"
+            },
+            "scope": 28530,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 28418,
+              "name": "IERC165",
+              "nameLocations": [
+                "271:7:75"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 28205,
+              "src": "271:7:75"
+            },
+            "id": 28419,
+            "nodeType": "InheritanceSpecifier",
+            "src": "271:7:75"
+          }
+        ],
+        "canonicalName": "IRMRKCatalog",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 28417,
+          "nodeType": "StructuredDocumentation",
+          "src": "133:111:75",
+          "text": " @title IRMRKCatalog\n @author RMRK team\n @notice An interface Catalog for RMRK equippable module."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          28530,
+          28205
+        ],
+        "name": "IRMRKCatalog",
+        "nameLocation": "255:12:75",
+        "scope": 28531,
+        "usedErrors": [],
+        "usedEvents": [
+          28434,
+          28442,
+          28450,
+          28455
+        ]
+      }
+    ],
+    "license": "Apache-2.0"
+  },
+  "id": 75
+}

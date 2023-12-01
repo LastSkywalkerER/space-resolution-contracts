@@ -1,0 +1,943 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "ResourceId",
+          "name": "tableId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "contract IStoreHook",
+          "name": "hookAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "enabledHooksBitmap",
+          "type": "uint8"
+        }
+      ],
+      "name": "registerStoreHook",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ResourceId",
+          "name": "tableId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "FieldLayout",
+          "name": "fieldLayout",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "Schema",
+          "name": "keySchema",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "Schema",
+          "name": "valueSchema",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string[]",
+          "name": "keyNames",
+          "type": "string[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "fieldNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "registerTable",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ResourceId",
+          "name": "tableId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "contract IStoreHook",
+          "name": "hookAddress",
+          "type": "address"
+        }
+      ],
+      "name": "unregisterStoreHook",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "registerStoreHook(bytes32,address,uint8)": "530f4b60",
+    "registerTable(bytes32,bytes32,bytes32,bytes32,string[],string[])": "0ba51f49",
+    "unregisterStoreHook(bytes32,address)": "05609129"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"ResourceId\",\"name\":\"tableId\",\"type\":\"bytes32\"},{\"internalType\":\"contract IStoreHook\",\"name\":\"hookAddress\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"enabledHooksBitmap\",\"type\":\"uint8\"}],\"name\":\"registerStoreHook\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"ResourceId\",\"name\":\"tableId\",\"type\":\"bytes32\"},{\"internalType\":\"FieldLayout\",\"name\":\"fieldLayout\",\"type\":\"bytes32\"},{\"internalType\":\"Schema\",\"name\":\"keySchema\",\"type\":\"bytes32\"},{\"internalType\":\"Schema\",\"name\":\"valueSchema\",\"type\":\"bytes32\"},{\"internalType\":\"string[]\",\"name\":\"keyNames\",\"type\":\"string[]\"},{\"internalType\":\"string[]\",\"name\":\"fieldNames\",\"type\":\"string[]\"}],\"name\":\"registerTable\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"ResourceId\",\"name\":\"tableId\",\"type\":\"bytes32\"},{\"internalType\":\"contract IStoreHook\",\"name\":\"hookAddress\",\"type\":\"address\"}],\"name\":\"unregisterStoreHook\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"The IStoreRegistration interface includes methods for managing table field layouts, metadata, and hooks, which are usually called once in the setup phase of an application, making them less performance critical than the  methods.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@latticexyz/store/src/IStoreRegistration.sol\":\"IStoreRegistration\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@rmrk-team/=node_modules/@rmrk-team/\",\":eth-gas-reporter/=node_modules/eth-gas-reporter/\",\":hardhat-deploy/=node_modules/hardhat-deploy/\",\":hardhat/=node_modules/hardhat/\"]},\"sources\":{\"node_modules/@latticexyz/schema-type/src/solidity/SchemaType.sol\":{\"keccak256\":\"0x770eff7a38b9b7b1613dc11ca09db4f28b42a117c9b39b2a06a650a58a250bdb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://39f544110658a53def52c2a4e33b8b158b95a4f14fccea58d5268b6e728d86d4\",\"dweb:/ipfs/QmTesj6tjSFbfAiKUitXapdNYWPStS8bLkB3r22qfyHwUC\"]},\"node_modules/@latticexyz/store/src/FieldLayout.sol\":{\"keccak256\":\"0x2a0536cd6cecc479d0b81d5aad6380231f4d6873beadc54814d801c2036b02c0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e07c041e19146a9ec258cc700a450b4d49440202895eb12f3bb17508427c23ba\",\"dweb:/ipfs/QmXoqrCGDSkuFgNSMURRFdjokjREL78nLDzNaUi6rjefy9\"]},\"node_modules/@latticexyz/store/src/IERC165.sol\":{\"keccak256\":\"0x2bbc3c43400c15a91a5cb35430a91309cb64a4d13a0a170eacec71dcf334feaf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f44dfc9605067de539de07a76a34bf469faa9e6dad8c192abafc2e05860c7dd2\",\"dweb:/ipfs/QmX8xgG6XWokM7YFwFZvmMhuh1uhkSjxCMD2oTHjUVdapb\"]},\"node_modules/@latticexyz/store/src/IStoreHook.sol\":{\"keccak256\":\"0xa6777c7868333996ad9c61a94457dcac702d8d7445a104dfdc86543d25e7470e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6268a16449d7529a94746d0103670dd0e38faf5117bf914fb01da9947ab44c2e\",\"dweb:/ipfs/QmaSfbx1QRA3jw2K8bGkQTw4CTGPUzNqnCJW7LwaFUJCXy\"]},\"node_modules/@latticexyz/store/src/IStoreRegistration.sol\":{\"keccak256\":\"0xf448fbb2bc9c982721a43234463656da5a49cea08543e62148d54f11e1ac3e2f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://64b3579d9b9dcd73dca2beab3d4fcf60237420945ebbb2e9f4ffcc88f4110115\",\"dweb:/ipfs/QmaW5nN3zGEriSYHncye6Nz2TkAw1oo1CyG2JuJTJrJoXg\"]},\"node_modules/@latticexyz/store/src/PackedCounter.sol\":{\"keccak256\":\"0x44ddfa9eb8a861462c550f0a9d66c40c68acdb347a61fa765949608407a2c7fb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://47ee957f4b19cab9e20bf5fc569c015eca13852fb3351f2a105a8be9c48204c0\",\"dweb:/ipfs/QmNkyzDobVQLoq9BtQ8HtgsPLiqnmi97EZx1wsu6wp8nKH\"]},\"node_modules/@latticexyz/store/src/ResourceId.sol\":{\"keccak256\":\"0x40983c580b8958e55db4520095934a535e98544ffe8228327e598973eb6647ed\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://839d658fa2bb2b1f09a08149d2bf0c26a26c301ad2dda8154fc99458085a695d\",\"dweb:/ipfs/Qmd5jHHYrgqraPqF8bjzT4xyjsoPk8K7pkxXLLfz6MRT6d\"]},\"node_modules/@latticexyz/store/src/Schema.sol\":{\"keccak256\":\"0x58aef318ba03f8ff8866ef70f8a30f549b150657ea699734aefe16c298956401\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7dc104690a7e2bcf5ce1afadcd58f8ef4d639b4b92b9ad9293656235d54395f3\",\"dweb:/ipfs/QmYJJvEv5KBJ3kzf9AkgRn7Uu5dp4exGTRddf4cae1btgE\"]},\"node_modules/@latticexyz/store/src/constants.sol\":{\"keccak256\":\"0x9e37c64c119ef07ad914bc589ee3f6d67946ab95877978c1ee3e2c1ffae07076\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3fad47e542025382aa28e8171253e34f93b2f149434b67a26989542d70218793\",\"dweb:/ipfs/QmW6JsKNwPc6oAMrgcikgR2EPwMUtQANiuZSQSGCd29HHC\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "ResourceId",
+              "name": "tableId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "contract IStoreHook",
+              "name": "hookAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "enabledHooksBitmap",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerStoreHook"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "ResourceId",
+              "name": "tableId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "FieldLayout",
+              "name": "fieldLayout",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "Schema",
+              "name": "keySchema",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "Schema",
+              "name": "valueSchema",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "string[]",
+              "name": "keyNames",
+              "type": "string[]"
+            },
+            {
+              "internalType": "string[]",
+              "name": "fieldNames",
+              "type": "string[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "registerTable"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "ResourceId",
+              "name": "tableId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "contract IStoreHook",
+              "name": "hookAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "unregisterStoreHook"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "@rmrk-team/=node_modules/@rmrk-team/",
+        "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+        "hardhat-deploy/=node_modules/hardhat-deploy/",
+        "hardhat/=node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@latticexyz/store/src/IStoreRegistration.sol": "IStoreRegistration"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@latticexyz/schema-type/src/solidity/SchemaType.sol": {
+        "keccak256": "0x770eff7a38b9b7b1613dc11ca09db4f28b42a117c9b39b2a06a650a58a250bdb",
+        "urls": [
+          "bzz-raw://39f544110658a53def52c2a4e33b8b158b95a4f14fccea58d5268b6e728d86d4",
+          "dweb:/ipfs/QmTesj6tjSFbfAiKUitXapdNYWPStS8bLkB3r22qfyHwUC"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/FieldLayout.sol": {
+        "keccak256": "0x2a0536cd6cecc479d0b81d5aad6380231f4d6873beadc54814d801c2036b02c0",
+        "urls": [
+          "bzz-raw://e07c041e19146a9ec258cc700a450b4d49440202895eb12f3bb17508427c23ba",
+          "dweb:/ipfs/QmXoqrCGDSkuFgNSMURRFdjokjREL78nLDzNaUi6rjefy9"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/IERC165.sol": {
+        "keccak256": "0x2bbc3c43400c15a91a5cb35430a91309cb64a4d13a0a170eacec71dcf334feaf",
+        "urls": [
+          "bzz-raw://f44dfc9605067de539de07a76a34bf469faa9e6dad8c192abafc2e05860c7dd2",
+          "dweb:/ipfs/QmX8xgG6XWokM7YFwFZvmMhuh1uhkSjxCMD2oTHjUVdapb"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/IStoreHook.sol": {
+        "keccak256": "0xa6777c7868333996ad9c61a94457dcac702d8d7445a104dfdc86543d25e7470e",
+        "urls": [
+          "bzz-raw://6268a16449d7529a94746d0103670dd0e38faf5117bf914fb01da9947ab44c2e",
+          "dweb:/ipfs/QmaSfbx1QRA3jw2K8bGkQTw4CTGPUzNqnCJW7LwaFUJCXy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/IStoreRegistration.sol": {
+        "keccak256": "0xf448fbb2bc9c982721a43234463656da5a49cea08543e62148d54f11e1ac3e2f",
+        "urls": [
+          "bzz-raw://64b3579d9b9dcd73dca2beab3d4fcf60237420945ebbb2e9f4ffcc88f4110115",
+          "dweb:/ipfs/QmaW5nN3zGEriSYHncye6Nz2TkAw1oo1CyG2JuJTJrJoXg"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/PackedCounter.sol": {
+        "keccak256": "0x44ddfa9eb8a861462c550f0a9d66c40c68acdb347a61fa765949608407a2c7fb",
+        "urls": [
+          "bzz-raw://47ee957f4b19cab9e20bf5fc569c015eca13852fb3351f2a105a8be9c48204c0",
+          "dweb:/ipfs/QmNkyzDobVQLoq9BtQ8HtgsPLiqnmi97EZx1wsu6wp8nKH"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/ResourceId.sol": {
+        "keccak256": "0x40983c580b8958e55db4520095934a535e98544ffe8228327e598973eb6647ed",
+        "urls": [
+          "bzz-raw://839d658fa2bb2b1f09a08149d2bf0c26a26c301ad2dda8154fc99458085a695d",
+          "dweb:/ipfs/Qmd5jHHYrgqraPqF8bjzT4xyjsoPk8K7pkxXLLfz6MRT6d"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/Schema.sol": {
+        "keccak256": "0x58aef318ba03f8ff8866ef70f8a30f549b150657ea699734aefe16c298956401",
+        "urls": [
+          "bzz-raw://7dc104690a7e2bcf5ce1afadcd58f8ef4d639b4b92b9ad9293656235d54395f3",
+          "dweb:/ipfs/QmYJJvEv5KBJ3kzf9AkgRn7Uu5dp4exGTRddf4cae1btgE"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@latticexyz/store/src/constants.sol": {
+        "keccak256": "0x9e37c64c119ef07ad914bc589ee3f6d67946ab95877978c1ee3e2c1ffae07076",
+        "urls": [
+          "bzz-raw://3fad47e542025382aa28e8171253e34f93b2f149434b67a26989542d70218793",
+          "dweb:/ipfs/QmW6JsKNwPc6oAMrgcikgR2EPwMUtQANiuZSQSGCd29HHC"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@latticexyz/store/src/IStoreRegistration.sol",
+    "id": 8397,
+    "exportedSymbols": {
+      "FieldLayout": [
+        7156
+      ],
+      "IStoreHook": [
+        8143
+      ],
+      "IStoreRegistration": [
+        8396
+      ],
+      "ResourceId": [
+        9237
+      ],
+      "Schema": [
+        9320
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1008:24",
+    "nodes": [
+      {
+        "id": 8345,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:24",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 8347,
+        "nodeType": "ImportDirective",
+        "src": "59:48:24",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/store/src/FieldLayout.sol",
+        "file": "./FieldLayout.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 8397,
+        "sourceUnit": 7576,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 8346,
+              "name": "FieldLayout",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 7156,
+              "src": "68:11:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 8349,
+        "nodeType": "ImportDirective",
+        "src": "108:38:24",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/store/src/Schema.sol",
+        "file": "./Schema.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 8397,
+        "sourceUnit": 9789,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 8348,
+              "name": "Schema",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9320,
+              "src": "117:6:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 8351,
+        "nodeType": "ImportDirective",
+        "src": "147:46:24",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/store/src/IStoreHook.sol",
+        "file": "./IStoreHook.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 8397,
+        "sourceUnit": 8144,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 8350,
+              "name": "IStoreHook",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 8143,
+              "src": "156:10:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 8353,
+        "nodeType": "ImportDirective",
+        "src": "194:46:24",
+        "nodes": [],
+        "absolutePath": "node_modules/@latticexyz/store/src/ResourceId.sol",
+        "file": "./ResourceId.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 8397,
+        "sourceUnit": 9309,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 8352,
+              "name": "ResourceId",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9237,
+              "src": "203:10:24",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 8396,
+        "nodeType": "ContractDefinition",
+        "src": "489:550:24",
+        "nodes": [
+          {
+            "id": 8375,
+            "nodeType": "FunctionDefinition",
+            "src": "522:201:24",
+            "nodes": [],
+            "functionSelector": "0ba51f49",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerTable",
+            "nameLocation": "531:13:24",
+            "parameters": {
+              "id": 8373,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8357,
+                  "mutability": "mutable",
+                  "name": "tableId",
+                  "nameLocation": "561:7:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8375,
+                  "src": "550:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ResourceId_$9237",
+                    "typeString": "ResourceId"
+                  },
+                  "typeName": {
+                    "id": 8356,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8355,
+                      "name": "ResourceId",
+                      "nameLocations": [
+                        "550:10:24"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9237,
+                      "src": "550:10:24"
+                    },
+                    "referencedDeclaration": 9237,
+                    "src": "550:10:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ResourceId_$9237",
+                      "typeString": "ResourceId"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8360,
+                  "mutability": "mutable",
+                  "name": "fieldLayout",
+                  "nameLocation": "586:11:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8375,
+                  "src": "574:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_FieldLayout_$7156",
+                    "typeString": "FieldLayout"
+                  },
+                  "typeName": {
+                    "id": 8359,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8358,
+                      "name": "FieldLayout",
+                      "nameLocations": [
+                        "574:11:24"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 7156,
+                      "src": "574:11:24"
+                    },
+                    "referencedDeclaration": 7156,
+                    "src": "574:11:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_FieldLayout_$7156",
+                      "typeString": "FieldLayout"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8363,
+                  "mutability": "mutable",
+                  "name": "keySchema",
+                  "nameLocation": "610:9:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8375,
+                  "src": "603:16:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Schema_$9320",
+                    "typeString": "Schema"
+                  },
+                  "typeName": {
+                    "id": 8362,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8361,
+                      "name": "Schema",
+                      "nameLocations": [
+                        "603:6:24"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9320,
+                      "src": "603:6:24"
+                    },
+                    "referencedDeclaration": 9320,
+                    "src": "603:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Schema_$9320",
+                      "typeString": "Schema"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8366,
+                  "mutability": "mutable",
+                  "name": "valueSchema",
+                  "nameLocation": "632:11:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8375,
+                  "src": "625:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Schema_$9320",
+                    "typeString": "Schema"
+                  },
+                  "typeName": {
+                    "id": 8365,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8364,
+                      "name": "Schema",
+                      "nameLocations": [
+                        "625:6:24"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9320,
+                      "src": "625:6:24"
+                    },
+                    "referencedDeclaration": 9320,
+                    "src": "625:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Schema_$9320",
+                      "typeString": "Schema"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8369,
+                  "mutability": "mutable",
+                  "name": "keyNames",
+                  "nameLocation": "667:8:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8375,
+                  "src": "649:26:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 8367,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "649:6:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 8368,
+                    "nodeType": "ArrayTypeName",
+                    "src": "649:8:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8372,
+                  "mutability": "mutable",
+                  "name": "fieldNames",
+                  "nameLocation": "699:10:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8375,
+                  "src": "681:28:24",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 8370,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "681:6:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 8371,
+                    "nodeType": "ArrayTypeName",
+                    "src": "681:8:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "544:169:24"
+            },
+            "returnParameters": {
+              "id": 8374,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "722:0:24"
+            },
+            "scope": 8396,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 8386,
+            "nodeType": "FunctionDefinition",
+            "src": "800:106:24",
+            "nodes": [],
+            "functionSelector": "530f4b60",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerStoreHook",
+            "nameLocation": "809:17:24",
+            "parameters": {
+              "id": 8384,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8378,
+                  "mutability": "mutable",
+                  "name": "tableId",
+                  "nameLocation": "838:7:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8386,
+                  "src": "827:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ResourceId_$9237",
+                    "typeString": "ResourceId"
+                  },
+                  "typeName": {
+                    "id": 8377,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8376,
+                      "name": "ResourceId",
+                      "nameLocations": [
+                        "827:10:24"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9237,
+                      "src": "827:10:24"
+                    },
+                    "referencedDeclaration": 9237,
+                    "src": "827:10:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ResourceId_$9237",
+                      "typeString": "ResourceId"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8381,
+                  "mutability": "mutable",
+                  "name": "hookAddress",
+                  "nameLocation": "858:11:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8386,
+                  "src": "847:22:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStoreHook_$8143",
+                    "typeString": "contract IStoreHook"
+                  },
+                  "typeName": {
+                    "id": 8380,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8379,
+                      "name": "IStoreHook",
+                      "nameLocations": [
+                        "847:10:24"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 8143,
+                      "src": "847:10:24"
+                    },
+                    "referencedDeclaration": 8143,
+                    "src": "847:10:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStoreHook_$8143",
+                      "typeString": "contract IStoreHook"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8383,
+                  "mutability": "mutable",
+                  "name": "enabledHooksBitmap",
+                  "nameLocation": "877:18:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8386,
+                  "src": "871:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 8382,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "871:5:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "826:70:24"
+            },
+            "returnParameters": {
+              "id": 8385,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "905:0:24"
+            },
+            "scope": 8396,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 8395,
+            "nodeType": "FunctionDefinition",
+            "src": "955:82:24",
+            "nodes": [],
+            "functionSelector": "05609129",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unregisterStoreHook",
+            "nameLocation": "964:19:24",
+            "parameters": {
+              "id": 8393,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8389,
+                  "mutability": "mutable",
+                  "name": "tableId",
+                  "nameLocation": "995:7:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8395,
+                  "src": "984:18:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ResourceId_$9237",
+                    "typeString": "ResourceId"
+                  },
+                  "typeName": {
+                    "id": 8388,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8387,
+                      "name": "ResourceId",
+                      "nameLocations": [
+                        "984:10:24"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 9237,
+                      "src": "984:10:24"
+                    },
+                    "referencedDeclaration": 9237,
+                    "src": "984:10:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ResourceId_$9237",
+                      "typeString": "ResourceId"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8392,
+                  "mutability": "mutable",
+                  "name": "hookAddress",
+                  "nameLocation": "1015:11:24",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8395,
+                  "src": "1004:22:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStoreHook_$8143",
+                    "typeString": "contract IStoreHook"
+                  },
+                  "typeName": {
+                    "id": 8391,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8390,
+                      "name": "IStoreHook",
+                      "nameLocations": [
+                        "1004:10:24"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 8143,
+                      "src": "1004:10:24"
+                    },
+                    "referencedDeclaration": 8143,
+                    "src": "1004:10:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStoreHook_$8143",
+                      "typeString": "contract IStoreHook"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "983:44:24"
+            },
+            "returnParameters": {
+              "id": 8394,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1036:0:24"
+            },
+            "scope": 8396,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IStoreRegistration",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 8354,
+          "nodeType": "StructuredDocumentation",
+          "src": "242:246:24",
+          "text": " The IStoreRegistration interface includes methods for managing table field layouts,\n metadata, and hooks, which are usually called once in the setup phase of an application,\n making them less performance critical than the  methods."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          8396
+        ],
+        "name": "IStoreRegistration",
+        "nameLocation": "499:18:24",
+        "scope": 8397,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 24
+}
