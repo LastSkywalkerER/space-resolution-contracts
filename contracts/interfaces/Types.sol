@@ -30,3 +30,18 @@ struct PlayerStatsResponse {
     uint256[] ethersId;
     uint256 wreckedEthers;
 }
+
+struct ShipSpecs {
+    uint16 MOVE_SPEED;
+    uint16 MOVE_ANGLE_SPEED;
+    uint16 SHIP_MASS;
+    uint16 LINEAR_DAMPING;
+    uint16 ANGULAR_DAMPING;
+    uint16 FIRE_RATE;
+    Position WEAPON_OFFSET;
+}
+
+struct VerificationData {
+    bytes signature;
+    uint256 tokenId;
+}

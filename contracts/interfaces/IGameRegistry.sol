@@ -4,7 +4,7 @@ pragma solidity ^0.8.21;
 import {Position, PlayerStats, PlayerStatsResponse} from "./Types.sol";
 
 interface IGameRegistry {
-    function initPlayer(address player_, Position[] calldata ethersPosition_) external;
+    function addEthers(address player_, Position[] calldata ethersPosition_) external;
 
     function updatePlayerPosition(address player_, Position calldata newPosition_) external;
 

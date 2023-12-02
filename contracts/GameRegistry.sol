@@ -13,8 +13,8 @@ contract GameRegistry is IGameRegistry, AccessControl {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
 
-    function initPlayer(address player_, Position[] calldata ethersPosition_) external onlyRole(DEFAULT_ADMIN_ROLE) {
-        require(_playersStats[player_].ethersAmount == _playersStats[player_].wreckedEthers, "Game is not over");
+    function addEthers(address player_, Position[] calldata ethersPosition_) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(_playersStats[player_].ethersAmount == 0, "There are some ethers");
 
         uint256 amount = ethersPosition_.length;
 

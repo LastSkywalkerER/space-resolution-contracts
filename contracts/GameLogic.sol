@@ -2,14 +2,24 @@
 
 pragma solidity ^0.8.21;
 
-import {GameRegistry} from "./GameRegistry.sol";
-import {Position, PlayerStats, PlayerStatsResponse, Bullet} from "./interfaces/Types.sol";
+import {EIP712} from "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
+import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
-contract GameLogic {
-    GameRegistry public gameRegistry;
+import {IGameRegistry} from "./interfaces/IGameRegistry.sol";
+import {IShip} from "./interfaces/IShip.sol";
+import {Position, PlayerStats, PlayerStatsResponse, Bullet, VerificationData} from "./interfaces/Types.sol";
+
+contract GameLogic is EIP712 {
+    using ECDSA for bytes32;
+
+    bytes32 internal constant SHIP_OWNER_TYPE_HASH = keccak256("ShipOwnership(address gameWallet,uint256 tokenId)");
+
+    IGameRegistry public gameRegistry;
+    IShip public ship;
 
     uint256 public bulletPrice;
-    uint256 public PERCENT_BASE = 10000;
+    uint16 public PERCENT_BASE = 10000;
+    uint8 public SPECS_MULTIPLIER = 100;
 
     address private _balanceReceiver;
     uint256 private _winRate;
@@ -17,20 +27,39 @@ contract GameLogic {
 
     constructor(
         address gameRegistry_,
+        address ship_,
         uint256 bulletPrice_,
         address balanceReceiver_,
         uint256 winRate_,
-        uint256 feeRate_
-    ) {
-        gameRegistry = GameRegistry(gameRegistry_);
+        uint256 feeRate_,
+        string memory domainName_,
+        string memory domainVersion_
+    ) EIP712(domainName_, domainVersion_) {
+        gameRegistry = IGameRegistry(gameRegistry_);
+        ship = IShip(ship_);
+
         bulletPrice = bulletPrice_;
         _balanceReceiver = balanceReceiver_;
         _winRate = winRate_;
         _feeRate = feeRate_;
     }
 
+    modifier onlyShipOwner(VerificationData calldata verificationData) {
+        if (verificationData.signature.length > 0) {
+            address signer = _hashTypedDataV4(
+                keccak256(abi.encode(SHIP_OWNER_TYPE_HASH, msg.sender, verificationData.tokenId))
+            ).recover(verificationData.signature);
+
+            require(ship.ownerOf(verificationData.tokenId) == signer, "You do not have a ship");
+        } else {
+            require(ship.ownerOf(verificationData.tokenId) == msg.sender, "You do not have a ship");
+        }
+
+        _;
+    }
+
     function start(Position[] calldata ethersPosition_) external {
-        gameRegistry.initPlayer(msg.sender, ethersPosition_);
+        gameRegistry.addEthers(msg.sender, ethersPosition_);
     }
 
     function buyBullets(uint256 amount_) external payable {
